@@ -102,6 +102,9 @@ public abstract class Critter {
 	}
 
 	protected final void reproduce(Critter offspring, int direction) {
+		offspring.energy = energy / 2;
+		energy /= 2;
+		energy -= Params.min_reproduce_energy;
 		switch(direction) {
 		case(0):
 			offspring.x_coord = x_coord + 1 % Params.world_width;
@@ -273,6 +276,7 @@ public abstract class Critter {
 		//DoTimeSteps
 		for(Critter c: population) {
 			c.doTimeStep();
+			//TODO Add in a part for photosynthesizing
 		}
 		
 		//Encounters
@@ -281,11 +285,35 @@ public abstract class Critter {
 			for(int k = i + 1; k < population.size(); ++k) {
 				Critter othC = population.get(k);
 				if(refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
-					boolean refFight = refC.fight(othC.toString());
-					boolean othFight = othC.fight(refC.toString());
-					if(refFight && othFight) {
+					boolean refCFight = refC.fight(othC.toString());
+					boolean othCFight = othC.fight(refC.toString());
+					
+					if(refCFight && othCFight) {
+						int refCRoll = getRandomInt(refC.energy);
+						int othCRoll = getRandomInt(othC.energy);
+						Critter winner;
+						Critter loser;
+						if(refCRoll >= othCRoll) {
+							winner = refC;
+							loser = othC;
+						}
+						else{
+							winner = othC;
+							loser = refC;
+						}
+						winner.energy += loser.energy / 2;
+						loser.energy = 0;
+					}
+					else if(refCFight) {
+					
+					}
+					else if(othCFight) {
 						
 					}
+					else {
+						
+					}
+					
 				}
 			}
 		}
@@ -293,6 +321,7 @@ public abstract class Critter {
 		//Update rest energy
 		for(Critter c: population) {
 			c.energy -= Params.rest_energy_cost;
+			//TODO Get rid of dead
 		}
 		
 		for(int i = 0; i < Params.refresh_algae_count; ++i) {
@@ -307,6 +336,15 @@ public abstract class Critter {
 			population.add(b);
 			babies.remove(b);
 		}
+	}
+	
+	private static boolean locOccupied(int x, int y) {
+		for(Critter c: population) {
+			if((c.x_coord == x) && (c.y_coord == y)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public static void displayWorld() {

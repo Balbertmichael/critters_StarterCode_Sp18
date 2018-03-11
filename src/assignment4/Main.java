@@ -120,11 +120,25 @@ public class Main {
 				break;
 
 			case ("seed"):
+				if(inArr.length != 2) {
+					System.out.println("Error processing " + in);
+					break;
+				}
+				else {
+					try {
+					Critter.setSeed(Long.parseLong(inArr[1]));
+					}catch(NumberFormatException e) {
+						System.out.println("Error processing " + in);
+						break;
+					}
+				}
 				break;
 			case ("make"):
 				break;
 			case ("stats"):
 				break;
+			default:
+				System.out.println("Invalid command: " + in);
 			}
 		} while (!in.equals("quit"));
 
