@@ -2,14 +2,14 @@ package assignment4;
 /* CRITTERS Critter.java
  * EE422C Project 4 submission by
  * Replace <...> with your actual data.
- * <Student1 Name>
- * <Student1 EID>
- * <Student1 5-digit Unique No.>
- * <Student2 Name>
- * <Student2 EID>
- * <Student2 5-digit Unique No.>
+ * <Student1 Angelique Bautista>
+ * <Student1 ab54429>
+ * <Student1 15465>
+ * <Student2 Albert Bautista>
+ * <Student2 abb2639>
+ * <Student2 15505>
  * Slip days used: <0>
- * Fall 2016
+ * Spring 2018
  */
 
 import java.util.List;
@@ -128,9 +128,6 @@ public abstract class Critter {
 			c.x_coord = getRandomInt(Params.world_width);
 			c.y_coord = getRandomInt(Params.world_height);
 			c.energy = Params.start_energy;
-
-			System.out.println("X coord: " + c.x_coord);
-			System.out.println("Y coord: " + c.y_coord);
 
 			population.add(c);
 		} catch (IllegalAccessException | InstantiationException | ClassNotFoundException | ClassCastException e) {

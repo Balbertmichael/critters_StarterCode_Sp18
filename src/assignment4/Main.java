@@ -2,16 +2,15 @@ package assignment4;
 /* CRITTERS Main.java
  * EE422C Project 4 submission by
  * Replace <...> with your actual data.
- * <Student1 Name>
- * <Student1 EID>
- * <Student1 5-digit Unique No.>
- * <Student2 Name>
- * <Student2 EID>
- * <Student2 5-digit Unique No.>
+ * <Student1 Angelique Bautista>
+ * <Student1 ab54429>
+ * <Student1 15465>
+ * <Student2 Albert Bautista>
+ * <Student2 abb2639>
+ * <Student2 15505>
  * Slip days used: <0>
- * Fall 2016
+ * Spring 2018
  */
-
 import java.util.Scanner;
 import java.io.*;
 
@@ -74,7 +73,14 @@ public class Main {
 		/* Write your code below. */
 		
 		try {
-			Critter.makeCritter("Algae");
+			for(int i = 0; i < 100; ++i) {
+				Critter.makeCritter("Algae");
+			}
+			
+			for(int i = 0; i < 25; ++i) {
+				Critter.makeCritter("Craig");
+			}
+			
 		} catch (InvalidCritterException e) {
 			System.out.println("Can't find critter named: " + e);
 		}
@@ -122,7 +128,7 @@ public class Main {
 			}
 		} while (!in.equals("quit"));
 
-		System.out.println("GLHF");
+		//System.out.println("GLHF");
 
 		/* Write your code above */
 		System.out.flush();
