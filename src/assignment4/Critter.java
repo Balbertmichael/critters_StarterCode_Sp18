@@ -23,7 +23,7 @@ public abstract class Critter {
 	private static String myPackage;
 	private static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
-
+	
 	// Gets the package name. This assumes that Critter and its subclasses are all
 	// in the same package.
 	static {
@@ -102,6 +102,41 @@ public abstract class Critter {
 	}
 
 	protected final void reproduce(Critter offspring, int direction) {
+		switch(direction) {
+		case(0):
+			offspring.x_coord = x_coord + 1 % Params.world_width;
+			offspring.y_coord = y_coord % Params.world_height;
+			break;
+		case(1):
+			offspring.x_coord = x_coord + 1 % Params.world_width;
+			offspring.y_coord = y_coord + 1 % Params.world_height;
+			break;
+		case(2):
+			offspring.x_coord = x_coord % Params.world_width;
+			offspring.y_coord = y_coord + 1 % Params.world_height;
+			break;
+		case(3):
+			offspring.x_coord = x_coord - 1 % Params.world_width;
+			offspring.y_coord = y_coord + 1 % Params.world_height;
+			break;
+		case(4):
+			offspring.x_coord = x_coord - 1 % Params.world_width;
+			offspring.y_coord = y_coord % Params.world_height;
+			break;
+		case(5):
+			offspring.x_coord = x_coord - 1 % Params.world_width;
+			offspring.y_coord = y_coord - 1 % Params.world_height;
+			break;
+		case(6):
+			offspring.x_coord = x_coord % Params.world_width;
+			offspring.y_coord = y_coord - 1 % Params.world_height;
+			break;
+		case(7):
+			offspring.x_coord = x_coord + 1 % Params.world_width;
+			offspring.y_coord = y_coord - 1 % Params.world_height;
+			break;
+		}
+		babies.add(offspring);
 	}
 
 	public abstract void doTimeStep();
@@ -231,7 +266,7 @@ public abstract class Critter {
 	 * Clear the world of all critters, dead and alive
 	 */
 	public static void clearWorld() {
-		// Complete this method.
+		population.clear();
 	}
 
 	public static void worldTimeStep() {
