@@ -1,7 +1,7 @@
 package assignment4;
 
 public class Critter2 extends Critter {
-
+	
 	public Critter2() {
 		// TODO Auto-generated constructor stub
 	}

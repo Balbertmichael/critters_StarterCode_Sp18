@@ -1,4 +1,7 @@
 package assignment4;
+
+import java.util.ArrayList;
+import java.util.List;
 /* CRITTERS Main.java
  * EE422C Project 4 submission by
  * Replace <...> with your actual data.
@@ -71,27 +74,26 @@ public class Main {
 
 		/* Do not alter the code above for your submission. */
 		/* Write your code below. */
-		
+
 		try {
-			for(int i = 0; i < 100; ++i) {
+			for (int i = 0; i < 100; ++i) {
 				Critter.makeCritter("Algae");
 			}
-			
-			for(int i = 0; i < 25; ++i) {
+
+			for (int i = 0; i < 25; ++i) {
 				Critter.makeCritter("Craig");
 			}
-			
+
 		} catch (InvalidCritterException e) {
 			System.out.println("Can't find critter named: " + e);
 		}
-		
+
 		String in;
 		do {
 			System.out.println("Input next command: ");
 			in = kb.nextLine();
-			in = in.toLowerCase();
 			String[] inArr = in.split(" ");
-			switch (inArr[0]) {
+			switch (inArr[0].toLowerCase()) {
 
 			case ("show"):
 				if (inArr.length > 1) {
@@ -103,10 +105,9 @@ public class Main {
 
 			case ("step"):
 				int stepCount;
-				if(inArr.length == 1) {
+				if (inArr.length == 1) {
 					stepCount = 1;
-				}
-				else {
+				} else {
 					try {
 						stepCount = Integer.parseInt(inArr[1]);
 					} catch (NumberFormatException e) {
@@ -120,29 +121,59 @@ public class Main {
 				break;
 
 			case ("seed"):
-				if(inArr.length != 2) {
+				if (inArr.length != 2) {
 					System.out.println("Error processing " + in);
 					break;
-				}
-				else {
+				} else {
 					try {
-					Critter.setSeed(Long.parseLong(inArr[1]));
-					}catch(NumberFormatException e) {
+						Critter.setSeed(Long.parseLong(inArr[1]));
+					} catch (NumberFormatException e) {
 						System.out.println("Error processing " + in);
 						break;
 					}
 				}
 				break;
 			case ("make"):
+				if (inArr.length != 3 && inArr.length != 2) {
+					System.out.println("Error processing " + in);
+					break;
+				} else {
+					try {
+						int critNum = 1;
+						if (inArr.length == 3) {
+							critNum = Integer.parseInt(inArr[2]);
+						}
+						for (int i = 0; i < critNum; ++i) {
+							Critter.makeCritter(inArr[1]);
+						}
+					} catch (InvalidCritterException | NumberFormatException e) {
+						System.out.println("Error processing " + in);
+					}
+				}
 				break;
 			case ("stats"):
+				if(inArr.length != 1 && inArr.length != 2) {
+					System.out.println("Error processing " + in);
+					break;
+				}
+				else {
+					try {
+					List<Critter> critters = Critter.getInstances(inArr[2]);
+					Class<?> critter_class = Class.forName(myPackage + '.' + inArr[2]);
+					critter_class.getMethod("runStats");
+					}catch(InvalidCritterException | ClassNotFoundException | ClassCastException | NoSuchMethodException e) {
+						System.out.println("Error processing " + in);
+						break;
+					}
+					
+				}
 				break;
 			default:
 				System.out.println("Invalid command: " + in);
 			}
 		} while (!in.equals("quit"));
 
-		//System.out.println("GLHF");
+		// System.out.println("GLHF");
 
 		/* Write your code above */
 		System.out.flush();

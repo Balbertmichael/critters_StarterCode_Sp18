@@ -11,6 +11,7 @@ public class Critter1 extends Critter {
 	
 	@Override
 	public void doTimeStep() {
+		moved = false;
 		if(getEnergy() < Params.start_energy / 2) {
 			//Only walks if it knows it's going to die
 			walk(Critter.getRandomInt(8));
@@ -31,9 +32,9 @@ public class Critter1 extends Critter {
 			return true;
 		}
 		if(moved == true) {
-			moved = false;
 			return true;
 		}
+		walk(getRandomInt(8));
 		return false;
 	}
 	

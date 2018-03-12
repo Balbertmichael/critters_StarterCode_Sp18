@@ -23,7 +23,7 @@ public abstract class Critter {
 	private static String myPackage;
 	private static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
-	
+
 	// Gets the package name. This assumes that Critter and its subclasses are all
 	// in the same package.
 	static {
@@ -66,8 +66,8 @@ public abstract class Critter {
 		move(2, direction);
 		energy -= Params.run_energy_cost;
 	}
-	
-	//Direction is 0-7
+
+	// Direction is 0-7
 	private final void move(int speed, int direction) {
 		switch (direction) {
 		case (0):
@@ -77,24 +77,24 @@ public abstract class Critter {
 			x_coord += speed % Params.world_width;
 			y_coord += speed % Params.world_height;
 			break;
-		case(2):
+		case (2):
 			y_coord += speed % Params.world_height;
 			break;
-		case(3):
+		case (3):
 			x_coord -= speed % Params.world_width;
 			y_coord += speed % Params.world_height;
 			break;
-		case(4):
+		case (4):
 			x_coord -= speed % Params.world_width;
 			break;
-		case(5):
+		case (5):
 			x_coord -= speed % Params.world_width;
 			y_coord -= speed % Params.world_height;
 			break;
-		case(6):
+		case (6):
 			y_coord -= speed % Params.world_height;
 			break;
-		case(7):
+		case (7):
 			x_coord += speed % Params.world_width;
 			y_coord -= speed % Params.world_height;
 			break;
@@ -105,36 +105,36 @@ public abstract class Critter {
 		offspring.energy = energy / 2;
 		energy /= 2;
 		energy -= Params.min_reproduce_energy;
-		switch(direction) {
-		case(0):
+		switch (direction) {
+		case (0):
 			offspring.x_coord = x_coord + 1 % Params.world_width;
 			offspring.y_coord = y_coord % Params.world_height;
 			break;
-		case(1):
+		case (1):
 			offspring.x_coord = x_coord + 1 % Params.world_width;
 			offspring.y_coord = y_coord + 1 % Params.world_height;
 			break;
-		case(2):
+		case (2):
 			offspring.x_coord = x_coord % Params.world_width;
 			offspring.y_coord = y_coord + 1 % Params.world_height;
 			break;
-		case(3):
+		case (3):
 			offspring.x_coord = x_coord - 1 % Params.world_width;
 			offspring.y_coord = y_coord + 1 % Params.world_height;
 			break;
-		case(4):
+		case (4):
 			offspring.x_coord = x_coord - 1 % Params.world_width;
 			offspring.y_coord = y_coord % Params.world_height;
 			break;
-		case(5):
+		case (5):
 			offspring.x_coord = x_coord - 1 % Params.world_width;
 			offspring.y_coord = y_coord - 1 % Params.world_height;
 			break;
-		case(6):
+		case (6):
 			offspring.x_coord = x_coord % Params.world_width;
 			offspring.y_coord = y_coord - 1 % Params.world_height;
 			break;
-		case(7):
+		case (7):
 			offspring.x_coord = x_coord + 1 % Params.world_width;
 			offspring.y_coord = y_coord - 1 % Params.world_height;
 			break;
@@ -183,7 +183,18 @@ public abstract class Critter {
 	 */
 	public static List<Critter> getInstances(String critter_class_name) throws InvalidCritterException {
 		List<Critter> result = new java.util.ArrayList<Critter>();
-
+		try {
+			Class<?> critter_class = Class.forName(myPackage + '.' + critter_class_name);
+			Critter getC = (Critter) critter_class.newInstance();
+			for(Critter c: population) {
+				//TODO Fix for Critter
+				if(c.toString().equals(getC.toString())) {
+					result.add(c);
+				}
+			}
+		} catch (IllegalAccessException | InstantiationException | ClassNotFoundException | ClassCastException e) {
+			throw (new InvalidCritterException(critter_class_name));
+		}
 		return result;
 	}
 
@@ -273,74 +284,85 @@ public abstract class Critter {
 	}
 
 	public static void worldTimeStep() {
-		//DoTimeSteps
-		for(Critter c: population) {
+		// DoTimeSteps
+		for (Critter c : population) {
 			c.doTimeStep();
-			//TODO Add in a part for photosynthesizing
+			if(c.toString().equals("@")) {
+				c.energy += Params.photosynthesis_energy_amount;
+			}
 		}
-		
-		//Encounters
-		for(int i = 0; i < population.size(); ++i) {
+
+		// Encounters
+		for (int i = 0; i < population.size(); ++i) {
 			Critter refC = population.get(i);
-			for(int k = i + 1; k < population.size(); ++k) {
+			for (int k = i + 1; k < population.size(); ++k) {
 				Critter othC = population.get(k);
-				if(refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
+				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
+					int oldX = refC.x_coord;
+					int oldY = refC.y_coord;
+					//Check to run away once if not then make them fight
 					boolean refCFight = refC.fight(othC.toString());
-					boolean othCFight = othC.fight(refC.toString());
+					if (refCFight == false) {
+						if(locOccupied(refC.x_coord, refC.y_coord)) {
+							refCFight = true;
+							refC.x_coord = oldX;
+							refC.y_coord = oldY;
+						}
+					}
 					
-					if(refCFight && othCFight) {
+					boolean othCFight = othC.fight(refC.toString());
+					if(othCFight == false) {
+						if(locOccupied(othC.x_coord, othC.y_coord)) {
+							othCFight = true;
+							othC.x_coord = oldX;
+							othC.y_coord = oldY;
+						}
+					}
+					
+					if (refCFight && othCFight) {
 						int refCRoll = getRandomInt(refC.energy);
 						int othCRoll = getRandomInt(othC.energy);
 						Critter winner;
 						Critter loser;
-						if(refCRoll >= othCRoll) {
+						if (refCRoll >= othCRoll) {
 							winner = refC;
 							loser = othC;
-						}
-						else{
+						} else {
 							winner = othC;
 							loser = refC;
 						}
 						winner.energy += loser.energy / 2;
-						loser.energy = 0;
+						population.remove(loser);
 					}
-					else if(refCFight) {
-					
-					}
-					else if(othCFight) {
-						
-					}
-					else {
-						
-					}
-					
 				}
 			}
 		}
-		
-		//Update rest energy
-		for(Critter c: population) {
+
+		// Update rest energy
+		for (Critter c : population) {
 			c.energy -= Params.rest_energy_cost;
-			//TODO Get rid of dead
-		}
-		
-		for(int i = 0; i < Params.refresh_algae_count; ++i) {
-			try {
-				makeCritter("Algae");
-			}catch(InvalidCritterException e) {
-				//Should never happen
+			if(c.energy <= 0) {
+				population.remove(c);
 			}
 		}
-		
-		for(Critter b: babies) {
+
+		for (int i = 0; i < Params.refresh_algae_count; ++i) {
+			try {
+				makeCritter("Algae");
+			} catch (InvalidCritterException e) {
+				// Should never happen
+			}
+		}
+
+		for (Critter b : babies) {
 			population.add(b);
 			babies.remove(b);
 		}
 	}
-	
+
 	private static boolean locOccupied(int x, int y) {
-		for(Critter c: population) {
-			if((c.x_coord == x) && (c.y_coord == y)) {
+		for (Critter c : population) {
+			if ((c.x_coord == x) && (c.y_coord == y)) {
 				return true;
 			}
 		}
