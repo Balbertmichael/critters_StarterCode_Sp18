@@ -16,6 +16,8 @@ import java.util.List;
  */
 import java.util.Scanner;
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /*
  * Usage: java <pkgname>.Main <input file> test
@@ -92,7 +94,8 @@ public class Main {
 		do {
 			System.out.println("Input next command: ");
 			in = kb.nextLine();
-			String[] inArr = in.split(" ");
+			String trimIn = in.trim();
+			String[] inArr = trimIn.split("\\s+");
 			switch (inArr[0].toLowerCase()) {
 
 			case ("show"):
@@ -152,21 +155,41 @@ public class Main {
 				}
 				break;
 			case ("stats"):
-				if(inArr.length != 1 && inArr.length != 2) {
+				// if(inArr.length != 1 && inArr.length != 2) {
+				// System.out.println("Error processing " + in);
+				// break;
+				// }
+				if (inArr.length != 2) {
 					System.out.println("Error processing " + in);
 					break;
-				}
-				else {
+				} else {
 					try {
-					List<Critter> critters = Critter.getInstances(inArr[2]);
-					Class<?> critter_class = Class.forName(myPackage + '.' + inArr[2]);
-					critter_class.getMethod("runStats");
-					}catch(InvalidCritterException | ClassNotFoundException | ClassCastException | NoSuchMethodException e) {
+						List<Critter> critters = Critter.getInstances(inArr[1]);
+						Class<?> critter_class = Class.forName(myPackage + '.' + inArr[1]);
+						
+						// Calls static runStats method on the abstract critter class
+						// Critter c = (Critter) critter_class.newInstance();
+						// c.runStats(critters);
+
+						// Calls static runStats method on specific critter class
+						critter_class.getMethod("runStats", List.class).invoke(null, critters);
+					}
+					// catch (InvalidCritterException | IllegalAccessException |
+					// InstantiationException | ClassNotFoundException | ClassCastException |
+					// IllegalArgumentException | InvocationTargetException | NoSuchMethodException
+					// | SecurityException e) {
+					// System.out.println("Error processing " + in);
+					// break;
+					// }
+					catch (InvalidCritterException | IllegalAccessException | ClassNotFoundException
+							| ClassCastException | IllegalArgumentException | InvocationTargetException
+							| NoSuchMethodException | SecurityException e) {
 						System.out.println("Error processing " + in);
 						break;
 					}
-					
 				}
+				break;
+			case ("quit"):
 				break;
 			default:
 				System.out.println("Invalid command: " + in);

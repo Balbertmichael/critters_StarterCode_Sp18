@@ -12,6 +12,7 @@ package assignment4;
  * Spring 2018
  */
 
+import java.util.Iterator;
 import java.util.List;
 
 /* see the PDF for descriptions of the methods and fields in this class
@@ -69,77 +70,97 @@ public abstract class Critter {
 
 	// Direction is 0-7
 	private final void move(int speed, int direction) {
+		if (x_coord == 0 || y_coord == 0) {
+			System.out.println("Flag");
+		}
 		switch (direction) {
 		case (0):
-			x_coord += speed % Params.world_width;
+			x_coord = negModulo(x_coord + speed, Params.world_width);
 			break;
 		case (1):
-			x_coord += speed % Params.world_width;
-			y_coord += speed % Params.world_height;
+			x_coord = negModulo(x_coord + speed, Params.world_width);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (2):
-			y_coord += speed % Params.world_height;
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (3):
-			x_coord -= speed % Params.world_width;
-			y_coord += speed % Params.world_height;
+			x_coord = negModulo(x_coord - speed, Params.world_width);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (4):
-			x_coord -= speed % Params.world_width;
+			x_coord = negModulo(x_coord - speed, Params.world_width);
 			break;
 		case (5):
-			x_coord -= speed % Params.world_width;
-			y_coord -= speed % Params.world_height;
+			x_coord = negModulo(x_coord - speed, Params.world_width);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (6):
-			y_coord -= speed % Params.world_height;
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (7):
-			x_coord += speed % Params.world_width;
-			y_coord -= speed % Params.world_height;
+			x_coord = negModulo(x_coord + speed, Params.world_width);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
+		}
+		if (x_coord < 0 || y_coord < 0) {
+			System.out.println("Error");
 		}
 	}
 
 	protected final void reproduce(Critter offspring, int direction) {
 		offspring.energy = energy / 2;
 		energy /= 2;
-		energy -= Params.min_reproduce_energy;
+		//energy -= Params.min_reproduce_energy;
 		switch (direction) {
 		case (0):
-			offspring.x_coord = x_coord + 1 % Params.world_width;
+			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
+
+			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
+			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+
 			offspring.y_coord = y_coord % Params.world_height;
 			break;
 		case (1):
-			offspring.x_coord = x_coord + 1 % Params.world_width;
-			offspring.y_coord = y_coord + 1 % Params.world_height;
+			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
 			break;
 		case (2):
-			offspring.x_coord = x_coord % Params.world_width;
-			offspring.y_coord = y_coord + 1 % Params.world_height;
+			offspring.x_coord = (x_coord) % Params.world_width;
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
 			break;
 		case (3):
-			offspring.x_coord = x_coord - 1 % Params.world_width;
-			offspring.y_coord = y_coord + 1 % Params.world_height;
+			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
 			break;
 		case (4):
-			offspring.x_coord = x_coord - 1 % Params.world_width;
+			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
 			offspring.y_coord = y_coord % Params.world_height;
 			break;
 		case (5):
-			offspring.x_coord = x_coord - 1 % Params.world_width;
-			offspring.y_coord = y_coord - 1 % Params.world_height;
+			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
 			break;
 		case (6):
 			offspring.x_coord = x_coord % Params.world_width;
-			offspring.y_coord = y_coord - 1 % Params.world_height;
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
 			break;
 		case (7):
-			offspring.x_coord = x_coord + 1 % Params.world_width;
-			offspring.y_coord = y_coord - 1 % Params.world_height;
+			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
 			break;
 		}
 		babies.add(offspring);
+	}
+
+	private int negModulo(int div, int mod) {
+		if (div < 0) {
+			return mod + div;
+		} else {
+			return div % mod;
+		}
 	}
 
 	public abstract void doTimeStep();
@@ -186,9 +207,9 @@ public abstract class Critter {
 		try {
 			Class<?> critter_class = Class.forName(myPackage + '.' + critter_class_name);
 			Critter getC = (Critter) critter_class.newInstance();
-			for(Critter c: population) {
-				//TODO Fix for Critter
-				if(c.toString().equals(getC.toString())) {
+			for (Critter c : population) {
+				// TODO Fix for Critter
+				if (c.toString().equals(getC.toString())) {
 					result.add(c);
 				}
 			}
@@ -281,13 +302,14 @@ public abstract class Critter {
 	 */
 	public static void clearWorld() {
 		population.clear();
+		babies.clear();
 	}
 
 	public static void worldTimeStep() {
 		// DoTimeSteps
 		for (Critter c : population) {
 			c.doTimeStep();
-			if(c.toString().equals("@")) {
+			if (c.toString().equals("@")) {
 				c.energy += Params.photosynthesis_energy_amount;
 			}
 		}
@@ -300,37 +322,59 @@ public abstract class Critter {
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
 					int oldX = refC.x_coord;
 					int oldY = refC.y_coord;
-					//Check to run away once if not then make them fight
+					// Check to run away once if not then make them fight
 					boolean refCFight = refC.fight(othC.toString());
 					if (refCFight == false) {
-						if(locOccupied(refC.x_coord, refC.y_coord)) {
+						if (locOccupied(refC.x_coord, refC.y_coord)) {
 							refCFight = true;
 							refC.x_coord = oldX;
 							refC.y_coord = oldY;
 						}
 					}
-					
+
 					boolean othCFight = othC.fight(refC.toString());
-					if(othCFight == false) {
-						if(locOccupied(othC.x_coord, othC.y_coord)) {
+					if (othCFight == false) {
+						if (locOccupied(othC.x_coord, othC.y_coord)) {
 							othCFight = true;
 							othC.x_coord = oldX;
 							othC.y_coord = oldY;
 						}
 					}
-					
+
+					if (refC.energy <= 0 || othC.energy <= 0) {
+						if (refC.energy < 0) {
+							population.remove(refC);
+						}
+						if (othC.energy < 0) {
+							population.remove(othC);
+						}
+						continue;
+					}
+
 					if (refCFight && othCFight) {
 						int refCRoll = getRandomInt(refC.energy);
 						int othCRoll = getRandomInt(othC.energy);
 						Critter winner;
 						Critter loser;
-						if (refCRoll >= othCRoll) {
+
+						// Check if Algae is one of the two critters
+						if (refC instanceof Algae) {
+							winner = othC;
+							loser = refC;
+						} else if (othC instanceof Algae) {
+							winner = refC;
+							loser = othC;
+						}
+
+						// Non-Algae critter fight
+						else if (refCRoll >= othCRoll) {
 							winner = refC;
 							loser = othC;
 						} else {
 							winner = othC;
 							loser = refC;
 						}
+
 						winner.energy += loser.energy / 2;
 						population.remove(loser);
 					}
@@ -339,12 +383,22 @@ public abstract class Critter {
 		}
 
 		// Update rest energy
-		for (Critter c : population) {
+		// Iterator Implementation:
+		Iterator<Critter> critIter = population.iterator();
+		while (critIter.hasNext()) {
+			Critter c = critIter.next();
 			c.energy -= Params.rest_energy_cost;
-			if(c.energy <= 0) {
-				population.remove(c);
+			if (c.energy <= 0) {
+				critIter.remove();
 			}
 		}
+
+		// for (Critter c : population) {
+		// c.energy -= Params.rest_energy_cost;
+		// if (c.energy <= 0) {
+		// population.remove(c);
+		// }
+		// }
 
 		for (int i = 0; i < Params.refresh_algae_count; ++i) {
 			try {
@@ -354,10 +408,19 @@ public abstract class Critter {
 			}
 		}
 
-		for (Critter b : babies) {
-			population.add(b);
-			babies.remove(b);
+		// Babies turn into critters
+		// Iterator implementation
+		Iterator<Critter> babyIter = babies.iterator();
+		while (babyIter.hasNext()) {
+			Critter c = babyIter.next();
+			population.add(c);
+			babyIter.remove();
 		}
+
+		// for (Critter b : babies) {
+		// population.add(b);
+		// babies.remove(b);
+		// }
 	}
 
 	private static boolean locOccupied(int x, int y) {
@@ -399,7 +462,13 @@ public abstract class Critter {
 
 		for (Critter c : population) {
 			// Assuming to String is char and also coords are within world bounds
-			worldArray[c.y_coord + 1][c.x_coord + 1] = c.toString().charAt(0);
+			try {
+				worldArray[c.y_coord + 1][c.x_coord + 1] = c.toString().charAt(0);
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("Y_coord: " + c.y_coord);
+				System.out.println("X_coord: " + c.x_coord);
+				throw e;
+			}
 		}
 		for (int i = 0; i < height; ++i) {
 			String row = new String(worldArray[i]);
