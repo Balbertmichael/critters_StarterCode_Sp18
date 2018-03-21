@@ -76,36 +76,26 @@ public class Main {
 
 		/* Do not alter the code above for your submission. */
 		/* Write your code below. */
-
-		try {
-			for (int i = 0; i < 100; ++i) {
-				Critter.makeCritter("Algae");
-			}
-
-			for (int i = 0; i < 25; ++i) {
-				Critter.makeCritter("Craig");
-			}
-
-		} catch (InvalidCritterException e) {
-			System.out.println("Can't find critter named: " + e);
-		}
-
+		
 		String in;
 		do {
-			System.out.println("Input next command: ");
+//			System.out.println("Input next command: ");
+			// Parse keyboard input
 			in = kb.nextLine();
 			String trimIn = in.trim();
 			String[] inArr = trimIn.split("\\s+");
 			switch (inArr[0].toLowerCase()) {
 
+			// display critter world to console
 			case ("show"):
 				if (inArr.length > 1) {
-					System.out.println("Error processing " + in);
+					System.out.println("error processing: " + in);
 					break;
 				}
 				Critter.displayWorld();
 				break;
-
+			
+			// advance one time step in world
 			case ("step"):
 				int stepCount;
 				if (inArr.length == 1) {
@@ -114,7 +104,7 @@ public class Main {
 					try {
 						stepCount = Integer.parseInt(inArr[1]);
 					} catch (NumberFormatException e) {
-						System.out.println("Error processing " + in);
+						System.out.println("error processing: " + in);
 						break;
 					}
 				}
@@ -123,22 +113,25 @@ public class Main {
 				}
 				break;
 
+			// set seed for random number generator
 			case ("seed"):
 				if (inArr.length != 2) {
-					System.out.println("Error processing " + in);
+					System.out.println("error processing: " + in);
 					break;
 				} else {
 					try {
 						Critter.setSeed(Long.parseLong(inArr[1]));
 					} catch (NumberFormatException e) {
-						System.out.println("Error processing " + in);
+						System.out.println("error processing: " + in);
 						break;
 					}
 				}
 				break;
+				
+			// create a Critter and add it to population
 			case ("make"):
 				if (inArr.length != 3 && inArr.length != 2) {
-					System.out.println("Error processing " + in);
+					System.out.println("error processing: " + in);
 					break;
 				} else {
 					try {
@@ -150,17 +143,19 @@ public class Main {
 							Critter.makeCritter(inArr[1]);
 						}
 					} catch (InvalidCritterException | NumberFormatException e) {
-						System.out.println("Error processing " + in);
+						System.out.println("error processing: " + in);
 					}
 				}
 				break;
+				
+			// run Critter statistics
 			case ("stats"):
 				// if(inArr.length != 1 && inArr.length != 2) {
-				// System.out.println("Error processing " + in);
+				// System.out.println("error processing: " + in);
 				// break;
 				// }
 				if (inArr.length != 2) {
-					System.out.println("Error processing " + in);
+					System.out.println("error processing: " + in);
 					break;
 				} else {
 					try {
@@ -178,19 +173,23 @@ public class Main {
 					// InstantiationException | ClassNotFoundException | ClassCastException |
 					// IllegalArgumentException | InvocationTargetException | NoSuchMethodException
 					// | SecurityException e) {
-					// System.out.println("Error processing " + in);
+					// System.out.println("error processing: " + in);
 					// break;
 					// }
 					catch (InvalidCritterException | IllegalAccessException | ClassNotFoundException
 							| ClassCastException | IllegalArgumentException | InvocationTargetException
 							| NoSuchMethodException | SecurityException e) {
-						System.out.println("Error processing " + in);
+						System.out.println("error processing: " + in);
 						break;
 					}
 				}
 				break;
+				
+			// terminate program
 			case ("quit"):
 				break;
+			
+			// invalid command
 			default:
 				System.out.println("Invalid command: " + in);
 			}
