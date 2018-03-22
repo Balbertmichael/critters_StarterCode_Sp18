@@ -96,28 +96,28 @@ public abstract class Critter {
 			break;
 		case (1):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
-			y_coord = negModulo(y_coord + speed, Params.world_height);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (2):
-			y_coord = negModulo(y_coord + speed, Params.world_height);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (3):
 			x_coord = negModulo(x_coord - speed, Params.world_width);
-			y_coord = negModulo(y_coord + speed, Params.world_height);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (4):
 			x_coord = negModulo(x_coord - speed, Params.world_width);
 			break;
 		case (5):
 			x_coord = negModulo(x_coord - speed, Params.world_width);
-			y_coord = negModulo(y_coord - speed, Params.world_height);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (6):
-			y_coord = negModulo(y_coord - speed, Params.world_height);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (7):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
-			y_coord = negModulo(y_coord - speed, Params.world_height);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		}
 //		if (x_coord < 0 || y_coord < 0) {
@@ -138,25 +138,19 @@ public abstract class Critter {
 		switch (direction) {
 		case (0):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-
-			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
-
 			offspring.y_coord = y_coord % Params.world_height;
 			break;
 		case (1):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_height);
 			break;
 		case (2):
 			offspring.x_coord = (x_coord) % Params.world_width;
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_height);
 			break;
 		case (3):
 			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_height);
 			break;
 		case (4):
 			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
@@ -164,15 +158,15 @@ public abstract class Critter {
 			break;
 		case (5):
 			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		case (6):
 			offspring.x_coord = x_coord % Params.world_width;
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		case (7):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		}
 		babies.add(offspring);
