@@ -217,4 +217,67 @@ public class EncounterTest {
 		assertEquals(num - 1, TestCritter.getPopulation().size());
 	}
 
+	@Test
+	public void FightTest2() throws InvalidCritterException {
+		Critter.clearWorld();
+		String e1 = "EncounterTestCritter1", e2 = "EncounterTestCritter2", m1 = "MyCritter6";
+		int x = 0;
+		int y = 0;
+		int num = 5;
+		Critter.makeCritter(e2);
+		EncounterTestCritter2 fighter = (EncounterTestCritter2) Critter.getInstances(e2).get(0);
+		
+		Critter.makeCritter(e2);
+		EncounterTestCritter2 spec1 = (EncounterTestCritter2) Critter.getInstances(e2).get(1);
+		
+		Critter.makeCritter(e2);
+		EncounterTestCritter2 runner1 = (EncounterTestCritter2) Critter.getInstances(e2).get(2);
+		
+		Critter.makeCritter(e2);
+		EncounterTestCritter2 runner2 = (EncounterTestCritter2) Critter.getInstances(e2).get(3);
+		
+		Critter.makeCritter(e2);
+		EncounterTestCritter2 spec2 = (EncounterTestCritter2) Critter.getInstances(e2).get(4);
+		
+//		for (int i = 0; i < 8; ++i) {
+//			Critter.makeCritter(m1);
+//		}
+//		List<Critter> c = Critter.getInstances(m1);
+//		MyCritter6[] blocker = new MyCritter6[c.size()];
+//		for (int i = 0; i < c.size(); ++i) {
+//			blocker[i] = (MyCritter6) c.get(i);
+//		}
+		runner1.setX_coord(x);
+		runner1.setY_coord(y);
+		runner2.setX_coord(x);
+		runner2.setY_coord(y);
+		fighter.setX_coord(x);
+		fighter.setY_coord(y);
+		
+		spec1.setX_coord(4);
+		spec1.setY_coord(4);
+		spec2.setX_coord(5);
+		spec2.setY_coord(5);
+//		for (int i = 0; i < 8; ++i) {
+//			int[] dir = moveStep(x, y, i, 2);
+//			blocker[i].setX_coord(dir[0]);
+//			blocker[i].setY_coord(dir[1]);
+//		}
+
+		Critter.displayWorld();
+
+		assertEquals(num, TestCritter.getPopulation().size());
+		Critter.worldTimeStep();
+
+		Critter.displayWorld();
+
+		if (DEBUG) {
+			Critter.displayWorld();
+		}
+		// assertFalse(runner.getEnergy() <= 0);
+		// assertEquals(Params.start_energy - Params.rest_energy_cost -
+		// Params.walk_energy_cost, runner.getEnergy());
+
+		assertEquals(num - 2, TestCritter.getPopulation().size());
+	}
 }
