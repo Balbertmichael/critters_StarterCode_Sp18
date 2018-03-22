@@ -15,6 +15,7 @@ package assignment4;
 import java.util.Iterator;
 import java.util.List;
 
+
 /* see the PDF for descriptions of the methods and fields in this class
  * you may add fields, methods or inner classes to Critter ONLY if you make your additions private
  * no new public, protected or default-package code or data can be added to Critter
@@ -88,11 +89,6 @@ public abstract class Critter {
 
 	// Direction is 0-7
 	private final void move(int speed, int direction) {
-		// if (x_coord == 0 || y_coord == 0) {
-		// System.out.println("Flag");
-		// }
-		// System.out.println("OX_coord: " + x_coord);
-		// System.out.println("OY_coord: " + y_coord);
 		switch (direction) {
 		case (0):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
@@ -123,11 +119,6 @@ public abstract class Critter {
 			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		}
-		// if (x_coord < 0 || y_coord < 0) {
-		// System.out.println("Error");
-		// }
-		// System.out.println("X_coord: " + x_coord);
-		// System.out.println("Y_coord: " + y_coord);
 	}
 
 	protected final void reproduce(Critter offspring, int direction) {
@@ -137,7 +128,6 @@ public abstract class Critter {
 		}
 		offspring.energy = energy / 2;
 		energy /= 2;
-		// energy -= Params.min_reproduce_energy;
 		switch (direction) {
 		case (0):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
@@ -388,11 +378,11 @@ public abstract class Critter {
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
 					Critter winner = critterEncounter(refC, othC);
 					if(winner.equals(refC)) {
-						--k;
+						--k;	// Account for changes in indexing once Critter is removed
 					}
 					else if(winner.equals(othC)) {
-						--i;
-						break;
+						--i;	// Account for changes in indexing once Critter is removed
+						break;	// Since refC no longer exists, move onto next Critter
 					}
 				}
 			}
@@ -476,7 +466,6 @@ public abstract class Critter {
 			}
 		}
 
-		// TODO: Review this change in implementation
 		// If both Critters are still in the same location despite having the chance to
 		// run away
 		if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
@@ -589,11 +578,5 @@ public abstract class Critter {
 			String row = new String(worldArray[i]);
 			System.out.println(row);
 		}
-		// String rowConcat = "";
-		// for (int i = 0; i < height; ++i) {
-		// String row = new String(worldArray[i]);
-		// rowConcat += row + '\n';
-		// }
-		// System.out.print(rowConcat);
 	}
 }

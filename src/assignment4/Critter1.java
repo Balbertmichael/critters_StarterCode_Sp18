@@ -26,7 +26,7 @@ public class Critter1 extends Critter {
 	public void doTimeStep() {
 		moved = false;
 		if(getEnergy() < Params.start_energy / 2) {
-			//Only walks if it knows it's going to die
+			//Only walks if it knows it's about to die 
 			walk(Critter.getRandomInt(8));
 			moved = true;
 		}
@@ -45,7 +45,6 @@ public class Critter1 extends Critter {
 	 */
 	@Override
 	public boolean fight(String oponent) {
-		// A somewhat smart critter that only fights if it can't
 		if(oponent.equals("@")) {
 			return true;
 		}

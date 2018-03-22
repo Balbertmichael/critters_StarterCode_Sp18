@@ -10,7 +10,6 @@ public class Critter3 extends Critter {
 	private boolean moved;
 
 	public Critter3() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

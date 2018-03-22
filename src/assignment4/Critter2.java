@@ -10,7 +10,6 @@ public class Critter2 extends Critter {
 	 * Constructor
 	 */
 	public Critter2() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

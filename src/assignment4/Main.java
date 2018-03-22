@@ -148,10 +148,6 @@ public class Main {
 				
 			// run Critter statistics
 			case ("stats"):
-				// if(inArr.length != 1 && inArr.length != 2) {
-				// System.out.println("error processing: " + in);
-				// break;
-				// }
 				if (inArr.length != 2) {
 					System.out.println("error processing: " + in);
 					break;
@@ -159,21 +155,9 @@ public class Main {
 					try {
 						List<Critter> critters = Critter.getInstances(inArr[1]);
 						Class<?> critter_class = Class.forName(myPackage + '.' + inArr[1]);
-						
-						// Calls static runStats method on the abstract critter class
-						// Critter c = (Critter) critter_class.newInstance();
-						// c.runStats(critters);
-
-						// Calls static runStats method on specific critter class
 						critter_class.getMethod("runStats", List.class).invoke(null, critters);
 					}
-					// catch (InvalidCritterException | IllegalAccessException |
-					// InstantiationException | ClassNotFoundException | ClassCastException |
-					// IllegalArgumentException | InvocationTargetException | NoSuchMethodException
-					// | SecurityException e) {
-					// System.out.println("error processing: " + in);
-					// break;
-					// }
+
 					catch (InvalidCritterException | IllegalAccessException | ClassNotFoundException
 							| ClassCastException | IllegalArgumentException | InvocationTargetException
 							| NoSuchMethodException | SecurityException e) {
