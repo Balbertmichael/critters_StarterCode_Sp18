@@ -1,0 +1,21 @@
+show
+seed 10 
+make Algae
+make Craig
+make Critter1
+make Critter2
+make Critter3
+make Critter4
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+quit
