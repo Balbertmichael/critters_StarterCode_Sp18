@@ -1,9 +1,14 @@
 package assignment4;
 
-public class MyTestCritter extends Critter.TestCritter {
+public class MoveTestCritter extends Critter.TestCritter {
 	
 	//final static int R = 0, UR = 1, U = 2, UL = 3, L = 4, DL = 5, D = 6, DR = 7;
+	private int strNum = 0;
 	private int direction = 0;
+	
+	public MoveTestCritter(int num) {
+		strNum = num;
+	}
 	
 	@Override
 	public void doTimeStep() {
@@ -11,7 +16,7 @@ public class MyTestCritter extends Critter.TestCritter {
 	}
 	
 	public void reproduce(int dir) {
-		MyTestCritter child = new MyTestCritter();
+		Critter child = new MoveTestCritter(dir);
 		reproduce(child, dir);
 	}
 	
@@ -26,6 +31,6 @@ public class MyTestCritter extends Critter.TestCritter {
 	}
 	
 	public String toString() {
-		return "1";
+		return Integer.toString(strNum);
 	}
 }
