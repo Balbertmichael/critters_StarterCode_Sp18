@@ -90,67 +90,164 @@ public class EncounterTest {
 		return new int[] { newX % w, newY % h };
 	}
 
-	/**
-	 * 11. Creates two Critters in the same spot, one being a runner. Checks to see
-	 * if runner moved, lost energy, and lived
-	 * 
-	 * @throws InvalidCritterException
-	 * 
-	 */
+//	/**
+//	 * 11. Creates two Critters in the same spot, one being a runner. Checks to see
+//	 * if runner moved, lost energy, and lived
+//	 * 
+//	 * @throws InvalidCritterException
+//	 * 
+//	 */
+//	@Test
+//	public void RunDuringFightTest() throws InvalidCritterException {
+//		int x = 0;
+//		int y = 0;
+//		int num = 2;
+//		Critter.makeCritter("MyCritter7");
+//		MyCritter7 fighter = (MyCritter7) Critter.getInstances("MyCritter7").get(0);
+//		Critter.makeCritter("MyCritter6");
+//		MyCritter6 runner = (MyCritter6) Critter.getInstances("MyCritter6").get(0);
+//		runner.setX_coord(x);
+//		runner.setY_coord(y);
+//		fighter.setX_coord(x);
+//		fighter.setY_coord(y);
+//
+//		assertEquals(num, TestCritter.getPopulation().size());
+//		Critter.worldTimeStep();
+//
+//		if (DEBUG) {
+//			Critter.displayWorld();
+//		}
+//		assertFalse(runner.getEnergy() <= 0);
+//		assertEquals(Params.start_energy - Params.rest_energy_cost - Params.run_energy_cost, runner.getEnergy());
+//		assertTrue(runner.getX_coord() != x || runner.getY_coord() != y);
+//		assertTrue(fighter.getX_coord() == x && fighter.getY_coord() == y);
+//	}
+//
+//	@Test
+//	public void RunFailDuringFightTest() throws InvalidCritterException {
+//		Critter.clearWorld();
+//		String e1 = "EncounterTestCritter1", e2 = "EncounterTestCritter2", m1 = "MyCritter6";
+//		int x = 0;
+//		int y = 0;
+//		int num = 10;
+//		Critter.makeCritter(e2);
+//		EncounterTestCritter2 fighter = (EncounterTestCritter2) Critter.getInstances(e2).get(0);
+//		Critter.makeCritter(e1);
+//		EncounterTestCritter1 runner = (EncounterTestCritter1) Critter.getInstances(e1).get(0);
+//		for (int i = 0; i < 8; ++i) {
+//			Critter.makeCritter(m1);
+//		}
+//		List<Critter> c = Critter.getInstances(m1);
+//		MyCritter6[] blocker = new MyCritter6[c.size()];
+//		for (int i = 0; i < c.size(); ++i) {
+//			blocker[i] = (MyCritter6) c.get(i);
+//		}
+//		runner.setX_coord(x);
+//		runner.setY_coord(y);
+//		fighter.setX_coord(x);
+//		fighter.setY_coord(y);
+//		for (int i = 0; i < 8; ++i) {
+//			int[] dir = moveStep(x, y, i, 2);
+//			blocker[i].setX_coord(dir[0]);
+//			blocker[i].setY_coord(dir[1]);
+//		}
+//
+//		Critter.displayWorld();
+//
+//		assertEquals(num, TestCritter.getPopulation().size());
+//		Critter.worldTimeStep();
+//
+//		Critter.displayWorld();
+//
+//		if (DEBUG) {
+//			Critter.displayWorld();
+//		}
+//		// assertFalse(runner.getEnergy() <= 0);
+//		// assertEquals(Params.start_energy - Params.rest_energy_cost -
+//		// Params.walk_energy_cost, runner.getEnergy());
+//
+//		assertEquals(num - 1, TestCritter.getPopulation().size());
+//	}
+//
+//	@Test
+//	public void FightTest() throws InvalidCritterException {
+//		Critter.clearWorld();
+//		String e1 = "EncounterTestCritter1", e2 = "EncounterTestCritter2", m1 = "MyCritter6";
+//		int x = 0;
+//		int y = 0;
+//		int num = 10;
+//		Critter.makeCritter(e2);
+//		EncounterTestCritter2 fighter = (EncounterTestCritter2) Critter.getInstances(e2).get(0);
+//
+//		Critter.makeCritter(e2);
+//		EncounterTestCritter2 runner = (EncounterTestCritter2) Critter.getInstances(e2).get(1);
+//
+//		for (int i = 0; i < 8; ++i) {
+//			Critter.makeCritter(m1);
+//		}
+//		List<Critter> c = Critter.getInstances(m1);
+//		MyCritter6[] blocker = new MyCritter6[c.size()];
+//		for (int i = 0; i < c.size(); ++i) {
+//			blocker[i] = (MyCritter6) c.get(i);
+//		}
+//		runner.setX_coord(x);
+//		runner.setY_coord(y);
+//		fighter.setX_coord(x);
+//		fighter.setY_coord(y);
+//		for (int i = 0; i < 8; ++i) {
+//			int[] dir = moveStep(x, y, i, 2);
+//			blocker[i].setX_coord(dir[0]);
+//			blocker[i].setY_coord(dir[1]);
+//		}
+//
+//		Critter.displayWorld();
+//
+//		assertEquals(num, TestCritter.getPopulation().size());
+//		Critter.worldTimeStep();
+//
+//		Critter.displayWorld();
+//
+//		if (DEBUG) {
+//			Critter.displayWorld();
+//		}
+//		// assertFalse(runner.getEnergy() <= 0);
+//		// assertEquals(Params.start_energy - Params.rest_energy_cost -
+//		// Params.walk_energy_cost, runner.getEnergy());
+//
+//		assertEquals(num - 1, TestCritter.getPopulation().size());
+//	}
+
 	@Test
-	public void RunDuringFightTest() throws InvalidCritterException {
-		int x = 0;
-		int y = 0;
-		int num = 2;
-		Critter.makeCritter("MyCritter7");
-		MyCritter7 fighter = (MyCritter7) Critter.getInstances("MyCritter7").get(0);
-		Critter.makeCritter("MyCritter6");
-		MyCritter6 runner = (MyCritter6) Critter.getInstances("MyCritter6").get(0);
-		runner.setX_coord(x);
-		runner.setY_coord(y);
-		fighter.setX_coord(x);
-		fighter.setY_coord(y);
-
-		assertEquals(num, TestCritter.getPopulation().size());
-		Critter.worldTimeStep();
-
-		if (DEBUG) {
-			Critter.displayWorld();
-		}
-		assertFalse(runner.getEnergy() <= 0);
-		assertEquals(Params.start_energy - Params.rest_energy_cost - Params.run_energy_cost, runner.getEnergy());
-		assertTrue(runner.getX_coord() != x || runner.getY_coord() != y);
-		assertTrue(fighter.getX_coord() == x && fighter.getY_coord() == y);
-	}
-
-	@Test
-	public void RunFailDuringFightTest() throws InvalidCritterException {
+	public void FightTest2() throws InvalidCritterException {
 		Critter.clearWorld();
 		String e1 = "EncounterTestCritter1", e2 = "EncounterTestCritter2", m1 = "MyCritter6";
 		int x = 0;
 		int y = 0;
-		int num = 10;
-		Critter.makeCritter(e2);
-		EncounterTestCritter2 fighter = (EncounterTestCritter2) Critter.getInstances(e2).get(0);
-		Critter.makeCritter(e1);
-		EncounterTestCritter1 runner = (EncounterTestCritter1) Critter.getInstances(e1).get(0);
-		for (int i = 0; i < 8; ++i) {
-			Critter.makeCritter(m1);
+		int num = 100000;
+		EncounterTestCritter2 [] stack = new EncounterTestCritter2[num];
+		for(int i = 0; i < num; ++i) {
+			Critter.makeCritter(e2);
+			stack[i] = (EncounterTestCritter2) Critter.getInstances(e2).get(i);
+			stack[i].setX_coord(x);
+			stack[i].setY_coord(y);
 		}
-		List<Critter> c = Critter.getInstances(m1);
-		MyCritter6[] blocker = new MyCritter6[c.size()];
-		for (int i = 0; i < c.size(); ++i) {
-			blocker[i] = (MyCritter6) c.get(i);
-		}
-		runner.setX_coord(x);
-		runner.setY_coord(y);
-		fighter.setX_coord(x);
-		fighter.setY_coord(y);
-		for (int i = 0; i < 8; ++i) {
-			int[] dir = moveStep(x, y, i, 2);
-			blocker[i].setX_coord(dir[0]);
-			blocker[i].setY_coord(dir[1]);
-		}
+		System.out.println(Critter.getInstances(e2).size());
+//		for(Critter c : TestCritter.getPopulation()) {
+//			System.out.println(c.hashCode());
+//		}
+//		for (int i = 0; i < 8; ++i) {
+//			Critter.makeCritter(m1);
+//		}
+//		List<Critter> c = Critter.getInstances(m1);
+//		MyCritter6[] blocker = new MyCritter6[c.size()];
+//		for (int i = 0; i < c.size(); ++i) {
+//			blocker[i] = (MyCritter6) c.get(i);
+//		}
+//		for (int i = 0; i < 8; ++i) {
+//			int[] dir = moveStep(x, y, i, 2);
+//			blocker[i].setX_coord(dir[0]);
+//			blocker[i].setY_coord(dir[1]);
+//		}
 
 		Critter.displayWorld();
 
@@ -165,56 +262,9 @@ public class EncounterTest {
 		// assertFalse(runner.getEnergy() <= 0);
 		// assertEquals(Params.start_energy - Params.rest_energy_cost -
 		// Params.walk_energy_cost, runner.getEnergy());
-
-		assertEquals(num - 1, TestCritter.getPopulation().size());
+//		for(Critter c : TestCritter.getPopulation()) {
+//			System.out.println(c.hashCode() + " " + TestCritter.getPopulation().size());
+//		}
+		assertEquals(1, TestCritter.getPopulation().size());
 	}
-
-	@Test
-	public void FightTest() throws InvalidCritterException {
-		Critter.clearWorld();
-		String e1 = "EncounterTestCritter1", e2 = "EncounterTestCritter2", m1 = "MyCritter6";
-		int x = 0;
-		int y = 0;
-		int num = 10;
-		Critter.makeCritter(e2);
-		EncounterTestCritter2 fighter = (EncounterTestCritter2) Critter.getInstances(e2).get(0);
-
-		Critter.makeCritter(e2);
-		EncounterTestCritter2 runner = (EncounterTestCritter2) Critter.getInstances(e2).get(1);
-
-		for (int i = 0; i < 8; ++i) {
-			Critter.makeCritter(m1);
-		}
-		List<Critter> c = Critter.getInstances(m1);
-		MyCritter6[] blocker = new MyCritter6[c.size()];
-		for (int i = 0; i < c.size(); ++i) {
-			blocker[i] = (MyCritter6) c.get(i);
-		}
-		runner.setX_coord(x);
-		runner.setY_coord(y);
-		fighter.setX_coord(x);
-		fighter.setY_coord(y);
-		for (int i = 0; i < 8; ++i) {
-			int[] dir = moveStep(x, y, i, 2);
-			blocker[i].setX_coord(dir[0]);
-			blocker[i].setY_coord(dir[1]);
-		}
-
-		Critter.displayWorld();
-
-		assertEquals(num, TestCritter.getPopulation().size());
-		Critter.worldTimeStep();
-
-		Critter.displayWorld();
-
-		if (DEBUG) {
-			Critter.displayWorld();
-		}
-		// assertFalse(runner.getEnergy() <= 0);
-		// assertEquals(Params.start_energy - Params.rest_energy_cost -
-		// Params.walk_energy_cost, runner.getEnergy());
-
-		assertEquals(num - 1, TestCritter.getPopulation().size());
-	}
-
 }
