@@ -386,7 +386,14 @@ public abstract class Critter {
 				Critter othC = population.get(k);
 				// If Critters occupy the same location, resolve encounter
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
-					critterEncounter(refC, othC);
+					Critter winner = critterEncounter(refC, othC);
+					if(winner.equals(refC)) {
+						--k;
+					}
+					else if(winner.equals(othC)) {
+						--i;
+						break;
+					}
 				}
 			}
 		}
@@ -429,7 +436,8 @@ public abstract class Critter {
 	 * @param othC
 	 *            Second Critter (Other Critter)
 	 */
-	private static void critterEncounter(Critter refC, Critter othC) {
+	private static Critter critterEncounter(Critter refC, Critter othC) {
+		
 		// Save current location in case Critters attempt to run to invalid locations
 		int oldX = refC.x_coord;
 		int oldY = refC.y_coord;
@@ -460,11 +468,12 @@ public abstract class Critter {
 		if (refC.energy <= 0 || othC.energy <= 0) {
 			if (refC.energy < 0) {
 				population.remove(refC);
+				return othC;
 			}
 			if (othC.energy < 0) {
 				population.remove(othC);
+				return refC;
 			}
-			return;
 		}
 
 		// TODO: Review this change in implementation
@@ -506,9 +515,12 @@ public abstract class Critter {
 					loser = refC;
 				}
 			}
+			//System.out.println("Hello " + refC.hashCode() + " " + othC.hashCode());
 			winner.energy += loser.energy / 2; // Winner gets half of loser's energy
 			population.remove(loser); // Loser dies
+			return winner;
 		}
+		return null;
 	}
 
 	/**
