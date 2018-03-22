@@ -15,7 +15,6 @@ package assignment4;
 import java.util.Iterator;
 import java.util.List;
 
-
 /* see the PDF for descriptions of the methods and fields in this class
  * you may add fields, methods or inner classes to Critter ONLY if you make your additions private
  * no new public, protected or default-package code or data can be added to Critter
@@ -166,11 +165,10 @@ public abstract class Critter {
 	}
 
 	private int negModulo(int div, int mod) {
-		if (div < 0) {
-			return mod + div;
-		} else {
-			return div % mod;
+		while(div < 0) {
+			div += mod;
 		}
+		return div % mod;
 	}
 
 	/**
@@ -372,17 +370,25 @@ public abstract class Critter {
 		// Determine if both Critters are at the same position
 		for (int i = 0; i < population.size(); ++i) {
 			Critter refC = population.get(i);
+			if (refC.energy <= 0) {
+				continue;
+			}
 			for (int k = i + 1; k < population.size(); ++k) {
 				Critter othC = population.get(k);
+				if (othC.energy <= 0) {
+					continue;
+				}
 				// If Critters occupy the same location, resolve encounter
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
 					Critter winner = critterEncounter(refC, othC);
-					if(winner.equals(refC)) {
-						--k;	// Account for changes in indexing once Critter is removed
+					if(winner == null) {
+						continue;
 					}
-					else if(winner.equals(othC)) {
-						--i;	// Account for changes in indexing once Critter is removed
-						break;	// Since refC no longer exists, move onto next Critter
+					else if (winner.equals(refC)) {
+						--k; // Account for changes in indexing once Critter is removed
+					} else if (winner.equals(othC)) {
+						--i; // Account for changes in indexing once Critter is removed
+						break; // Since refC no longer exists, move onto next Critter
 					}
 				}
 			}
@@ -427,7 +433,7 @@ public abstract class Critter {
 	 *            Second Critter (Other Critter)
 	 */
 	private static Critter critterEncounter(Critter refC, Critter othC) {
-		
+
 		// Save current location in case Critters attempt to run to invalid locations
 		int oldX = refC.x_coord;
 		int oldY = refC.y_coord;
@@ -486,15 +492,20 @@ public abstract class Critter {
 
 			// If both tried to run away but could not, or both wanted to fight
 			else {
-				
+
 				int refCRoll = getRandomInt(refC.energy);
 				int othCRoll = getRandomInt(othC.energy);
 
 				// Check if Algae is one of the two critters; Critter will always win over Algae
-				/*
-				 * if (refC instanceof Algae) { winner = othC; loser = refC; } else if (othC
-				 * instanceof Algae) { winner = refC; loser = othC; }
-				 */
+
+				if (refC instanceof Algae) {
+					winner = othC;
+					loser = refC;
+				} else if (othC instanceof Algae) {
+					winner = refC;
+					loser = othC;
+				}
+
 				// Critters Fight
 				if (refCRoll >= othCRoll) {
 					winner = refC;
@@ -504,7 +515,6 @@ public abstract class Critter {
 					loser = refC;
 				}
 			}
-			//System.out.println("Hello " + refC.hashCode() + " " + othC.hashCode());
 			winner.energy += loser.energy / 2; // Winner gets half of loser's energy
 			population.remove(loser); // Loser dies
 			return winner;
