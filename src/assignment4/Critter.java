@@ -356,13 +356,13 @@ public abstract class Critter {
 	 */
 	public static void worldTimeStep() {
 
-		// DoTimeSteps
-		for (Critter c : population) {
-			c.doTimeStep();
-			if (c.toString().equals("@")) {
-				c.energy += Params.photosynthesis_energy_amount;
-			}
-		}
+		// DoTimeSteps for photosynthesis
+//		for (Critter c : population) {
+//			c.doTimeStep();
+//			if (c.toString().equals("@")) {
+//				c.energy += Params.photosynthesis_energy_amount;
+//			}
+//		}
 
 		// Encounters
 		// Checks each member of population against every other member of population not
