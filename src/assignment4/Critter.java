@@ -74,11 +74,13 @@ public abstract class Critter {
 	private int y_coord;
 
 	protected final void walk(int direction) {
+		System.out.println( this + " walking in direction: " + direction);
 		move(1, direction);
 		energy -= Params.walk_energy_cost;
 	}
 
 	protected final void run(int direction) {
+		System.out.println( this + " running in direction: " + direction);		
 		move(2, direction);
 		energy -= Params.run_energy_cost;
 	}
@@ -129,6 +131,7 @@ public abstract class Critter {
 
 	protected final void reproduce(Critter offspring, int direction) {
 		// Can only reproduce if energy is higher than minimum reproduction energy
+		System.out.println( this + " reproducing in direction: " + direction);
 		if(energy < Params.min_reproduce_energy) {
 			return;
 		}
@@ -377,6 +380,7 @@ public abstract class Critter {
 				Critter othC = population.get(k);
 				// If Critters occupy the same location, resolve encounter
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
+					System.out.println( "Conflict! " + "R" + refC + " vs " + "O" + othC + " at (" + refC.x_coord + ", " + refC.y_coord + ")");
 					// Save current location in case Critters attempt to run to invalid locations
 					int oldX = refC.x_coord;
 					int oldY = refC.y_coord;
@@ -385,23 +389,27 @@ public abstract class Critter {
 					// First Critter
 					boolean refCFight = refC.fight(othC.toString());
 					if (refCFight == false) {
+						System.out.println("R" + refC + " tries to run");
 						if (locOccupied(refC.x_coord, refC.y_coord, refC)) {
 							// Invalid location: return position to original position, and force it to fight
+							System.out.println("R" + refC + " fails. Location already taken.");
 							refC.x_coord = oldX;
 							refC.y_coord = oldY;
-							System.out.println("Here");
 						}
+						System.out.println("R" + refC + " runs to (" + refC.x_coord + ", " + refC.y_coord + ")");
 					}
 
 					// Second Critter
 					boolean othCFight = othC.fight(refC.toString());
 					if (othCFight == false) {
+						System.out.println("O" + othC + " tries to run");
 						if (locOccupied(othC.x_coord, othC.y_coord, othC)) {
 							// Invalid location: return position to original position, and force it to fight
+							System.out.println("O" + othC + " fails. Location already taken.");
 							othC.x_coord = oldX;
 							othC.y_coord = oldY;
-							System.out.println("Here");
 						}
+						System.out.println("O" + othC + "runs to (" + othC.x_coord + ", " + othC.y_coord + ")");
 					}
 
 					// Remove from population if Critters had used up all energy to run
@@ -419,6 +427,7 @@ public abstract class Critter {
 					// If both Critters are still in the same location despite having the chance to run away
 					if(refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
 						
+						System.out.println("Fight");
 						Critter winner;
 						Critter loser;
 						
@@ -455,6 +464,7 @@ public abstract class Critter {
 								loser = refC;
 							}
 							
+							System.out.println(winner + " wins!");
 							winner.energy += loser.energy / 2;	// Winner gets half of loser's energy
 							population.remove(loser);			// Loser dies
 						}				

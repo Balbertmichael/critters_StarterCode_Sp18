@@ -1,0 +1,847 @@
++----------+
+|     2 22 |
+|  2 2     |
+| 2     2 2|
+| 2    2  2|
+|    2     |
+|      2 2 |
+|        2 |
+|2      2  |
+|          |
+|       2  |
++----------+
+2 running in direction: 4
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 2
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 5
+2 running in direction: 5
+Conflict! R2 vs O2 at (5, 2)
+Fight
+2 wins!
+Conflict! R2 vs O2 at (8, 5)
+Fight
+2 wins!
++----------+
+| 2   2    |
+| 22 2     |
+| 22  2  2 |
+|      2 2 |
+|          |
+|    22 2@ |
+|          |
+|   @   2  |
+|      22  |
+|          |
++----------+
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 7
+2 running in direction: 4
+2 running in direction: 7
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 2
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 6
+Conflict! R2 vs O@ at (8, 5)
+Fight
+2 wins!
++----------+
+|    2     |
+|   @     2|
+|    2     |
+|2     2 2 |
+| 2     22 |
+|   2  2 2 |
+|       2  |
+| @ @  22  |
+| 2 2      |
+|     2    |
++----------+
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 1
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 1
+2 running in direction: 6
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 6
+2 running in direction: 7
+2 running in direction: 3
+Conflict! R2 vs O2 at (8, 1)
+Fight
+2 wins!
+Conflict! R2 vs O2 at (5, 5)
+Fight
+2 wins!
++----------+
+| 2 2      |
+|   @    @ |
+|2 2      2|
+|         2|
+|        @2|
+|    222 2 |
+|          |
+| @ @   2  |
+|      2  2|
+|        2 |
++----------+
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 3
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 2
+2 running in direction: 0
++----------+
+|          |
+|2  @    @ |
+|  22   2  |
+|      2 2 |
+|  2     @ |
+| 2    @2@ |
+|       2 2|
+| @ @  2 22|
+|    2    2|
+|          |
++----------+
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 2
+Conflict! R2 vs O2 at (1, 4)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (1, 7)
+Fight
+2 wins!
++----------+
+|    22    |
+|   @2   @ |
+|    2     |
+|22     2  |
+| 2  2   @ |
+|  @   @ @ |
+|       2  |
+|22 @      |
+|       2  |
+|2       2@|
++----------+
+2 running in direction: 6
+2 running in direction: 7
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 2
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 4
++----------+
+|          |
+|  2@    @ |
+|       @  |
+|    22    |
+|  2  2  @ |
+|22@   @ @ |
+|@  22  2  |
+|   @      |
+|    2  2  |
+|2  2    2@|
++----------+
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 4
+2 running in direction: 4
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 1
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 6
+Conflict! R2 vs O2 at (0, 1)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (8, 5)
+Fight
+2 wins!
+Conflict! R2 vs O2 at (5, 4)
+Fight
+2 wins!
++----------+
+|  2   @   |
+|2  @    @ |
+|       @  |
+|          |
+|    22  @ |
+|  @ 22@ 2@|
+|@   2  2  |
+|  2@      |
+|         2|
+| 2       @|
++----------+
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 5
+2 running in direction: 7
+2 running in direction: 1
+2 running in direction: 1
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 1
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 4
++----------+
+|      @   |
+| 2 @    @ |
+|   2   @  |
+|  2     2 |
+|     @2 @ |
+|  @22 @  @|
+|@2    2   |
+| 2 @  2   |
+|    2   @2|
+|         @|
++----------+
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 7
+Conflict! R2 vs O@ at (8, 8)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (6, 5)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (3, 1)
+Fight
+2 wins!
++----------+
+|      @  2|
+|   22   @ |
+|       @  |
+|          |
+|   @ @  @ |
+| 2@   2  @|
+|@  @    22|
+|  2@22    |
+|      2 2 |
+|         @|
++----------+
+2 running in direction: 4
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 3
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 3
+Conflict! R2 vs O@ at (9, 5)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (0, 6)
+Fight
+2 wins!
++----------+
+|   @  @   |
+|  @     @ |
+|       @  |
+|   2      |
+|   @ @ 2@ |
+|2 @2     2|
+|22 @      |
+|   @  2   |
+|    2 2  2|
+|  2 2    @|
++----------+
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 5
+2 running in direction: 4
+2 running in direction: 5
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 1
+2 running in direction: 4
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 5
+2 running in direction: 7
+Conflict! R2 vs O@ at (2, 1)
+Fight
+2 wins!
++----------+
+|   @  @ 2 |
+| 22     @ |
+|       @  |
+|2         |
+|   @ @  @ |
+|  @    2  |
+|   @  2  2|
+|   @ 2    |
+|   @   222|
+|2   2    @|
++----------+
+2 running in direction: 4
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 5
+2 running in direction: 3
+2 running in direction: 5
+2 running in direction: 4
+Conflict! R2 vs O@ at (6, 0)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (2, 5)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (9, 9)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (3, 7)
+Fight
+2 wins!
+Conflict! R@ vs O@ at (8, 1)
+Fight
+@ wins!
++----------+
+|@  @  22  |
+|    2 2 @ |
+|       @  |
+|          |
+|  @@2@  @ |
+|  2  2    |
+|2  @      |
+|   2      |
+|   @   2 2|
+|  2      2|
++----------+
+2 running in direction: 5
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 2
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 7
+2 running in direction: 4
++----------+
+|@  @   2  |
+|        @2|
+|    2 2@ 2|
+|  2       |
+|  @@ @  @ |
+|          |
+|  2@      |
+| 22 22    |
+| 2 @@  @  |
+|      2   |
++----------+
+2 running in direction: 4
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 1
+2 running in direction: 1
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 0
+2 running in direction: 5
+Conflict! R2 vs O2 at (9, 9)
+Fight
+2 wins!
++----------+
+|@  @ @  22|
+|    2   @ |
+| 22    @  |
+|    2     |
+|  @@ @  @ |
+|   22     |
+|   @2    2|
+|          |
+|@  @@  @  |
+|    2    2|
++----------+
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 5
+2 running in direction: 6
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 1
+2 running in direction: 2
+2 running in direction: 0
+2 running in direction: 0
+Conflict! R2 vs O@ at (0, 0)
+Fight
+2 wins!
++----------+
+|2  @ @    |
+|    2 2 @ |
+|   2  2@  |
+|          |
+| 2@@2@  @ |
+|  2       |
+|   @      |
+|   22     |
+|@ @@@  @ 2|
+| 2        |
++----------+
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 5
+Conflict! R@ vs O@ at (2, 8)
+Fight
+@ wins!
++----------+
+|@  @ @    |
+|  2     @ |
+|2   2  @ 2|
+|    2 2   |
+| 2@@ @2 @ |
+|    2     |
+|   @   2  |
+|          |
+|@ @@@  @  |
+|   @ 2    |
++----------+
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 4
+2 running in direction: 1
+2 running in direction: 3
+2 running in direction: 1
+Conflict! R2 vs O@ at (7, 2)
++----------+
+|@  @ @  2 |
+|   2    @ |
+|   2@ 2@  |
+|          |
+|  @@ @  @ |
+|      2 2 |
+|   @      |
+| 2  2  @  |
+|@ @@@  @  |
+|  2@      |
++----------+
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 4
+2 running in direction: 6
+Conflict! R2 vs O@ at (3, 4)
+Fight
+2 wins!
++----------+
+|@  @ @  2 |
+|        @ |
+|    @  @2 |
+|   2      |
+|  @2 @  @ |
+|      2   |
+|  @@      |
+|  2 @ 2@ 2|
+|@ @@@  @  |
+|   @2     |
++----------+
+2 running in direction: 2
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 6
+2 running in direction: 4
++----------+
+|@  @ @  2 |
+|   @2   @ |
+|    @  @2 |
+|    22    |
+| 2@  @  @ |
+|          |
+|  @@      |
+|    @  @2 |
+|@ @@@  @  |
+|2  @ @   2|
++----------+
+2 running in direction: 5
+2 running in direction: 3
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 4
+Conflict! R2 vs O2 at (6, 2)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (7, 7)
+Fight
+2 wins!
++----------+
+|@  @ @    |
+|  2@ 2  @ |
+|    @ 2@  |
+|          |
+|  @  @  @2|
+| @        |
+|@ @@      |
+|    @ 22  |
+|@ @@@  @  |
+|  2@2@    |
++----------+
+2 running in direction: 5
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 1
+2 running in direction: 2
+2 running in direction: 3
+Conflict! R2 vs O@ at (3, 1)
+Fight
+2 wins!
+Conflict! R2 vs O2 at (4, 7)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (4, 7)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (7, 2)
+Fight
+2 wins!
++----------+
+|@  @ @    |
+|   @    @ |
+|    @  2  |
+|  2       |
+|  @ 2@  @ |
+| @  2  2  |
+|@ @@      |
+|    2     |
+|@ @@@  @  |
+|   @ @  @ |
++----------+
+2 running in direction: 3
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 5
+2 running in direction: 7
+2 running in direction: 2
++----------+
+|@  @ @ 2  |
+|   @ 2@ @ |
+|  2 @     |
+|          |
+|@ @  @  @ |
+| @2       |
+|@ @@      |
+|    2    2|
+|@ @@@  @  |
+|  2@ @  @ |
++----------+
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 4
+Conflict! R2 vs O@ at (4, 2)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (3, 9)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (5, 0)
+Fight
+2 wins!
++----------+
+|@  @ 2    |
+|   @  @ @ |
+|    2     |
+|2         |
+|@ @  @  @ |
+| @  @  2  |
+|@ @@      |
+|2         |
+|@ @@@@ @  |
+|   2 @2 @ |
++----------+
+2 running in direction: 3
+2 running in direction: 2
+2 running in direction: 7
+2 running in direction: 1
+2 running in direction: 5
+2 running in direction: 5
+2 running in direction: 3
+Conflict! R2 vs O@ at (8, 1)
+Fight
+2 wins!
+Conflict! R2 vs O2 at (5, 7)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (3, 8)
+Fight
+2 wins!
++----------+
+|@ 2@  @ @ |
+|2  @  @ 2 |
+|          |
+|          |
+|@ @  @  @ |
+| @  @     |
+|@ @@      |
+|     2    |
+|@ @2@@ @  |
+|     @  @ |
++----------+
+2 running in direction: 4
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 3
+Conflict! R2 vs O@ at (0, 0)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (5, 9)
+Fight
+2 wins!
++----------+
+|2  @  @ @ |
+|   @  @@  |
+|          |
+|  2   2   |
+|@ @  @  @ |
+| @  @     |
+|@2@@      |
+|        2 |
+|@ @ @@ @  |
+|     2  @ |
++----------+
+2 running in direction: 4
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 5
+2 running in direction: 5
+2 reproducing in direction: 7
+2 running in direction: 6
+Conflict! R2 vs O@ at (8, 0)
+Fight
+2 wins!
+Conflict! R2 vs O@ at (3, 1)
+Fight
+2 wins!
+Conflict! R@ vs O@ at (7, 8)
+Fight
+@ wins!
++----------+
+|   @  @ 2 |
+|   2  @@  |
+|    2     |
+|2       2 |
+|@ @  @  @ |
+| @  @     |
+|@ @@      |
+|          |
+|@2@ @@ @  |
+|      @ @ |
++----------+
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 1
+2 running in direction: 1
+2 running in direction: 5
+2 running in direction: 1
+2 running in direction: 5
+Conflict! R2 vs O@ at (3, 6)
+Fight
+2 wins!
+Conflict! R@ vs O2 at (2, 4)
+Fight
+2 wins!
+Conflict! R@ vs O@ at (6, 9)
+Fight
+@ wins!
++----------+
+|   @  @   |
+|2     @@  |
+|2         |
+| 22       |
+|@ 2  @  @ |
+|@@  @     |
+|@ @2      |
+|          |
+|@ @ @@ @  |
+|      @ @ |
++----------+
+2 running in direction: 7
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 2
+2 running in direction: 4
+2 running in direction: 2
+Conflict! R2 vs O@ at (4, 5)
+Fight
+2 wins!
+Conflict! R@ vs O@ at (6, 1)
+Fight
+@ wins!
++----------+
+|   @  @   |
+| 2@   @@  |
+|  2       |
+|        2 |
+|@ 2  @  @ |
+|@@  2     |
+|@2@       |
+|    @     |
+|@ @ @@ @  |
+|      @ @ |
++----------+
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 2
+2 running in direction: 1
+2 running in direction: 4
+2 running in direction: 2
++----------+
+|  2@  @   |
+|  @   @@2 |
+|          |
+|          |
+|@   2@  @ |
+|@@  @     |
+|@ @      2|
+|    @ 2   |
+|@ @ @@ @  |
+|   2  @ @ |
++----------+
+2 running in direction: 1
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 4
+2 running in direction: 3
+Conflict! R@ vs O2 at (0, 8)
+Fight
+2 wins!
+Conflict! R@ vs O@ at (0, 5)
+Fight
+@ wins!

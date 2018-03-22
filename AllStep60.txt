@@ -1,0 +1,67 @@
+seed 5
+make Craig 10
+make Critter1 10
+make Critter2 10
+make Critter3 10
+make Critter4 20
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+show
+step
+quit

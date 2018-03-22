@@ -1,0 +1,965 @@
++----------+
+|     3 33 |
+|  3 3     |
+| 3     3 3|
+| 3    3  3|
+|    3     |
+|      3 3 |
+|        3 |
+|3      3  |
+|          |
+|       3  |
++----------+
+3 running in direction: 2
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 2
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 0
+3 running in direction: 6
+3 walking in direction: 6
+3 walking in direction: 6
+3 walking in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+Conflict! R3 vs O3 at (7, 0)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (8, 5)
+3 running in direction: 4
+R3 tries to run
+R3 runs to (6, 5)
+3 running in direction: 2
+O3 tries to run
+O3runs to (8, 3)
++----------+
+|     3 33 |
+|  3   @3 3|
+|  3 3     |
+|3     3 33|
+|  3   3 3 |
+|      3   |
+|        @ |
+|     3    |
+|          |
+|3      3  |
++----------+
+3 running in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+3 walking in direction: 6
+3 walking in direction: 0
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 2
+3 walking in direction: 2
+3 walking in direction: 0
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 0
+3 walking in direction: 6
+3 walking in direction: 0
+3 walking in direction: 2
+Conflict! R3 vs O3 at (7, 2)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (6, 1)
+Fight
+3 wins!
++----------+
+|     3@  3|
+|   3  3 3 |
+|3      33 |
+|3   3   3 |
+|      33 3|
+|  3       |
+|        @ |
+|3    @    |
+|          |
+|       3  |
++----------+
+3 reproducing in direction: 4
+3 running in direction: 2
+3 running in direction: 2
+3 walking in direction: 2
+3 running in direction: 0
+3 walking in direction: 2
+3 walking in direction: 2
+3 running in direction: 4
+3 walking in direction: 2
+3 running in direction: 4
+3 walking in direction: 2
+3 walking in direction: 2
+3 running in direction: 6
+3 running in direction: 6
+3 walking in direction: 6
++----------+
+|      @ 3 |
+|3    3   3|
+|    3333  |
+|  3    @3 |
+|    3  3 3|
+|3         |
+|3    3  @ |
+|     @    |
+|       3  |
+|      @   |
++----------+
+3 walking in direction: 4
+3 running in direction: 2
+3 running in direction: 0
+3 running in direction: 0
+3 running in direction: 6
+3 walking in direction: 2
+3 walking in direction: 4
+3 walking in direction: 4
+3 running in direction: 6
+3 walking in direction: 4
+3 running in direction: 0
+Conflict! R3 vs O@ at (6, 9)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (4, 2)
+3 running in direction: 6
+R3 tries to run
+R3 runs to (4, 4)
+Conflict! R3 vs O3 at (6, 4)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (6, 4)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (9, 1)
+3 running in direction: 6
+O3 tries to run
+O3 fails. Location already taken.
+O3runs to (9, 1)
+Fight
++----------+
+|      @ @ |
+|     3  33|
+|    3 3 3 |
+|  3    @ 3|
+|    3 3   |
+|          |
+|3    3  @ |
+|3    @    |
+|    @    3|
+|      3   |
++----------+
+3 walking in direction: 4
+3 running in direction: 0
+3 reproducing in direction: 0
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 4
+3 walking in direction: 2
+3 running in direction: 6
+3 running in direction: 6
+3 running in direction: 4
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 4
+Conflict! R3 vs O@ at (8, 6)
+Fight
+3 wins!
++----------+
+|      @3@ |
+|     3    |
+|    33 33 |
+|  3@  3@ 3|
+|    3     |
+|         3|
+|   @3   3 |
+|     @  3 |
+|    @    3|
+|        33|
++----------+
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 walking in direction: 0
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 4
+3 running in direction: 0
++----------+
+|      @ @ |
+|   3   3  |
+|    3333@ |
+|  3@  3@ 3|
+|  3       |
+|3    @    |
+|   @3 3  3|
+|     @  3 |
+|    @     |
+| 3     33 |
++----------+
+3 walking in direction: 2
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 4
+3 running in direction: 4
+3 walking in direction: 0
+3 running in direction: 0
+3 running in direction: 6
+3 walking in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 walking in direction: 4
+3 running in direction: 6
+3 running in direction: 0
+3 walking in direction: 0
+Conflict! R3 vs O3 at (8, 7)
+3 running in direction: 2
+O3 tries to run
+O3runs to (8, 5)
+Conflict! R3 vs O3 at (7, 1)
+3 running in direction: 0
+R3 tries to run
+R3 fails. Location already taken.
+R3 runs to (7, 1)
+Fight
+Conflict! R3 vs O@ at (8, 2)
+Fight
+3 wins!
++----------+
+|      @@@ |
+| 3   3 3 3|
+|   3   33 |
+|3  @   @  |
+| 3        |
+|     @3 @3|
+|3  @  3   |
+|     @3 3 |
+|    @     |
+|  3       |
++----------+
+3 walking in direction: 2
+3 walking in direction: 6
+3 walking in direction: 0
+3 running in direction: 2
+3 running in direction: 4
+3 running in direction: 6
+3 running in direction: 0
+3 running in direction: 0
+3 walking in direction: 0
+Conflict! R3 vs O3 at (1, 5)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (6, 7)
+3 running in direction: 6
+O3 tries to run
+O3runs to (6, 9)
++----------+
+|     3@@@ |
+|  @     33|
+|   3   @3 |
+|3  @   @  |
+|          |
+|33   @  @ |
+|3  @3     |
+|     @3 3 |
+|    @     |
+|  3   33  |
++----------+
+3 running in direction: 2
+3 walking in direction: 4
+3 walking in direction: 4
+3 running in direction: 4
+3 running in direction: 6
+3 walking in direction: 0
+3 walking in direction: 4
+3 walking in direction: 0
+3 walking in direction: 0
+3 walking in direction: 6
+3 running in direction: 4
+Conflict! R3 vs O@ at (3, 6)
+Fight
+3 wins!
++----------+
+|      @@@ |
+|33@       |
+|   3 33@3 |
+|3  @   @  |
+|          |
+|33   @  @ |
+|   @      |
+|     @3 3 |
+|3   @3    |
+|  3  @3 3 |
++----------+
+3 running in direction: 2
+3 walking in direction: 2
+3 running in direction: 6
+3 running in direction: 2
+3 walking in direction: 4
+3 walking in direction: 2
+3 running in direction: 2
+3 walking in direction: 2
+3 walking in direction: 2
+3 running in direction: 0
+3 running in direction: 0
+Conflict! R3 vs O@ at (3, 6)
+Fight
+3 wins!
++----------+
+|      @@@ |
+|33@     3 |
+| @ 3 3 @3 |
+|   @   @  |
+| 3        |
+|     @  @ |
+|3  3  3 3 |
+|3  @ @    |
+|    @3    |
+|3   3@33  |
++----------+
+3 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 2
+3 walking in direction: 2
+3 walking in direction: 2
+3 walking in direction: 4
+3 running in direction: 6
+3 walking in direction: 6
+3 reproducing in direction: 6
+3 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 4
+Conflict! R3 vs O@ at (3, 7)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (3, 3)
+Fight
+3 wins!
++----------+
+| 3    @@@ |
+|  @  3 33 |
+|3@     @3 |
+|   3   @  |
+|         3|
+|3    @  @ |
+| @   33 33|
+|   3 @3   |
+|   3@     |
+|3   3@    |
++----------+
+3 walking in direction: 2
+3 walking in direction: 0
+3 walking in direction: 0
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 4
+3 running in direction: 4
+3 walking in direction: 2
+3 walking in direction: 0
+3 running in direction: 0
+3 running in direction: 4
+3 running in direction: 6
+3 running in direction: 0
+Conflict! R3 vs O@ at (5, 5)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (0, 2)
+3 running in direction: 0
+R3 tries to run
+R3 runs to (2, 2)
+Conflict! R@ vs O@ at (6, 0)
+Fight
+@ wins!
++----------+
+| @3   @@@ |
+|  @   3   |
+|3@3  3 @  |
+|     3 @3 |
+|       3  |
+|3    3  @ |
+| @  3   33|
+|   3 @ 3  |
+|3  3@     |
+|    3@    |
++----------+
+3 walking in direction: 6
+3 walking in direction: 4
+3 running in direction: 0
+3 running in direction: 0
+3 running in direction: 0
+3 walking in direction: 0
+3 walking in direction: 2
+3 walking in direction: 4
+3 running in direction: 4
+3 walking in direction: 0
+3 running in direction: 0
+3 running in direction: 0
+3 walking in direction: 4
+3 running in direction: 0
+Conflict! R3 vs O3 at (3, 6)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (7, 3)
+Fight
+3 wins!
+Conflict! R@ vs O@ at (1, 6)
+Fight
+@ wins!
++----------+
+| @  3 @@@ |
+|  @   @3  |
+|3@3  3 @  |
+|       33 |
+|         3|
+|  3     @ |
+|3@ 3 3  3 |
+|     @  3 |
+|  @ @3  3 |
+|   3 @    |
++----------+
+3 walking in direction: 4
+3 walking in direction: 6
+3 walking in direction: 0
+3 running in direction: 6
+3 walking in direction: 0
+3 reproducing in direction: 0
+3 running in direction: 6
+3 running in direction: 2
+3 reproducing in direction: 2
+3 running in direction: 2
+3 running in direction: 6
+Conflict! R3 vs O@ at (1, 2)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (5, 0)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (8, 0)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (8, 5)
+Fight
+3 wins!
++----------+
+|@@   3@@3 |
+|  @   @3  |
+|33   3 3 3|
+|       33 |
+|          |
+|  3     3 |
+| @  33    |
+|     @  3 |
+|3 @ @     |
+|   3 @    |
++----------+
+3 walking in direction: 0
+3 walking in direction: 4
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 2
+3 running in direction: 6
+3 running in direction: 6
+3 walking in direction: 6
+3 walking in direction: 4
+3 running in direction: 4
+3 walking in direction: 4
+Conflict! R3 vs O3 at (8, 7)
+3 running in direction: 2
+R3 tries to run
+R3 runs to (8, 5)
+Conflict! R3 vs O@ at (7, 0)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (4, 8)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (4, 8)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (9, 2)
+3 running in direction: 2
+R3 tries to run
+R3 runs to (9, 0)
++----------+
+|@@   3@333|
+|  @   @   |
+|3   3 3@ 3|
+|        3 |
+|       3  |
+|        3 |
+| @3  33@  |
+|     @  3 |
+|3 @ 3 @   |
+| 3   @    |
++----------+
+3 walking in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 6
+3 running in direction: 0
+3 running in direction: 6
+3 reproducing in direction: 2
+3 walking in direction: 2
+3 walking in direction: 4
+3 walking in direction: 4
+3 walking in direction: 0
+3 running in direction: 0
+3 walking in direction: 4
+3 walking in direction: 2
+Conflict! R3 vs O3 at (0, 0)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (0, 0)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (2, 8)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (7, 2)
+Fight
+3 wins!
+Conflict! R@ vs O3 at (6, 1)
+Fight
+3 wins!
++----------+
+|3@   3@   |
+|  @   3   |
+| 3     3  |
+|        3 |
+|    3 3   |
+|        3 |
+| @  33 @  |
+|  3 3@ 3  |
+|  3 3 @   |
+| 3   @ @3 |
++----------+
+3 running in direction: 0
+3 walking in direction: 4
+3 reproducing in direction: 4
+3 walking in direction: 0
+3 running in direction: 6
+3 walking in direction: 2
+3 walking in direction: 4
+3 running in direction: 6
+3 walking in direction: 6
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 0
+3 running in direction: 0
+3 running in direction: 2
+Conflict! R3 vs O@ at (7, 6)
+Fight
+3 wins!
+Conflict! R@ vs O@ at (2, 1)
+Fight
+@ wins!
++----------+
+| @  3 @ 33|
+|  @  3  3 |
+|3     3   |
+|    3     |
+|     3  3 |
+|    3    3|
+| @  @ 33  |
+|     @ @  |
+|  3   @3  |
+| 33  @ @  |
++----------+
+3 running in direction: 6
+3 walking in direction: 2
+3 walking in direction: 6
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 walking in direction: 4
+3 running in direction: 6
+3 running in direction: 0
+3 walking in direction: 0
+3 running in direction: 4
+3 running in direction: 6
+3 running in direction: 0
+Conflict! R3 vs O@ at (6, 0)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (7, 6)
+Fight
+3 wins!
++----------+
+|3@  3 3  3|
+| @@   33  |
+|      3  3|
+|    3     |
+|     3    |
+|        33|
+| @  @  3  |
+|    3@ @  |
+|  3   @3  |
+|  3  @ @  |
++----------+
+3 running in direction: 2
+3 walking in direction: 2
+3 walking in direction: 6
+3 reproducing in direction: 6
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 6
+Conflict! R3 vs O3 at (6, 1)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (6, 1)
+3 running in direction: 6
+O3 tries to run
+O3runs to (6, 3)
+Conflict! R@ vs O@ at (1, 0)
+Fight
+@ wins!
++----------+
+|3@  3    3|
+| @@ 3 33  |
+|     33  3|
+|      3 3 |
+|       3  |
+|         3|
+| @  @     |
+|     @ @  |
+|  3   @3  |
+| 33 3@ @ @|
++----------+
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 2
+3 running in direction: 2
+3 walking in direction: 0
+3 walking in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 2
+Conflict! R@ vs O@ at (4, 6)
+Fight
+@ wins!
++----------+
+| @  3     |
+| @@ 3333 3|
+|      3   |
+|     3  33|
+|       3 3|
+|    @     |
+| @  @     |
+| 3   @ @  |
+|3 3 33@   |
+|  3  @ @ @|
++----------+
+3 walking in direction: 2
+3 walking in direction: 2
+3 running in direction: 4
+3 running in direction: 6
+3 walking in direction: 6
+3 walking in direction: 2
+3 walking in direction: 4
+3 running in direction: 2
+3 running in direction: 0
+3 walking in direction: 6
+3 walking in direction: 6
+3 running in direction: 0
+3 running in direction: 4
+Conflict! R3 vs O@ at (5, 7)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (2, 1)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (7, 1)
+3 running in direction: 4
+R3 tries to run
+R3 runs to (5, 1)
+Conflict! R3 vs O3 at (6, 2)
+3 running in direction: 0
+O3 tries to run
+O3 fails. Location already taken.
+O3runs to (6, 2)
+Fight
+Conflict! R@ vs O@ at (9, 9)
+Fight
+@ wins!
++----------+
+| @  3 3   |
+| @3  3 3 3|
+|      3 3 |
+|        33|
+|     3    |
+| 3  @@ 3  |
+| @  @     |
+|     3 @  |
+|  3   @ 3 |
+|  3 @@ @ @|
++----------+
+3 reproducing in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+3 walking in direction: 4
+3 running in direction: 4
+3 running in direction: 6
+3 walking in direction: 2
+3 running in direction: 4
+3 running in direction: 4
+3 running in direction: 2
+Conflict! R3 vs O3 at (6, 0)
+3 running in direction: 4
+R3 tries to run
+R3 fails. Location already taken.
+R3 runs to (6, 0)
+Fight
++----------+
+| @  3 3   |
+| @3 33   3|
+|    3   3 |
+|          |
+| 3 3     3|
+|    @@ 33 |
+| @  @     |
+|  3@ 3 @  |
+|  3@ 3@ 3 |
+|    @@ @ @|
++----------+
+3 walking in direction: 0
+3 walking in direction: 4
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 4
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 0
+3 running in direction: 6
+3 running in direction: 6
++----------+
+| @   @3   |
+| @ 33    3|
+|  3  33 3 |
+|       3  |
+| 3      3 |
+| 33 @@ 3  |
+| @  @     |
+|   @ @3@  |
+| 3 @3 @ 3 |
+|    @@ @ @|
++----------+
+3 running in direction: 0
+3 walking in direction: 4
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 6
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 4
+3 walking in direction: 0
+3 running in direction: 6
+3 running in direction: 2
+Conflict! R3 vs O@ at (1, 1)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (3, 1)
+3 running in direction: 4
+O3 tries to run
+O3 fails. Location already taken.
+O3runs to (3, 1)
+Fight
+Conflict! R@ vs O3 at (6, 8)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (5, 0)
+Fight
+3 wins!
++----------+
+| @  33    |
+| 3 3      |
+| 3    3 3 |
+|     @ 3  |
+| 3    33  |
+| @  @@   3|
+| @3 @  3  |
+|   @ @3@  |
+| 3 @  3 3 |
+|    @@ @ @|
++----------+
+3 running in direction: 2
+3 running in direction: 4
+3 running in direction: 4
+3 running in direction: 4
+3 running in direction: 6
+3 running in direction: 6
+3 running in direction: 6
+3 running in direction: 0
+3 walking in direction: 2
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 0
+3 running in direction: 4
+3 running in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+3 running in direction: 6
+3 running in direction: 6
+Conflict! R3 vs O@ at (7, 7)
+Fight
+3 wins!
++----------+
+| @    3   |
+| 3   3   3|
+|    333   |
+| 3   @3   |
+| 3   33   |
+|3@  @@33  |
+| @ @@   3 |
+|   @ @ 3  |
+|  3@    @3|
+|    @@ @ @|
++----------+
+3 running in direction: 6
+3 running in direction: 4
+3 running in direction: 6
+3 running in direction: 6
+3 walking in direction: 2
+3 walking in direction: 6
+3 running in direction: 2
+3 walking in direction: 4
+3 running in direction: 0
+3 walking in direction: 0
+3 running in direction: 2
+3 running in direction: 2
++----------+
+| @3  33  3|
+| 3    3  3|
+|     3    |
+|   @ @    |
+| 3  333  3|
+| @3 @@3 3 |
+| @ @@   3 |
+|   @ @3   |
+|   @  3 @ |
+|    @@ @ @|
++----------+
+3 running in direction: 4
+3 walking in direction: 2
+3 running in direction: 2
+3 running in direction: 6
+3 walking in direction: 4
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 0
+3 running in direction: 6
+3 walking in direction: 6
+3 running in direction: 6
+3 running in direction: 0
+Conflict! R3 vs O@ at (4, 5)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (5, 3)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (5, 3)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (8, 8)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (8, 8)
+Fight
+3 wins!
++----------+
+| @33  3   |
+|  3      3|
+|     3  @ |
+|   @ 33   |
+| 3 3      |
+| @3 3@3 3 |
+| @ @@    3|
+|   @ @    |
+|   @  3 33|
+|    @@ @@@|
++----------+
+3 running in direction: 2
+3 walking in direction: 2
+3 running in direction: 0
+3 running in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 6
+3 running in direction: 0
+Conflict! R3 vs O@ at (3, 8)
+Fight
+3 wins!
+Conflict! R3 vs O3 at (6, 6)
+Fight
+3 wins!
++----------+
+| @       3|
+|3 3       |
+| @   3  @ |
+|   @333   |
+| 3 3      |
+|3@   @  3 |
+| @ @@ 3   |
+|   @ @    |
+|33 3  3@ 3|
+|    @@ @@@|
++----------+
+3 running in direction: 0
+3 walking in direction: 4
+3 running in direction: 6
+3 walking in direction: 4
+3 reproducing in direction: 6
+3 running in direction: 4
+3 walking in direction: 2
+3 running in direction: 6
+3 walking in direction: 2
+3 running in direction: 6
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 4
++----------+
+|3@      33|
+| @        |
+| @  3   @ |
+|   @ 3@   |
+| 3 3  3   |
+| @   @3   |
+| @ @@     |
+|   @ @  3 |
+| 3 3   @ 3|
+|   3@@ @@@|
++----------+
+3 walking in direction: 0
+3 walking in direction: 4
+3 walking in direction: 2
+3 walking in direction: 6
+3 running in direction: 6
+3 walking in direction: 6
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 4
+Conflict! R3 vs O3 at (1, 2)
+Fight
+3 wins!
+Conflict! R3 vs O@ at (1, 2)
+Fight
+3 wins!

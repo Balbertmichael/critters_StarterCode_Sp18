@@ -1,0 +1,2716 @@
++------------------------------+
+|                            3 |
+|      3 4                     |
+|           C       1          |
+|           C    1             |
+|             4                |
+|      C         4        2    |
+|                  3           |
+|                     3   3    |
+|C                    1        |
+|       4                      |
+|             4     3         2|
+|                        1  2  |
+|                       2      |
+|    34             1     3    |
+|                      C       |
+|                       1    2 |
+|                   3          |
+|   2                  2       |
+|   4      4   2            C4 |
+|    4  1                      |
+|    4  1       C      C44     |
+|4            4         4     2|
+|                     41       |
+|                              |
+|                  4           |
+|          4       C           |
+|                  C        2  |
+|1                             |
+|                              |
+|   34                         |
++------------------------------+
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 3
+C walking in direction: 3
+C walking in direction: 2
+C walking in direction: 6
+C walking in direction: 7
+C walking in direction: 2
+C walking in direction: 7
+C walking in direction: 2
+2 running in direction: 0
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 6
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 3
+3 running in direction: 4
+3 walking in direction: 2
+3 running in direction: 4
+3 walking in direction: 2
+3 walking in direction: 2
+3 running in direction: 6
+3 running in direction: 6
+3 walking in direction: 6
+4 walking in direction: 2
+4 reproducing in direction: 3
+4 walking in direction: 1
+4 reproducing in direction: 7
+4 walking in direction: 7
+4 reproducing in direction: 5
+4 walking in direction: 4
+4 reproducing in direction: 1
+4 walking in direction: 3
+4 reproducing in direction: 4
+4 walking in direction: 3
+4 reproducing in direction: 2
+4 walking in direction: 4
+4 reproducing in direction: 4
+4 walking in direction: 4
+4 reproducing in direction: 3
+4 walking in direction: 7
+4 reproducing in direction: 1
+4 walking in direction: 6
+4 reproducing in direction: 5
+4 walking in direction: 7
+4 reproducing in direction: 0
+4 walking in direction: 4
+4 reproducing in direction: 1
+4 walking in direction: 7
+4 reproducing in direction: 6
+4 walking in direction: 2
+4 reproducing in direction: 2
+4 walking in direction: 2
+4 reproducing in direction: 4
+4 walking in direction: 7
+4 reproducing in direction: 5
+4 walking in direction: 3
+4 reproducing in direction: 4
+4 walking in direction: 1
+4 reproducing in direction: 7
+4 walking in direction: 7
+4 reproducing in direction: 5
+4 walking in direction: 5
+4 reproducing in direction: 7
+Conflict! R1 vs O3 at (21, 8)
+1 walking in direction: 1
+R1 tries to run
+R1 runs to (22, 7)
+Conflict! R4 vs O4 at (3, 19)
+Fight
+4 wins!
++------------------------------+
+|    4   4                     |
+|   4      C                   |
+|          C        1          |
+|      3         1 @           |
+|                         @    |
+|     C        4            2  |
+|             4   44           |
+|C                     13      |
+|       4             3        |
+|      4     44                |
+| 2                 3          |
+|    4                   1     |
+|    4                    3    |
+|                   1      2  2|
+|                       2      |
+|    32               C21      |
+|            2    3            |
+|   4                         4|
+|4 4     44                    |
+|  44   1    4  C      44   2C |
+| 4     1     4           4    |
+|  4                    C4     |
+|                      1 4     |
+|                    4  4      |
+|                     4        |
+|                  C4          |
+|           4      C4          |
+|1         4                   |
+|   3                       2  |
+|        4                   3 |
++------------------------------+
+C walking in direction: 5
+C walking in direction: 5
+C walking in direction: 2
+C walking in direction: 0
+C walking in direction: 0
+C walking in direction: 3
+C walking in direction: 3
+C walking in direction: 3
+C walking in direction: 2
+C walking in direction: 4
+2 running in direction: 7
+2 running in direction: 5
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 7
+2 running in direction: 5
+3 walking in direction: 2
+3 walking in direction: 2
+3 walking in direction: 0
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 6
+3 running in direction: 2
+3 walking in direction: 6
+4 walking in direction: 5
+4 reproducing in direction: 3
+4 walking in direction: 6
+4 reproducing in direction: 7
+4 walking in direction: 1
+4 reproducing in direction: 4
+4 walking in direction: 7
+4 reproducing in direction: 2
+4 walking in direction: 4
+4 reproducing in direction: 1
+4 walking in direction: 7
+4 reproducing in direction: 5
+4 walking in direction: 5
+4 reproducing in direction: 4
+4 walking in direction: 5
+4 reproducing in direction: 2
+4 walking in direction: 4
+4 reproducing in direction: 1
+4 walking in direction: 4
+4 reproducing in direction: 7
+4 walking in direction: 3
+4 reproducing in direction: 5
+4 walking in direction: 7
+4 reproducing in direction: 7
+4 walking in direction: 7
+4 reproducing in direction: 3
+4 walking in direction: 2
+4 reproducing in direction: 6
+4 walking in direction: 1
+4 reproducing in direction: 4
+4 walking in direction: 7
+4 reproducing in direction: 0
+4 walking in direction: 4
+4 reproducing in direction: 1
+4 walking in direction: 7
+4 reproducing in direction: 0
+4 walking in direction: 3
+4 reproducing in direction: 0
+4 walking in direction: 5
+4 reproducing in direction: 3
+4 walking in direction: 5
+4 reproducing in direction: 4
+4 walking in direction: 1
+4 reproducing in direction: 1
+4 walking in direction: 6
+4 reproducing in direction: 3
+4 walking in direction: 1
+4 reproducing in direction: 6
+4 walking in direction: 2
+4 reproducing in direction: 2
+4 walking in direction: 4
+4 reproducing in direction: 4
+4 walking in direction: 2
+4 reproducing in direction: 6
+4 walking in direction: 5
+4 reproducing in direction: 6
+4 walking in direction: 5
+4 reproducing in direction: 2
+4 walking in direction: 5
+4 reproducing in direction: 6
+4 walking in direction: 0
+4 reproducing in direction: 7
+4 walking in direction: 2
+4 reproducing in direction: 1
+4 walking in direction: 0
+4 reproducing in direction: 6
+4 walking in direction: 6
+4 reproducing in direction: 7
+4 walking in direction: 4
+4 reproducing in direction: 5
+4 walking in direction: 2
+4 reproducing in direction: 4
+4 walking in direction: 6
+4 reproducing in direction: 4
+4 walking in direction: 5
+4 reproducing in direction: 0
+4 walking in direction: 3
+4 reproducing in direction: 0
++------------------------------+
+|   4    44C                   |
+|  4 4 3         @             |
+|  4        C       1          |
+|                1 @           |
+|                         @    |
+|                4             |
+|    C    @  4  44 3           |
+| C         4     4    1 3    2|
+|      4      44  4            |
+|    4  4             3        |
+|   24  4    4    3            |
+|             4          1     |
+|                         2    |
+|     4             1     3    |
+|    4                         |
+|    3            3     1  2  2|
+|                    C        4|
+|  4 4  2            2       4 |
+| 44  444  2            4   C  |
+|4 44   44 4   C       44 2   4|
+|  4 4  1   4           C4     |
+| 4          4          44     |
+|444                44 1 4     |
+|                    44   44   |
+|                 C  4 44      |
+|           44    C 4          |
+|           4        4         |
+|1                             |
+| 3                          32|
+|        44                    |
++------------------------------+
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 2
+C walking in direction: 7
+C walking in direction: 3
+C walking in direction: 1
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 1
+C walking in direction: 3
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 5
+2 running in direction: 6
+2 running in direction: 2
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 1
+2 running in direction: 2
+3 running in direction: 0
+3 running in direction: 6
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 4
+3 running in direction: 6
+3 running in direction: 2
+4 walking in direction: 0
+4 reproducing in direction: 4
+4 walking in direction: 0
+4 reproducing in direction: 2
+4 walking in direction: 7
+4 reproducing in direction: 1
+4 walking in direction: 3
+4 reproducing in direction: 7
+4 walking in direction: 7
+4 reproducing in direction: 5
+4 walking in direction: 0
+4 reproducing in direction: 2
+4 walking in direction: 6
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 1
+4 walking in direction: 3
+4 reproducing in direction: 1
+4 walking in direction: 5
+4 reproducing in direction: 5
+4 walking in direction: 7
+4 reproducing in direction: 4
+4 walking in direction: 6
+4 reproducing in direction: 4
+4 walking in direction: 6
+4 reproducing in direction: 6
+4 walking in direction: 1
+4 reproducing in direction: 0
+4 walking in direction: 4
+4 reproducing in direction: 4
+4 walking in direction: 6
+4 reproducing in direction: 7
+4 walking in direction: 3
+4 reproducing in direction: 1
+4 walking in direction: 4
+4 reproducing in direction: 0
+4 walking in direction: 1
+4 reproducing in direction: 2
+4 walking in direction: 3
+4 reproducing in direction: 0
+4 walking in direction: 0
+4 reproducing in direction: 6
+4 walking in direction: 6
+4 reproducing in direction: 5
+4 walking in direction: 6
+4 reproducing in direction: 4
+4 walking in direction: 7
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 6
+4 walking in direction: 5
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 2
+4 walking in direction: 4
+4 reproducing in direction: 2
+4 walking in direction: 0
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 6
+4 walking in direction: 3
+4 reproducing in direction: 2
+4 walking in direction: 7
+4 reproducing in direction: 7
+4 walking in direction: 6
+4 reproducing in direction: 2
+4 walking in direction: 0
+4 reproducing in direction: 5
+4 walking in direction: 6
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 2
+4 walking in direction: 1
+4 reproducing in direction: 2
+4 walking in direction: 3
+4 reproducing in direction: 1
+4 walking in direction: 3
+4 reproducing in direction: 0
+4 walking in direction: 1
+4 reproducing in direction: 3
+4 walking in direction: 2
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 0
+4 walking in direction: 0
+4 reproducing in direction: 0
+4 walking in direction: 2
+4 reproducing in direction: 3
+4 walking in direction: 6
+4 reproducing in direction: 6
+4 walking in direction: 0
+4 reproducing in direction: 5
+4 walking in direction: 7
+4 reproducing in direction: 2
+4 walking in direction: 7
+4 reproducing in direction: 7
+4 walking in direction: 1
+4 reproducing in direction: 3
+4 walking in direction: 0
+4 reproducing in direction: 3
+4 walking in direction: 7
+4 reproducing in direction: 3
+4 walking in direction: 3
+4 reproducing in direction: 3
+4 walking in direction: 4
+4 reproducing in direction: 5
+4 walking in direction: 3
+4 reproducing in direction: 6
+4 walking in direction: 3
+4 reproducing in direction: 7
+4 walking in direction: 6
+4 reproducing in direction: 5
+4 walking in direction: 5
+4 reproducing in direction: 2
+4 walking in direction: 3
+4 reproducing in direction: 3
+4 walking in direction: 2
+4 reproducing in direction: 7
+4 walking in direction: 1
+4 reproducing in direction: 5
+4 walking in direction: 5
+4 reproducing in direction: 3
+4 walking in direction: 0
+4 reproducing in direction: 0
+4 walking in direction: 5
+4 reproducing in direction: 7
+4 walking in direction: 3
+4 reproducing in direction: 6
+4 walking in direction: 6
+4 reproducing in direction: 3
+4 walking in direction: 5
+4 reproducing in direction: 0
+4 walking in direction: 4
+4 reproducing in direction: 7
+4 walking in direction: 5
+4 reproducing in direction: 2
+4 walking in direction: 6
+4 reproducing in direction: 3
+4 walking in direction: 5
+4 reproducing in direction: 0
+4 walking in direction: 5
+4 reproducing in direction: 4
+4 walking in direction: 2
+4 reproducing in direction: 1
+4 walking in direction: 2
+4 reproducing in direction: 6
+4 walking in direction: 4
+4 reproducing in direction: 4
+4 walking in direction: 0
+4 reproducing in direction: 5
+4 walking in direction: 5
+4 reproducing in direction: 7
+4 walking in direction: 6
+4 reproducing in direction: 5
+4 walking in direction: 6
+4 reproducing in direction: 2
+Conflict! RC vs O3 at (19, 15)
+Fight
+C wins!
+Conflict! RC vs OC at (18, 24)
+Fight
+C wins!
+Conflict! RC vs O4 at (18, 24)
+Fight
+C wins!
+Conflict! RC vs O4 at (24, 19)
+Fight
+C wins!
+Conflict! R1 vs O3 at (22, 7)
+1 walking in direction: 0
+R1 tries to run
+R1 runs to (23, 7)
+Conflict! R2 vs O4 at (25, 21)
+Fight
+2 wins!
+Conflict! R4 vs O4 at (2, 21)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (22, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (3, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (6, 19)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (13, 10)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 18)
+Fight
+4 wins!
++------------------------------+
+|     4 4 4                  32|
+| 44   4         @             |
+| 4 4               1          |
+|      3     C   1 @           |
+|                  3      @    |
+|               4           2  |
+|C    C   @ 4    44            |
+|         44 4  44     31      |
+|   4   44   44  4             |
+|   4  4 44       4   3        |
+|   4  44     4 3              |
+|   4        44          1     |
+|   2  4                       |
+|      4            1     3   2|
+|                       2      |
+|   44    2         C   1    4 |
+| 4 44     2           4    4  |
+| 4                    242 C  4|
+| 44  4    44 C         4    4 |
+| 44444444 444          4C     |
+| 4444  44         4 4 44    4 |
+| 44  4      44     44 44 2   4|
+|4 4                44 44 @4   |
+|  4              4   4  44    |
+|                  C  4   4    |
+|          44  4   44   4      |
+|           4 4      4 4       |
+|1          @        44        |
+| 3       44         4         |
+|    4    4C                   |
++------------------------------+
+C walking in direction: 2
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 5
+C walking in direction: 0
+C walking in direction: 3
+C walking in direction: 6
+C walking in direction: 5
+C walking in direction: 6
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 2
+2 running in direction: 1
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 0
+3 walking in direction: 0
+3 walking in direction: 4
+3 running in direction: 4
+3 walking in direction: 2
+3 walking in direction: 4
+3 walking in direction: 2
+3 walking in direction: 2
+4 walking in direction: 1
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 2
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 6
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 0
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 4
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 2
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 2
+4 walking in direction: 2
+4 walking in direction: 4
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 4
+Conflict! R1 vs O4 at (7, 19)
+1 walking in direction: 1
+R1 tries to run
+R1 runs to (8, 18)
+Conflict! R1 vs O4 at (22, 22)
+1 walking in direction: 0
+R1 tries to run
+R1 fails. Location already taken.
+R1 runs to (22, 22)
+Fight
+Conflict! R2 vs O4 at (24, 19)
+Fight
+2 wins!
+Conflict! R3 vs O4 at (2, 15)
+Fight
+3 wins!
+Conflict! R4 vs O4 at (2, 21)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (16, 6)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (10, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (10, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (7, 11)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (7, 11)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 18)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 18)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (13, 7)
+Fight
+4 wins!
+Conflict! R@ vs O4 at (9, 6)
+Fight
+4 wins!
+Conflict! R@ vs O4 at (9, 6)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (16, 7)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (13, 8)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (0, 16)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (24, 23)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (24, 23)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (2, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 18)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (9, 0)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (9, 6)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (20, 23)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (20, 23)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (7, 11)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (15, 9)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (2, 16)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (23, 23)
+Fight
+4 wins!
++------------------------------+
+|  4      4                 2 3|
+|  4  4 4        @             |
+|444   3            1          |
+|  4             1 @           |
+|           C      3      @    |
+|    C      4  44  4          2|
+| C       4      4             |
+|             4  44   3 1      |
+|             4   4   3        |
+|   44 4  44 44 4              |
+|  4  4  4  4 3  4             |
+|       4    4           1    2|
+|  4                           |
+|      4 @          1     3    |
+|     2 4           C     2    |
+|  34                   12  4 4|
+|4 4 4       @            C    |
+|4   44 2              4       |
+| 4 4 4  1  4           44  4  |
+|44 44444 4 4 C     4  4 2  2  |
+|444 4 41  44 44    4  4C      |
+|  4 4 4             4 44  4 4 |
+| 4 4              4 4 44 @   4|
+|                    4  444    |
+| 4       4 4    4  4 44  4    |
+|           44     C  4        |
+|             44    4 4        |
+|13      444@        4 4       |
+|         44                   |
+|   4 4  4  C         4        |
++------------------------------+
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 2
+C walking in direction: 3
+C walking in direction: 1
+C walking in direction: 3
+C walking in direction: 1
+C walking in direction: 7
+C walking in direction: 1
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 0
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 1
+2 running in direction: 4
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 5
+3 walking in direction: 0
+3 walking in direction: 2
+3 running in direction: 2
+3 running in direction: 4
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 0
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 2
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 2
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 2
+4 walking in direction: 6
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 2
+4 reproducing in direction: 6
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 2
+4 walking in direction: 2
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 2
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 6
+Conflict! RC vs O4 at (19, 24)
+Fight
+C wins!
+Conflict! R1 vs O4 at (8, 18)
+1 walking in direction: 1
+R1 tries to run
+R1 runs to (9, 17)
+Conflict! R1 vs O4 at (22, 22)
+1 walking in direction: 2
+R1 tries to run
+R1 fails. Location already taken.
+R1 runs to (22, 22)
+Fight
+Conflict! R4 vs O4 at (13, 25)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (22, 18)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (4, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (20, 25)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (20, 21)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (22, 25)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (23, 17)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 20)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (24, 22)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (10, 10)
+Fight
+4 wins!
++------------------------------+
+|  4   4 4                2   3|
+| 4    4 4  @    @             |
+| 44  3             1         4|
+| 4        C     1 @           |
+|  4        4      4      @    |
+|  CC     4   4  4 3           |
+|         4    4     @         |
+|              4  4    31     2|
+|   44      4    44     3      |
+|   4         3    4           |
+|     44   444 4  4            |
+| 2   4 4                13    |
+|       2     4                |
+| 4   4 4@          1  2       |
+|  4                       42 4|
+|34                C    1C    4|
+|     4      @                 |
+|4 44     1 4           4     2|
+|44 44 4 4 2   C       4       |
+| 4 4 44  2 4  4      42     4 |
+|44  44 1  4 4       4      4  |
+| 4     4 4  4       4 4 C     |
+|   4             4   44 4@4 4 |
+|4   4       4          4      |
+|        4      4   C  4 44    |
+|             4      4 4       |
+|       4 44 4     4           |
+|13         @4      4          |
+|        4 4C         44       |
+|          4                   |
++------------------------------+
+C walking in direction: 7
+C walking in direction: 7
+C walking in direction: 0
+C walking in direction: 1
+C walking in direction: 4
+C walking in direction: 2
+C walking in direction: 5
+C walking in direction: 3
+C walking in direction: 5
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 5
+2 running in direction: 3
+2 running in direction: 4
+2 running in direction: 4
+2 running in direction: 3
+2 running in direction: 0
+2 running in direction: 1
+2 running in direction: 6
+3 walking in direction: 6
+3 running in direction: 4
+3 running in direction: 0
+3 walking in direction: 0
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 6
+3 running in direction: 4
+4 walking in direction: 5
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 2
+4 walking in direction: 1
+4 walking in direction: 4
+4 walking in direction: 1
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 0
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 2
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 6
+4 reproducing in direction: 7
+4 walking in direction: 0
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 0
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 6
+4 reproducing in direction: 7
+Conflict! R3 vs O4 at (15, 9)
+Fight
+3 wins!
+Conflict! R4 vs O4 at (6, 12)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (12, 9)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (12, 9)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (5, 9)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (17, 9)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (13, 6)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (4, 18)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (7, 1)
+Fight
+4 wins!
+Conflict! R4 vs O@ at (12, 16)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (11, 26)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (12, 9)
+Fight
+4 wins!
+Conflict! R@ vs O4 at (25, 22)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (1, 16)
+Fight
+4 wins!
++------------------------------+
+| 4                            |
+|4      4 4 @    @            3|
+|           C       1          |
+|4    3          1 @          4|
+|                 4       @    |
+| C        4     3             |
+|    C    4   4  4   @         |
+|         44         3  1      |
+|  4       4  4         3      |
+| 2   4    4 4  3  4           |
+|     2                        |
+|              4        31    2|
+|      4                       |
+|  4     @    4     1    2   4 |
+|                        C     |
+|4                      1      |
+|34          4      C     2  4 |
+|4  44  4 1 2        2      2  |
+|    4   @             4       |
+|   4   4     C      4  4   4  |
+|4 44   1  24           C      |
+|   4         4       4 4   4 4|
+|    4 4 4           4 1  4   4|
+|              4     4   4     |
+|   4        4 4         44    |
+|                  C           |
+|           4     4  44        |
+|1 3     4  4         4 4      |
+|           4C       4  2      |
+|         @                    |
++------------------------------+
+C walking in direction: 6
+C walking in direction: 1
+C walking in direction: 0
+C walking in direction: 7
+C walking in direction: 7
+C walking in direction: 2
+C walking in direction: 5
+C walking in direction: 7
+C walking in direction: 3
+2 running in direction: 6
+2 running in direction: 5
+2 running in direction: 4
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 4
+2 running in direction: 2
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 0
+3 walking in direction: 2
+3 walking in direction: 2
+3 running in direction: 2
+3 running in direction: 0
+3 running in direction: 4
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 7
+4 reproducing in direction: 3
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 6
+4 walking in direction: 0
+4 walking in direction: 5
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 2
+4 walking in direction: 4
+4 walking in direction: 1
+4 walking in direction: 0
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 4
+4 reproducing in direction: 2
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 0
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 0
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 2
+Conflict! RC vs O4 at (24, 21)
+Conflict! R1 vs O4 at (22, 22)
+1 walking in direction: 5
+R1 tries to run
+R1 runs to (21, 23)
+Conflict! R2 vs O2 at (1, 11)
+Fight
+2 wins!
+Conflict! R4 vs O4 at (21, 27)
+Conflict! R4 vs O4 at (9, 7)
+Fight
+4 wins!
+Conflict! R4 vs O4 at (28, 20)
+Conflict! R4 vs O4 at (2, 19)
++------------------------------+
+|                              |
+|           @    @            3|
+|          4        1          |
+|       3    C   1 @           |
+|                         @    |
+|     C          3             |
+|  C                 @         |
+|         44   4     3  1      |
+|          4    3   4 3        |
+|             4                |
+|     4       4 4       3      |
+| 2                    2 1     |
+|     2                        |
+|        @          1    C     |
+|3                             |
+|         2             1   4 4|
+| 4          4          2      |
+| 4       1   4     C     2    |
+|        @   C                 |
+|   4              2           |
+|       14   2                 |
+|   4                    4    4|
+|  4      4            4 4     |
+|              @      1 4 4    |
+|                              |
+|  4                           |
+|                 C     @      |
+|1 3        @                  |
+|             C                |
+|         @                    |
++------------------------------+
+C walking in direction: 6
+C walking in direction: 3
+C walking in direction: 3
+C walking in direction: 6
+C walking in direction: 6
+C walking in direction: 0
+C walking in direction: 0
+C walking in direction: 3
+C walking in direction: 0
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 7
+2 running in direction: 4
+2 running in direction: 6
+2 running in direction: 4
+2 running in direction: 5
+2 running in direction: 7
+2 running in direction: 5
+3 walking in direction: 0
+3 walking in direction: 0
+3 walking in direction: 4
+3 walking in direction: 2
+3 walking in direction: 6
+3 running in direction: 6
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 2
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 7
+4 walking in direction: 6
+4 walking in direction: 1
+4 walking in direction: 1
+4 reproducing in direction: 2
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 1
+4 walking in direction: 5
+4 walking in direction: 2
+4 reproducing in direction: 2
+4 walking in direction: 7
+4 walking in direction: 4
+4 walking in direction: 7
+4 walking in direction: 3
+4 reproducing in direction: 7
+4 walking in direction: 1
+4 walking in direction: 1
+4 reproducing in direction: 1
+4 walking in direction: 7
+4 reproducing in direction: 0
+Conflict! R3 vs O4 at (0, 14)
+3 running in direction: 6
+R3 tries to run
+R3 runs to (0, 16)
+Conflict! R4 vs O4 at (9, 21)
+Conflict! R4 vs O4 at (14, 10)
++------------------------------+
+|                              |
+|3          @    @             |
+|                   1          |
+|       3        1 @           |
+|    C       C            @    |
+|                              |
+|        4  4    3   @         |
+|  C      4          3  1      |
+|                3             |
+|           4           3      |
+|                     3        |
+|    4                   1    2|
+|              @               |
+|        @          12    C    |
+|       2      4               |
+|             44        1      |
+|3             4               |
+|         1 2    2             |
+|4       @    C     C     2    |
+|                         2    |
+|       1               C4     |
+|         4              4     |
+| 4  4     2              44  4|
+|              @      1  4     |
+|                              |
+|                              |
+|                  C @2 @      |
+|13         @C                 |
+|                              |
+|         @                    |
++------------------------------+
+C walking in direction: 1
+C walking in direction: 7
+C walking in direction: 1
+C walking in direction: 0
+C walking in direction: 7
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 7
+C walking in direction: 2
+2 running in direction: 7
+2 running in direction: 4
+2 running in direction: 1
+2 running in direction: 2
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 7
+2 running in direction: 0
+3 running in direction: 0
+3 walking in direction: 4
+3 running in direction: 4
+3 running in direction: 4
+3 running in direction: 4
+3 running in direction: 6
+3 walking in direction: 0
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 2
+4 walking in direction: 3
+4 walking in direction: 3
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 6
+4 walking in direction: 0
+Conflict! RC vs O4 at (24, 21)
+Fight
+C wins!
+Conflict! R3 vs O4 at (7, 5)
+Fight
+3 wins!
++------------------------------+
+|                @             |
+|  3        @    @             |
+|                   1          |
+|                1 @           |
+|             C           @    |
+|     C 3                      |
+|                 3  @         |
+|        4  4       3   1      |
+|   C          3               |
+|            4        3       2|
+|                     3        |
+|                  2     1     |
+|         2    @         C     |
+|        @          1          |
+|            4                 |
+|             44        1      |
+|             4              3 |
+|         1   C      C        4|
+|        @              2      |
+|             2    2        2  |
+|       1               4      |
+|                        C    4|
+|   4        2              4  |
+| 4            @      1   4    |
+|                   2          |
+|                              |
+|             C     C@  @      |
+|13 @       @                  |
+|                              |
+|         @                    |
++------------------------------+
+C walking in direction: 1
+C walking in direction: 6
+C walking in direction: 2
+C walking in direction: 5
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 3
+C walking in direction: 4
+C walking in direction: 1
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 7
+2 running in direction: 2
+2 running in direction: 1
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 4
+3 running in direction: 2
+3 walking in direction: 6
+3 walking in direction: 2
+3 walking in direction: 2
+3 walking in direction: 6
+3 running in direction: 0
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 1
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 1
+4 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 2
+4 walking in direction: 1
++------------------------------+
+|                @             |
+|           @    @             |
+|                   1          |
+|                1 @           |
+|                         @    |
+|       3    C                 |
+|@    C              @         |
+|  C         4    3 3   1      |
+|         4  4                 |
+|              3   2  3        |
+|                       3      |
+| 2       @              1     |
+|              @          C    |
+|        @          1          |
+|         2    4               |
+|             44        1    3 |
+|              C      C        |
+|         1  4              2  |
+|        @                     |
+|                    2         |
+|       1               2      |
+|           2           C4   4 |
+|          2          2    4   |
+|              @      1        |
+|                              |
+|             C    C           |
+| 3                  @  @      |
+|1  @       @                  |
+|                              |
+|  3      @                    |
++------------------------------+
+C walking in direction: 7
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 4
+C walking in direction: 2
+C walking in direction: 5
+C walking in direction: 7
+C walking in direction: 6
+C walking in direction: 1
+2 running in direction: 1
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 3
+2 running in direction: 6
+2 running in direction: 0
+2 running in direction: 7
+3 walking in direction: 2
+3 walking in direction: 2
+3 walking in direction: 6
+3 running in direction: 4
+4 walking in direction: 4
+4 walking in direction: 5
+4 walking in direction: 5
+4 walking in direction: 1
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 7
+4 walking in direction: 0
+Conflict! RC vs O2 at (22, 17)
+Fight
+C wins!
+Conflict! RC vs O4 at (23, 22)
+Fight
+C wins!
+Conflict! RC vs O4 at (15, 15)
+Fight
+C wins!
++------------------------------+
+|                @             |
+|           @    @             |
+|                   1          |
+|                1 @           |
+|                         @    |
+|    C3     C                  |
+|@ C          4     3@         |
+|                 @     1      |
+|              3               |
+|          44         3     @  |
+|                       3      |
+|   2     @        2     1     |
+|              @               |
+|        @          1    C     |
+|                              |
+|               C       1 2  3 |
+|           2 44               |
+|         1            C       |
+|        @                2    |
+|                              |
+|       1           2          |
+|             2               4|
+|                       C      |
+|              @      1     4  |
+|            2                 |
+|              C               |
+|                   C@  @      |
+|13 @       @                  |
+|                              |
+|  3      @                    |
++------------------------------+
+C walking in direction: 7
+C walking in direction: 6
+C walking in direction: 5
+C walking in direction: 6
+C walking in direction: 6
+C walking in direction: 4
+C walking in direction: 6
+C walking in direction: 0
+C walking in direction: 2
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 6
+2 running in direction: 6
+2 running in direction: 2
+2 running in direction: 0
+2 running in direction: 7
+3 running in direction: 0
+3 running in direction: 2
+3 running in direction: 2
+3 running in direction: 0
+3 walking in direction: 0
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 0
+4 walking in direction: 1
+4 walking in direction: 3
+4 walking in direction: 3
+Conflict! R3 vs O4 at (14, 6)
+Fight
+3 wins!
++------------------------------+
+|            @   @             |
+|           @    @             |
+|                   1          |
+|                1 @       @   |
+|                         @    |
+|     3                        |
+|@   C      C  3    3@         |
+|  C              @3    1      |
+|                              |
+|                  2    3   @  |
+|                       3      |
+|     2   @              1     |
+|              @               |
+|        @          1   C      |
+|             2 C              |
+|                       1    3 |
+|                       2      |
+|         1               2    |
+|        @              C      |
+|                              |
+|       1                      |
+|               2              |
+|                   2    C     |
+|              @      1        |
+|                              |
+| 3                            |
+|             C2     @  @      |
+|1  @       @       C          |
+|                              |
+|    3    @                    |
++------------------------------+
+C walking in direction: 3
+C walking in direction: 1
+C walking in direction: 5
+C walking in direction: 0
+C walking in direction: 7
+C walking in direction: 7
+C walking in direction: 4
+C walking in direction: 7
+C walking in direction: 5
+2 running in direction: 2
+2 running in direction: 5
+2 running in direction: 3
+2 running in direction: 5
+2 running in direction: 0
+2 running in direction: 3
+2 running in direction: 2
+2 running in direction: 4
+3 walking in direction: 4
+3 running in direction: 0
+3 walking in direction: 0
+3 walking in direction: 0
+3 running in direction: 2
+3 walking in direction: 2
+3 walking in direction: 2
+3 walking in direction: 4
++------------------------------+
+|            @   @             |
+|           @    @             |
+|                   1          |
+|                1 @       @   |
+|     3                   @    |
+|     C                        |
+|@           C 3   3 @3        |
+|                2@     1      |
+|   C                          |
+|   2                    3  @  |
+|                      3       |
+|         @              1     |
+|              @               |
+|        @          1        3 |
+|                  @    2C     |
+|              C        1      |
+|           2                  |
+|         1            C       |
+|        @ @                   |
+|               2       2      |
+|       1                      |
+|                              |
+|                     2        |
+|              @      1   C    |
+|                              |
+|  3                           |
+|            2       @  @      |
+|1  @       @C     C           |
+|                              |
+|   3     @                    |
++------------------------------+
+C walking in direction: 7
+C walking in direction: 6
+C walking in direction: 1
+C walking in direction: 0
+C walking in direction: 3
+C walking in direction: 4
+C walking in direction: 3
+C walking in direction: 6
+C walking in direction: 4
+2 running in direction: 7
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 0
+2 running in direction: 0
+2 running in direction: 0
+2 running in direction: 0
+2 running in direction: 7
+3 running in direction: 0
+3 running in direction: 6
+3 running in direction: 2
+3 walking in direction: 0
+3 running in direction: 6
++------------------------------+
+|            @   @             |
+|           @    @    @        |
+|     3             1          |
+|                1 @       @   |
+|                         @    |
+|                              |
+|@    C       C     3@  3      |
+|  C              @2    1      |
+|              3               |
+|     2                  3  @  |
+|                              |
+|         @              1     |
+|              @       3       |
+|        @          1     @  3 |
+|                  @    C      |
+|             C         1      |
+|                         2    |
+|         1                    |
+|        @ @  2         C      |
+|                 2       2    |
+|       1                      |
+|                              |
+|                       2      |
+|              @      1        |
+|                         C    |
+|  3                           |
+|             C   C  @  @      |
+|1  @       @                  |
+|              2               |
+|   3     @                    |
++------------------------------+
+C walking in direction: 0
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 2
+C walking in direction: 4
+C walking in direction: 0
+C walking in direction: 6
+C walking in direction: 4
+C walking in direction: 0
+2 running in direction: 3
+2 running in direction: 5
+2 running in direction: 3
+2 running in direction: 2
+2 running in direction: 7
+2 running in direction: 7
+2 running in direction: 0
+2 running in direction: 6
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 4
+3 running in direction: 0
+3 running in direction: 2
+3 walking in direction: 6
++------------------------------+
+|            @ 2 @             |
+|           @    @    @        |
+|       3           1          |
+|                1 @       @   |
+|                   3     @    |
+|             C                |
+|@                   @ 3       |
+| C 2C            @     1      |
+|              3               |
+|                    2   3  @  |
+|                              |
+|  @      @              1     |
+|              @               |
+|        @          1  3  @3   |
+|                  @    2C     |
+|              C        1      |
+|                              |
+|         1               2    |
+|        @ @             C     |
+|                   2          |
+|       1   2                  |
+|             @                |
+|                              |
+|              @      1        |
+|                        C2    |
+|                              |
+|  3         C       @  @      |
+|1  @       @     C            |
+|                              |
+|   3     @                    |
++------------------------------+
+C walking in direction: 4
+C walking in direction: 5
+C walking in direction: 0
+C walking in direction: 0
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 2
+C walking in direction: 3
+C walking in direction: 5
+2 running in direction: 2
+2 running in direction: 1
+2 running in direction: 7
+2 running in direction: 1
+2 running in direction: 0
+2 running in direction: 7
+2 running in direction: 1
+2 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 0
+3 running in direction: 4
+3 running in direction: 0
+3 running in direction: 0
+3 running in direction: 4
++------------------------------+
+|   3        @   @             |
+|           @    @    @        |
+|         3         1          |
+|                1 @       @   |
+|                   3     @    |
+|              C               |
+|@                   @   3     |
+|                 @     1      |
+|C  C          3               |
+|     2                  3  @  |
+|                              |
+|  @      @            2 1     |
+|              @        2      |
+|        @          13    @  3 |
+|     @            @    C      |
+|            @          1   2  |
+|             C                |
+|         1           2        |
+|        @ @  2         C      |
+|                              |
+|       1                      |
+|             @                |
+|                              |
+|              @      1 C      |
+|                           2  |
+|                              |
+|3            C   C  @  @      |
+|1  @       @                  |
+|              2               |
+|         @                    |
++------------------------------+
+C walking in direction: 6
+C walking in direction: 7
+C walking in direction: 1
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 6
+C walking in direction: 6
+C walking in direction: 3
+C walking in direction: 7
+2 running in direction: 3
+2 running in direction: 4
+2 running in direction: 5
+2 running in direction: 7
+2 running in direction: 3
+2 running in direction: 1
+2 running in direction: 5
+2 running in direction: 5
+3 running in direction: 6
+3 running in direction: 2
+3 running in direction: 6
+3 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 0
+3 walking in direction: 6
+Conflict! RC vs O1 at (23, 15)
+1 walking in direction: 6
+O1 tries to run
+O1runs to (23, 16)
+Conflict! R2 vs O3 at (24, 9)
+3 running in direction: 4
+O3 tries to run
+O3runs to (22, 9)
+Conflict! R2 vs O@ at (12, 0)
++------------------------------+
+|            @   @             |
+|           @    @    @        |
+|   3     3         1          |
+|                1 @       @   |
+|             C       3  3@    |
+|                              |
+|@                   @         |
+|                 @     1      |
+| C                            |
+|    C                 3    @  |
+|              3               |
+|  @2     @              1     |
+|              @               |
+|        @          1     @    |
+| @   @  @         @ 3       3 |
+|            @          C      |
+|                       1      |
+|         1    C              2|
+|        @ @                   |
+|                       C      |
+|       1                      |
+|             @                |
+|                      C       |
+|              @      1        |
+|3                             |
+|              C               |
+|                    @  @      |
+|1  @       @     C            |
+|                              |
+|         @                    |
++------------------------------+
+C walking in direction: 4
+C walking in direction: 4
+C walking in direction: 3
+C walking in direction: 2
+C walking in direction: 0
+C walking in direction: 7
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 1
+2 running in direction: 3
+2 running in direction: 1
+3 running in direction: 6
+3 running in direction: 2
+3 walking in direction: 6
+3 running in direction: 2
+3 walking in direction: 0
+3 walking in direction: 4
+3 running in direction: 2
+3 running in direction: 4
+Conflict! R3 vs O@ at (18, 14)
+Fight
+3 wins!
++------------------------------+
+|         3  @   @             |
+|           @    @    @        |
+|                   1    3     |
+|             C  1 @       @   |
+|   3                 3   @    |
+|                              |
+|@                   @         |
+|                 @     1      |
+|  C                           |
+| 2 C                   3   @  |
+|         @                    |
+|  @      @    3         1     |
+|              @               |
+|        @          1     @    |
+| @   @  @         3        3  |
+|            @                 |
+|               C       1C     |
+|       @ 1                    |
+|        @ @                   |
+|                      C       |
+|       1                      |
+|             @                |
+|3                    C        |
+|              @      1        |
+|             C                |
+|                              |
+|                    @  @      |
+|1  @       @                  |
+|                C             |
+|         @                    |
++------------------------------+
+C walking in direction: 1
+C walking in direction: 2
+C walking in direction: 0
+C walking in direction: 4
+C walking in direction: 7
+C walking in direction: 0
+C walking in direction: 7
+C walking in direction: 3
+C walking in direction: 3
+2 running in direction: 2
+3 walking in direction: 0
+3 running in direction: 2
+3 walking in direction: 4
+3 running in direction: 6
+3 running in direction: 0
+3 walking in direction: 4
++------------------------------+
+|         3  @   @       3     |
+|           @    @    @        |
+|                   1          |
+|            C   1 @       @   |
+|    3               3    @    |
+|                              |
+|@                   @         |
+| 2               @     1      |
+|   C                          |
+|   C                     3 @  |
+|         @                    |
+|  @      @   3          1     |
+|              @               |
+|        @          1     @   @|
+| @   @  @         3        3  |
+|            @ C               |
+|                       1 C    |
+|       @ 1                    |
+|        @ @            C      |
+|                              |
+|       1                      |
+|             @      C         |
+|                              |
+|   @          @      1        |
+|3             C               |
+|                              |
+|                    @  @      |
+|1  @       @                  |
+|                              |
+|         @       C            |
++------------------------------+
+C walking in direction: 5
+C walking in direction: 1
+C walking in direction: 4
+C walking in direction: 2
+C walking in direction: 1
+C walking in direction: 3
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 4
+2 running in direction: 6
+3 walking in direction: 4
+3 walking in direction: 2
+3 running in direction: 4
+3 running in direction: 6
+3 running in direction: 2
+3 running in direction: 4
++------------------------------+
+|         3  @   @      3      |
+|           @    @    @        |
+|            C      13         |
+|                1 @       @   |
+|    3                    @    |
+|                              |
+|@         @         @         |
+|    C            @     1      |
+|    C                         |
+| 2                       3 @  |
+|         @   3                |
+|  @      @              1     |
+|              @               |
+|        @          1     @   @|
+| @   @  @       3             |
+|            @C          C     |
+|                       1   3  |
+|       @ 1                    |
+|        @ @                   |
+|                      C    @  |
+|       1                      |
+|             @       C        |
+|                              |
+|   @          @      1        |
+|             C              3 |
+|                              |
+|                    @  @      |
+|1  @       @                  |
+|                C             |
+|         @                    |
++------------------------------+
+C walking in direction: 3
+C walking in direction: 7
+C walking in direction: 1
+C walking in direction: 3
+C walking in direction: 7
+C walking in direction: 6
+C walking in direction: 4
+C walking in direction: 4
+C walking in direction: 3
+2 running in direction: 1
+3 walking in direction: 2
+3 walking in direction: 4
+3 walking in direction: 0
+3 running in direction: 2
+3 running in direction: 0
+3 running in direction: 6
+Conflict! RC vs O@ at (14, 23)
+Fight
+C wins!
+Conflict! RC vs O@ at (11, 1)
+Fight
+C wins!
++------------------------------+
+|         3  @   @      3      |
+|           C    @    @        |
+|                   @  3       |
+|    3           1 @       @   |
+|                         @    |
+|                              |
+|@         @         @         |
+|   2             @     1      |
+|     C                        |
+|     C                   3 @  |
+|         @  3                 |
+|  @      @              1     |
+|              @               |
+|        @          1     @   @|
+| @   @  @   C              3  |
+|            @                 |
+|                3      1C     |
+|       @ 1                    |
+|        @ @          C        |
+|              @            @  |
+|       1                      |
+|             @      C         |
+|                              |
+|   @          C      1        |
+|                             3|
+|                              |
+|                    @  @      |
+|1  @       @                  |
+|               C              |
+|         @                    |
++------------------------------+
+C walking in direction: 4
+C walking in direction: 4
+C walking in direction: 6
+C walking in direction: 7
+C walking in direction: 1
+C walking in direction: 2
+C walking in direction: 4
+C walking in direction: 0
+C walking in direction: 7
+2 running in direction: 0
+3 running in direction: 0
+3 running in direction: 0
+3 running in direction: 6
+3 walking in direction: 2
+3 running in direction: 2
+3 running in direction: 2
+3 walking in direction: 0
+Conflict! R1 vs O@ at (19, 2)
+Fight
+1 wins!
++------------------------------+
+|            @   @     3  3    |
+|                @    @        |
+|            C      1          |
+|    3           1 @       @   |
+|                         @    |
+|                              |
+|@         @         @         |
+|                 @     1      |
+|    C C                       |
+|                           @  |
+|         @    3               |
+|  @      @              13    |
+|              @               |
+|        @          1     @ 3 @|
+| @   @  @                     |
+|            @C          C     |
+|                 3     1      |
+|       @ 1                    |
+|        @ @         C         |
+|              @            @  |
+|       1                      |
+|           @ @       C        |
+|                              |
+|   @                 1        |
+|    @         C              3|
+|                              |
+|                    @  @      |
+|1  @       @                  |
+|         3    C               |
+|         @                    |
++------------------------------+
+C walking in direction: 2
+C walking in direction: 3
+C walking in direction: 6
+C walking in direction: 7
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 0
+C walking in direction: 3
+C walking in direction: 6
+3 running in direction: 0
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 4
+3 walking in direction: 2
++------------------------------+
+|            @   @    3 3      |
+|                @    @        |
+|                   1          |
+|      3      C  1 @       @   |
+|                         @    |
+|                              |
+|@         @         @         |
+|   C             @     1      |
+|                              |
+|     C                     @  |
+|         @                    |
+|  @      @    3         13    |
+|              @               |
+|        @          1     @ 3 @|
+| @   @  @                     |
+|            @    3     C      |
+|             C         1      |
+|       @ 1          C         |
+|        @ @                   |
+|              @            @  |
+|       1            C         |
+|           @ @                |
+|                              |
+|   @                 1@       |
+|    @                        3|
+|              C               |
+|                 @  @  @      |
+|1  @       @                  |
+|         3     C              |
+|         @                    |
++------------------------------+
+C walking in direction: 5
+C walking in direction: 2
+C walking in direction: 0
+C walking in direction: 6
+C walking in direction: 0
+C walking in direction: 4
+C walking in direction: 4
+C walking in direction: 5
+C walking in direction: 3
+3 walking in direction: 0
+3 walking in direction: 2
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 0
+3 running in direction: 0
+Conflict! RC vs O@ at (12, 15)
+Fight
+C wins!
++------------------------------+
+|            @   @      3      |
+|                @    @        |
+|                   1          |
+|       3        1 @       @   |
+|             C           @    |
+|                              |
+|@  C      @         @         |
+|                 @     @      |
+|                              |
+|      C                    @  |
+|         @                    |
+|  @      @   3          1  3  |
+|              @               |
+|        @          1     @ 3 @|
+| @   @  @                     |
+|            C    3    C       |
+|                       1      |
+|       @ 1                    |
+|        @ @        C          |
+|              @            @  |
+|       1                      |
+|           @ @     C          |
+|                              |
+|   @                 1@       |
+|    @                         |
+|               C             3|
+|                 @  @  @      |
+|1  @       @                  |
+|         3    C               |
+|         @        @    3      |
++------------------------------+
+C walking in direction: 7
+C walking in direction: 1
+C walking in direction: 4
+C walking in direction: 0
+C walking in direction: 5
+C walking in direction: 0
+C walking in direction: 0
+C walking in direction: 2
+C walking in direction: 0
+3 running in direction: 0
+3 walking in direction: 0
+3 walking in direction: 6
+3 running in direction: 6
+3 running in direction: 6
+3 running in direction: 0
+Conflict! R1 vs O@ at (23, 7)
+Fight
+1 wins!
++------------------------------+
+|         3  @   @      3      |
+|                @    @        |
+|                   1          |
+|         3      1 @       @   |
+|              C          @    |
+|    C          @              |
+|@         @         @         |
+|           @     @     1      |
+|                              |
+|                           @  |
+|     C   @                    |
+|  @      @   3          1     |
+|              @            3  |
+|        @          1     @   @|
+| @   @  @                     |
+|             C     3   C   3  |
+|                       1      |
+|       @ 1                    |
+|        @ @                   |
+|              @     C      @  |
+|       1           C          |
+|           @ @                |
+|                              |
+|   @                 1@       |
+|    @                         |
+|3             C               |
+|                 @  @  @      |
+|1  @       @                  |
+|               C              |
+|         @        @    3      |
++------------------------------+
+C walking in direction: 3
+C walking in direction: 3
+C walking in direction: 4
+C walking in direction: 5
+C walking in direction: 5
+C walking in direction: 7
+C walking in direction: 3
+C walking in direction: 4
+C walking in direction: 2
+3 running in direction: 4
+3 walking in direction: 6
+3 walking in direction: 2
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 0
+3 running in direction: 6
+Conflict! R3 vs O3 at (23, 0)
+3 running in direction: 4
+O3 tries to run
+O3runs to (21, 0)
++------------------------------+
+|          3 @   @    3 3      |
+|                @    @        |
+|                   1          |
+|       3        1 @       @   |
+|   C      @              @    |
+|             C @              |
+|@         @         @         |
+|           @     @     1      |
+|                              |
+|                           @  |
+|         @                    |
+|  @ C    @   3          1     |
+|              @          3    |
+|        @          1     @   @|
+| @   @  @    C                |
+|                         3    |
+|                       1C     |
+|       @ 1         3          |
+|        @ @        C         @|
+|              @            @  |
+|       1          C           |
+|           @ @                |
+|                              |
+|   @                 1@       |
+|3   @                         |
+|             C                |
+|                 @  @  @      |
+|1  @       @  C               |
+|                              |
+|         @        @           |
++------------------------------+
+C walking in direction: 0
+C walking in direction: 5
+C walking in direction: 4
+C walking in direction: 3
+C walking in direction: 1
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 2
+C walking in direction: 2
+3 walking in direction: 4
+3 running in direction: 0
+3 running in direction: 4
+3 running in direction: 4
+3 walking in direction: 0
+3 walking in direction: 0
+Conflict! R3 vs O3 at (22, 0)
++------------------------------+
+|        3   @   @     3       |
+|                @    @        |
+|                   1          |
+|       3        1 @       @   |
+|          @ C            @    |
+|  C            @              |
+|@         @         @         |
+|           @     @     1      |
+|                              |
+|                           @  |
+|     C   @                    |
+|  @      @     3        1     |
+|              @          3    |
+|        @    C     1     @   @|
+| @   @  @                     |
+|                       C 3    |
+|                       1      |
+|       @ 1          3         |
+|        @ @         C        @|
+|              @   C        @  |
+|       1                      |
+|           @ @                |
+|                              |
+|   @                 1@       |
+|    @                       3 |
+|            C                 |
+|                 @  @  @      |
+|1  @       @   C              |
+|                              |
+|         @        @           |
++------------------------------+
+C walking in direction: 7
+C walking in direction: 7
+C walking in direction: 2
+C walking in direction: 5
+C walking in direction: 2
+C walking in direction: 6
+C walking in direction: 7
+C walking in direction: 7
+C walking in direction: 0
+3 running in direction: 6
+3 walking in direction: 0
+3 walking in direction: 6
+3 walking in direction: 6
+3 walking in direction: 0
+3 walking in direction: 6
+Conflict! RC vs O1 at (23, 16)
+1 walking in direction: 2
+O1 tries to run
+O1runs to (23, 15)
+Conflict! R3 vs O@ at (25, 13)
+Fight
+3 wins!
+Conflict! R@ vs O@ at (11, 27)
+Fight
+@ wins!
+Conflict! R@ vs O@ at (22, 23)
+Fight
+@ wins!
++------------------------------+
+|        3   @   @             |
+|                @    @3       |
+|                   1          |
+|                1 @       @   |
+|          @              @    |
+|       3   C   @              |
+|@  C      @         @         |
+|           @     @     1      |
+|                          @   |
+|     C                     @  |
+|         @                    |
+|  @      @              1     |
+|              @               |
+|        @     C    1     3   @|
+| @   @  @                     |
+|                       1      |
+|                       C      |
+|       @ 1          3         |
+|        @ @                  @|
+|              @      C     @  |
+|       1           C          |
+|           @ @                |
+|                              |
+|   @                 1@       |
+|    @       C                 |
+|                            3 |
+|                 @  @  @      |
+|1  @       @                  |
+|                C             |
+|         @        @           |
++------------------------------+
+C walking in direction: 3
+C walking in direction: 5
+C walking in direction: 5
+C walking in direction: 5
+C walking in direction: 1
+C walking in direction: 2
+C walking in direction: 3
+C walking in direction: 0
+C walking in direction: 7
+3 walking in direction: 4
+3 walking in direction: 6
+3 running in direction: 0
+3 running in direction: 6
+Conflict! RC vs O@ at (10, 6)
+Fight
+C wins!
+Conflict! RC vs O1 at (23, 15)
+1 walking in direction: 7
+O1 tries to run
+O1runs to (24, 16)
+Conflict! R@ vs O@ at (23, 26)
+Fight
+@ wins!
++------------------------------+
+|            @   @             |
+|                @  @ @3       |
+|                   1          |
+|                1 @       @   |
+|          @              @    |
+|               @              |
+|@         C         @         |
+|  C        @     @     1      |
+|      C                   @   |
+|                           @  |
+|         @                    |
+|  @      @              1     |
+|              @               |
+|        @          1     3   @|
+| @   @  @      C              |
+|                       C      |
+|                        1     |
+|       @ 1                    |
+|        @ @         C        @|
+|              @     3      @  |
+|       1            C         |
+|           @ @                |
+|                   @          |
+|   @                 1@       |
+|    @                         |
+|           C                  |
+|                 @  @  @    3 |
+|1  @       @   C              |
+|                              |
+|         @        @           |
++------------------------------+
+C walking in direction: 1
+C walking in direction: 2
+C walking in direction: 4
+C walking in direction: 6
+C walking in direction: 6
+C walking in direction: 3
+C walking in direction: 2
+C walking in direction: 1
+C walking in direction: 7
+3 running in direction: 4
+3 walking in direction: 4
+3 walking in direction: 0
+3 walking in direction: 4

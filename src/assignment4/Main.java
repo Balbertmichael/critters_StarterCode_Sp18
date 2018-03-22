@@ -75,6 +75,18 @@ public class Main {
 		/* Do not alter the code above for your submission. */
 		/* Write your code below. */
 		
+		// DEBUG: Prints results to an output file
+		PrintStream outFile;
+		try {
+			kb = new Scanner(new File("AllStep60.txt"));
+			outFile = new PrintStream(new File("output_all.txt"));
+			System.setOut(outFile);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		
 		String in;
 		do {
 //			System.out.println("Input next command: ");

@@ -22,63 +22,132 @@
 |          |
 |          |
 +----------+
+C walking in direction: 2
+2 running in direction: 5
+3 running in direction: 2
+4 walking in direction: 2
+4 reproducing in direction: 7
 +----------+
-|   @      |
-|4         |
-|         4|
-|        @ |
+|   @     4|
+|4   3     |
 |          |
-|    3    @|
+|      2 @ |
 |          |
-|C     1   |
+|C        @|
 |          |
-|      2   |
+|      1   |
+|          |
+|          |
 +----------+
+C walking in direction: 2
+2 running in direction: 0
+3 walking in direction: 6
+4 walking in direction: 1
+4 reproducing in direction: 7
+4 walking in direction: 1
+4 reproducing in direction: 6
+Conflict! 2 vs @ at (8, 3)
+Fight
+2 wins!
 +----------+
-|   @      |
+| 4 @ @    |
 | 4        |
-| 4@       |
-|4       @ |
 |    3     |
+|        2 |
+|C         |
 |         @|
 |          |
 |      @   |
-|C         |
-|        2 |
-+----------+
-+----------+
-|   @      |
-|2    @    |
-|4 4       |
-| 4  3   @ |
-|4        4|
-|4        @|
 |          |
-|      1   |
+|4         |
++----------+
+C walking in direction: 0
+2 running in direction: 7
+3 walking in direction: 0
+4 walking in direction: 2
+4 reproducing in direction: 3
+4 walking in direction: 5
+4 reproducing in direction: 2
+4 walking in direction: 1
+4 reproducing in direction: 3
+4 walking in direction: 2
+4 reproducing in direction: 3
+Conflict! 1 vs @ at (6, 7)
+Fight
+1 wins!
++----------+
+|44 @ @    |
+|4@   @    |
+|     3    |
+|          |
+| C        |
+|2        @|
+|          |
+|      1  4|
+|44        |
+|4 4       |
++----------+
+C walking in direction: 7
+2 running in direction: 6
+3 running in direction: 6
+4 walking in direction: 5
+4 walking in direction: 6
+4 walking in direction: 4
+4 walking in direction: 3
+4 walking in direction: 5
+4 walking in direction: 3
+4 walking in direction: 6
+4 walking in direction: 2
+Conflict! 4 vs 4 at (9, 9)
+Fight
+4 wins!
+Conflict! 4 vs 4 at (1, 9)
+Fight
+4 wins!
++----------+
+|   @ @    |
+| @   @ @  |
+|4         |
+|          |
+|     3    |
+|  C      @|
+|          |
+|2     1   |
+|@       4 |
+|44       4|
++----------+
+C walking in direction: 4
+2 running in direction: 5
+3 running in direction: 0
+4 walking in direction: 6
+4 walking in direction: 5
+4 walking in direction: 7
+4 walking in direction: 0
+4 walking in direction: 3
+4 walking in direction: 2
++----------+
+|  4@ @   4|
+| @   @ @  |
+|          |
+|         4|
+|       3  |
 | C       @|
 |          |
+|4     14  |
+|@        @|
+| @      2 |
 +----------+
-+----------+
-|   @      |
-| 4  3@ @  |
-|44        |
-|   @    @ |
-|4       4 |
-|4        @|
-|          |
-| C    1   |
-|         @|
-|2         |
-+----------+
-+----------+
-|   @      |
-|    3@ @  |
-|44        |
-|44 @    @4|
-| 4        |
-| 4       @|
-| C        |
-|      1@  |
-|         @|
-|  2       |
-+----------+
+C walking in direction: 5
+2 running in direction: 5
+4 walking in direction: 7
+4 walking in direction: 3
+4 walking in direction: 2
+4 walking in direction: 0
+4 walking in direction: 0
+4 walking in direction: 5
+Conflict! 4 vs 4 at (2, 9)
+Fight
+4 wins!
+Conflict! 4 vs @ at (9, 8)
+Fight
+4 wins!
