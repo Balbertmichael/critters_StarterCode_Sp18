@@ -1,10 +1,14 @@
 package assignment4;
+
+import java.util.List;
+
 /**
- * Critter2 Class: Hotheaded Critter
- * This Critter will never back away from a fight.
- * It is always energetic and running. It never walks
+ * Critter2 Class: Hotheaded Critter This Critter will never back away from a
+ * fight. It is always energetic and running. It never walks
  */
 public class Critter2 extends Critter {
+
+	private static int fought = 0;
 
 	/**
 	 * Constructor
@@ -17,6 +21,7 @@ public class Critter2 extends Critter {
 	 */
 	@Override
 	public void doTimeStep() {
+		fought = 0;
 		run(getRandomInt(8));
 		if (getEnergy() >= Params.start_energy * 3) {
 			Critter2 child = new Critter2();
@@ -29,15 +34,25 @@ public class Critter2 extends Critter {
 	 */
 	@Override
 	public boolean fight(String oponent) {
+		fought++;
 		return true;
 	}
-	
+
 	/**
 	 * String representation of Critter2
 	 */
 	@Override
 	public String toString() {
 		return "2";
+	}
+
+	/**
+	 * Shows the number of fights Critter2s had last turn
+	 * 
+	 * @param critter4
+	 */
+	public static void runStats(List<Critter> critter4) {
+		System.out.println(critter4.size() + " total Critter2s who fought " + fought + " times");
 	}
 
 }

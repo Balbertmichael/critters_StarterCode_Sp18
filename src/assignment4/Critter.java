@@ -165,7 +165,7 @@ public abstract class Critter {
 	}
 
 	private int negModulo(int div, int mod) {
-		while(div < 0) {
+		while (div < 0) {
 			div += mod;
 		}
 		return div % mod;
@@ -357,12 +357,12 @@ public abstract class Critter {
 	public static void worldTimeStep() {
 
 		// DoTimeSteps for photosynthesis
-//		for (Critter c : population) {
-//			c.doTimeStep();
-//			if (c.toString().equals("@")) {
-//				c.energy += Params.photosynthesis_energy_amount;
-//			}
-//		}
+		for (Critter c : population) {
+			c.doTimeStep();
+			// if (c.toString().equals("@")) {
+			// c.energy += Params.photosynthesis_energy_amount;
+			// }
+		}
 
 		// Encounters
 		// Checks each member of population against every other member of population not
@@ -381,10 +381,9 @@ public abstract class Critter {
 				// If Critters occupy the same location, resolve encounter
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
 					Critter winner = critterEncounter(refC, othC);
-					if(winner == null) {
+					if (winner == null) {
 						continue;
-					}
-					else if (winner.equals(refC)) {
+					} else if (winner.equals(refC)) {
 						--k; // Account for changes in indexing once Critter is removed
 					} else if (winner.equals(othC)) {
 						--i; // Account for changes in indexing once Critter is removed

@@ -74,10 +74,9 @@ public class Main {
 
 		/* Do not alter the code above for your submission. */
 		/* Write your code below. */
-		
+
 		String in;
 		do {
-//			System.out.println("Input next command: ");
 			// Parse keyboard input
 			in = kb.nextLine();
 			String trimIn = in.trim();
@@ -92,7 +91,7 @@ public class Main {
 				}
 				Critter.displayWorld();
 				break;
-			
+
 			// advance one time step in world
 			case ("step"):
 				int stepCount;
@@ -125,7 +124,7 @@ public class Main {
 					}
 				}
 				break;
-				
+
 			// create a Critter and add it to population
 			case ("make"):
 				if (inArr.length != 3 && inArr.length != 2) {
@@ -145,7 +144,7 @@ public class Main {
 					}
 				}
 				break;
-				
+
 			// run Critter statistics
 			case ("stats"):
 				if (inArr.length != 2) {
@@ -166,20 +165,16 @@ public class Main {
 					}
 				}
 				break;
-				
+
 			// terminate program
 			case ("quit"):
 				break;
-			
+
 			// invalid command
 			default:
 				System.out.println("Invalid command: " + in);
 			}
 		} while (!in.equals("quit"));
-
-		// System.out.println("GLHF");
-
-		/* Write your code above */
 		System.out.flush();
 
 	}
