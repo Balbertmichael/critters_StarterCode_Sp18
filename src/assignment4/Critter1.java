@@ -1,14 +1,27 @@
 package assignment4;
-
+/**
+ * Critter1 Class: Lazy Critter
+ * This Critter only moves if it has to, meaning it will only move if it's energy is low so it can find food.
+ * Otherwise the Critter will rest in each time step and never runs.
+ * If it is confronted in a fight, it will walk away if possible
+ *
+ */
 public class Critter1 extends Critter {
 	
 	//Private variable to add awareness on whether or not it has moved
 	private boolean moved;
 	
+	/**
+	 * Constructor
+	 */
 	public Critter1() {
 		moved = false;
 	}
 	
+	/**
+	 * doTimeStep: Critter1 only rests during a time step
+	 * It will only reproduce once it has energy twice as much as the starting energy
+	 */
 	@Override
 	public void doTimeStep() {
 		moved = false;
@@ -25,6 +38,11 @@ public class Critter1 extends Critter {
 		}
 	}
 
+	/**
+	 * fight: Critter1 never fights unless necessary
+	 * it is smart enough to know if it already moved or not
+	 * it also never runs, only walks
+	 */
 	@Override
 	public boolean fight(String oponent) {
 		// A somewhat smart critter that only fights if it can't
@@ -38,6 +56,9 @@ public class Critter1 extends Critter {
 		return false;
 	}
 	
+	/**
+	 * String representation of Critter1
+	 */
 	@Override
 	public String toString() {
 		return "1";

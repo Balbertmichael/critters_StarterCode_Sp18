@@ -1,5 +1,10 @@
 package assignment4;
-
+/**
+ * Critter3 Class: Straight-laced Critter
+ * This Critter moves only completely horizontally or completely vertically
+ * It never moves diagonally
+ * It can walk, run, but never rests
+ */
 public class Critter3 extends Critter {
 
 	private boolean moved;
@@ -8,6 +13,10 @@ public class Critter3 extends Critter {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * doTimeStep: Critter3 randomly chooses an action and goes with it
+	 * However it will always move straight, never diagonally
+	 */
 	@Override
 	public void doTimeStep() {
 		moved = false;
@@ -32,6 +41,11 @@ public class Critter3 extends Critter {
 		}
 	}
 
+	/**
+	 * fight: Critter3 is smart enough to know if it has moved.
+	 * so it will fight if it already moved.
+	 * otherwise, it will try to run away
+	 */
 	@Override
 	public boolean fight(String oponent) {
 		if (oponent.equals("@")) {
@@ -44,6 +58,9 @@ public class Critter3 extends Critter {
 		return false;
 	}
 
+	/**
+	 * String representation of Critter3
+	 */
 	@Override
 	public String toString() {
 		return "3";

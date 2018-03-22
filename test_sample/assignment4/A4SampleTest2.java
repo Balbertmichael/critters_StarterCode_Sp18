@@ -123,14 +123,21 @@ public class A4SampleTest2 {
 		runner.setY_coord(y);
 		fighter.setX_coord(x);
 		fighter.setY_coord(y);
-
+		
+		Critter.displayWorld();
+		
 		assertEquals(num, TestCritter.getPopulation().size());
 		Critter.worldTimeStep();
+		
+		Critter.displayWorld();
+		
 		if (DEBUG) {
 			Critter.displayWorld();
 		}
 		assertFalse(runner.getEnergy() <= 0);
 		assertEquals(Params.start_energy - Params.rest_energy_cost - Params.run_energy_cost, runner.getEnergy());
+		System.out.println("Runner X: " + x);
+		System.out.println("Runner Y: " + y);
 		assertTrue(runner.getX_coord() != x || runner.getY_coord() != y);
 		assertTrue(fighter.getX_coord() == x && fighter.getY_coord() == y);
 	}
