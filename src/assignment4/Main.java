@@ -1,6 +1,5 @@
 package assignment4;
 
-import java.util.ArrayList;
 import java.util.List;
 /* CRITTERS Main.java
  * EE422C Project 4 submission by
@@ -17,7 +16,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 /*
  * Usage: java <pkgname>.Main <input file> test

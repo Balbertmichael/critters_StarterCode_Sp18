@@ -21,9 +21,9 @@ import java.util.List;
  */
 
 /**
- * Critter class is the base abstract class
- * It holds the basic functionality of all Critters in the Critter world
- * It also contains the entire Critter world population
+ * Critter class is the base abstract class It holds the basic functionality of
+ * all Critters in the Critter world It also contains the entire Critter world
+ * population
  */
 public abstract class Critter {
 	private static String myPackage;
@@ -40,17 +40,20 @@ public abstract class Critter {
 
 	/**
 	 * Returns a random integer
-	 * @param max maximum amount the integer can be
+	 * 
+	 * @param max
+	 *            maximum amount the integer can be
 	 * @return random integer between 0 and max
 	 */
 	public static int getRandomInt(int max) {
 		return rand.nextInt(max);
 	}
-	
+
 	/**
-	 * Sets the seed for the random integer
-	 * Will allow for more predictable testing
-	 * @param new_seed value of seed
+	 * Sets the seed for the random integer Will allow for more predictable testing
+	 * 
+	 * @param new_seed
+	 *            value of seed
 	 */
 	public static void setSeed(long new_seed) {
 		rand = new java.util.Random(new_seed);
@@ -85,78 +88,72 @@ public abstract class Critter {
 
 	// Direction is 0-7
 	private final void move(int speed, int direction) {
-//		if (x_coord == 0 || y_coord == 0) {
-//			System.out.println("Flag");
-//		}
-		//System.out.println("OX_coord: " + x_coord);
-		//System.out.println("OY_coord: " + y_coord);
+		// if (x_coord == 0 || y_coord == 0) {
+		// System.out.println("Flag");
+		// }
+		// System.out.println("OX_coord: " + x_coord);
+		// System.out.println("OY_coord: " + y_coord);
 		switch (direction) {
 		case (0):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
 			break;
 		case (1):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
-			y_coord = negModulo(y_coord + speed, Params.world_height);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (2):
-			y_coord = negModulo(y_coord + speed, Params.world_height);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (3):
 			x_coord = negModulo(x_coord - speed, Params.world_width);
-			y_coord = negModulo(y_coord + speed, Params.world_height);
+			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		case (4):
 			x_coord = negModulo(x_coord - speed, Params.world_width);
 			break;
 		case (5):
 			x_coord = negModulo(x_coord - speed, Params.world_width);
-			y_coord = negModulo(y_coord - speed, Params.world_height);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (6):
-			y_coord = negModulo(y_coord - speed, Params.world_height);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		case (7):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
-			y_coord = negModulo(y_coord - speed, Params.world_height);
+			y_coord = negModulo(y_coord + speed, Params.world_height);
 			break;
 		}
-//		if (x_coord < 0 || y_coord < 0) {
-//			System.out.println("Error");
-//		}
-		//System.out.println("X_coord: " + x_coord);
-		//System.out.println("Y_coord: " + y_coord);
+		// if (x_coord < 0 || y_coord < 0) {
+		// System.out.println("Error");
+		// }
+		// System.out.println("X_coord: " + x_coord);
+		// System.out.println("Y_coord: " + y_coord);
 	}
 
 	protected final void reproduce(Critter offspring, int direction) {
 		// Can only reproduce if energy is higher than minimum reproduction energy
-		if(energy < Params.min_reproduce_energy) {
+		if (energy < Params.min_reproduce_energy) {
 			return;
 		}
 		offspring.energy = energy / 2;
 		energy /= 2;
-		//energy -= Params.min_reproduce_energy;
+		// energy -= Params.min_reproduce_energy;
 		switch (direction) {
 		case (0):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-
-			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
-
 			offspring.y_coord = y_coord % Params.world_height;
 			break;
 		case (1):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_height);
 			break;
 		case (2):
 			offspring.x_coord = (x_coord) % Params.world_width;
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_height);
 			break;
 		case (3):
 			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord + 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord - 1, Params.world_height);
 			break;
 		case (4):
 			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
@@ -164,15 +161,15 @@ public abstract class Critter {
 			break;
 		case (5):
 			offspring.x_coord = negModulo(x_coord - 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		case (6):
 			offspring.x_coord = x_coord % Params.world_width;
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		case (7):
 			offspring.x_coord = negModulo(x_coord + 1, Params.world_width);
-			offspring.y_coord = negModulo(y_coord - 1, Params.world_width);
+			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		}
 		babies.add(offspring);
@@ -193,7 +190,9 @@ public abstract class Critter {
 
 	/**
 	 * Contains how an individual Critter fights when faced with an encounter
-	 * @param oponent the string representation of the Critter's fighting opponent
+	 * 
+	 * @param oponent
+	 *            the string representation of the Critter's fighting opponent
 	 * @return true if Critter is willing to fight; false if Critter is not
 	 */
 	public abstract boolean fight(String oponent);
@@ -290,22 +289,25 @@ public abstract class Critter {
 	static abstract class TestCritter extends Critter {
 		/**
 		 * Set Critter energy level
+		 * 
 		 * @param new_energy_value
 		 */
 		protected void setEnergy(int new_energy_value) {
 			super.energy = new_energy_value;
 		}
-		
+
 		/**
 		 * Sets Critter's x location in the Critter world
+		 * 
 		 * @param new_x_coord
 		 */
 		protected void setX_coord(int new_x_coord) {
 			super.x_coord = new_x_coord;
 		}
-		
+
 		/**
 		 * Sets Critter's y location in the Critter world
+		 * 
 		 * @param new_y_coord
 		 */
 		protected void setY_coord(int new_y_coord) {
@@ -314,6 +316,7 @@ public abstract class Critter {
 
 		/**
 		 * Gets Critter's x location
+		 * 
 		 * @return Critter's x coordinate
 		 */
 		protected int getX_coord() {
@@ -322,6 +325,7 @@ public abstract class Critter {
 
 		/**
 		 * Gets Critter's y location
+		 * 
 		 * @return Critter's y coordinate
 		 */
 		protected int getY_coord() {
@@ -355,17 +359,15 @@ public abstract class Critter {
 		population.clear();
 		babies.clear();
 	}
-	
+
 	/**
 	 * Progresses the entire Critter World by one time step in the following order
-	 * *Invoke every critter's doTimeStep()
-	 * *Resolve encounters
-	 * *Update energy (subtract rest energy)
-	 * *Generate algae
-	 * *Move any babies born during the time step to the general Critter population
+	 * *Invoke every critter's doTimeStep() *Resolve encounters *Update energy
+	 * (subtract rest energy) *Generate algae *Move any babies born during the time
+	 * step to the general Critter population
 	 */
 	public static void worldTimeStep() {
-		
+
 		// DoTimeSteps
 		for (Critter c : population) {
 			c.doTimeStep();
@@ -375,7 +377,8 @@ public abstract class Critter {
 		}
 
 		// Encounters
-		// Checks each member of population against every other member of population not yet checked
+		// Checks each member of population against every other member of population not
+		// yet checked
 		// Determine if both Critters are at the same position
 		for (int i = 0; i < population.size(); ++i) {
 			Critter refC = population.get(i);
@@ -383,95 +386,12 @@ public abstract class Critter {
 				Critter othC = population.get(k);
 				// If Critters occupy the same location, resolve encounter
 				if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
-					// Save current location in case Critters attempt to run to invalid locations
-					int oldX = refC.x_coord;
-					int oldY = refC.y_coord;
-					
-					// Give both Critters one chance to run away if desired; if destination is occupied = cannot run, must fight
-					// First Critter
-					boolean refCFight = refC.fight(othC.toString());
-					if (refCFight == false) {
-						if (locOccupied(refC.x_coord, refC.y_coord, refC)) {
-							// Invalid location: return position to original position, and force it to fight
-							refC.x_coord = oldX;
-							refC.y_coord = oldY;
-							System.out.println("Here");
-						}
-					}
-
-					// Second Critter
-					boolean othCFight = othC.fight(refC.toString());
-					if (othCFight == false) {
-						if (locOccupied(othC.x_coord, othC.y_coord, othC)) {
-							// Invalid location: return position to original position, and force it to fight
-							othC.x_coord = oldX;
-							othC.y_coord = oldY;
-							System.out.println("Here");
-						}
-					}
-
-					// Remove from population if Critters had used up all energy to run
-					if (refC.energy <= 0 || othC.energy <= 0) {
-						if (refC.energy < 0) {
-							population.remove(refC);
-						}
-						if (othC.energy < 0) {
-							population.remove(othC);
-						}
-						continue;
-					}
-
-					// TODO: Review this change in implementation
-					// If both Critters are still in the same location despite having the chance to run away
-					if(refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
-						
-						Critter winner;
-						Critter loser;
-						
-						// The Critter that tried to run away loses
-						if(refCFight && !othCFight) {
-							winner = refC;
-							loser = othC;
-						}
-						else if(othCFight && !refCFight) {
-							winner = othC;
-							loser = refC;
-						}
-						
-						// If both tried to run away but could not, or both wanted to fight
-						else {
-							int refCRoll = getRandomInt(refC.energy);
-							int othCRoll = getRandomInt(othC.energy);
-
-							// Check if Algae is one of the two critters; Critter will always win over Algae
-							if (refC instanceof Algae) {
-								winner = othC;
-								loser = refC;
-							} else if (othC instanceof Algae) {
-								winner = refC;
-								loser = othC;
-							}
-
-							// Non-Algae critter fight
-							else if (refCRoll >= othCRoll) {
-								winner = refC;
-								loser = othC;
-							} else {
-								winner = othC;
-								loser = refC;
-							}
-							
-							winner.energy += loser.energy / 2;	// Winner gets half of loser's energy
-							population.remove(loser);			// Loser dies
-						}				
-					}
-
+					critterEncounter(refC, othC);
 				}
 			}
 		}
-
 		// Update rest energy
-		// Iterator Implementation:
+		// Iterator Implementation
 		Iterator<Critter> critIter = population.iterator();
 		while (critIter.hasNext()) {
 			Critter c = critIter.next();
@@ -481,13 +401,6 @@ public abstract class Critter {
 			}
 		}
 
-		// for (Critter c : population) {
-		// c.energy -= Params.rest_energy_cost;
-		// if (c.energy <= 0) {
-		// population.remove(c);
-		// }
-		// }
-		
 		// Refresh Algae count
 		for (int i = 0; i < Params.refresh_algae_count; ++i) {
 			try {
@@ -505,22 +418,111 @@ public abstract class Critter {
 			population.add(c);
 			babyIter.remove();
 		}
+	}
 
-		// for (Critter b : babies) {
-		// population.add(b);
-		// babies.remove(b);
-		// }
+	/**
+	 * Helper function to deal with the Encounter of two critters on the same space
+	 * (Moved mostly cause this is a pretty long section)
+	 * 
+	 * @param refC
+	 *            First Critter (Reference Critter)
+	 * @param othC
+	 *            Second Critter (Other Critter)
+	 */
+	private static void critterEncounter(Critter refC, Critter othC) {
+		// Save current location in case Critters attempt to run to invalid locations
+		int oldX = refC.x_coord;
+		int oldY = refC.y_coord;
+
+		// Give both Critters one chance to run away if desired; if destination is
+		// occupied = cannot run, must fight
+		// First Critter choosing to fight
+		boolean refCFight = refC.fight(othC.toString());
+		if (refCFight == false) {
+			if (locOccupied(refC.x_coord, refC.y_coord, refC)) {
+				// Invalid location: return position to original position, and force it to fight
+				refC.x_coord = oldX;
+				refC.y_coord = oldY;
+			}
+		}
+
+		// Second Critter choosing to fight
+		boolean othCFight = othC.fight(refC.toString());
+		if (othCFight == false) {
+			if (locOccupied(othC.x_coord, othC.y_coord, othC)) {
+				// Invalid location: return position to original position, and force it to fight
+				othC.x_coord = oldX;
+				othC.y_coord = oldY;
+			}
+		}
+
+		// Remove from population if Critters had used up all energy to run
+		if (refC.energy <= 0 || othC.energy <= 0) {
+			if (refC.energy < 0) {
+				population.remove(refC);
+			}
+			if (othC.energy < 0) {
+				population.remove(othC);
+			}
+			return;
+		}
+
+		// TODO: Review this change in implementation
+		// If both Critters are still in the same location despite having the chance to
+		// run away
+		if (refC.x_coord == othC.x_coord && refC.y_coord == othC.y_coord) {
+
+			Critter winner;
+			Critter loser;
+
+			// The Critter that tried to run away loses
+			if (refCFight && !othCFight) {
+				winner = refC;
+				loser = othC;
+
+			} else if (othCFight && !refCFight) {
+				winner = othC;
+				loser = refC;
+
+			}
+
+			// If both tried to run away but could not, or both wanted to fight
+			else {
+				
+				int refCRoll = getRandomInt(refC.energy);
+				int othCRoll = getRandomInt(othC.energy);
+
+				// Check if Algae is one of the two critters; Critter will always win over Algae
+				/*
+				 * if (refC instanceof Algae) { winner = othC; loser = refC; } else if (othC
+				 * instanceof Algae) { winner = refC; loser = othC; }
+				 */
+				// Critters Fight
+				if (refCRoll >= othCRoll) {
+					winner = refC;
+					loser = othC;
+				} else {
+					winner = othC;
+					loser = refC;
+				}
+			}
+			winner.energy += loser.energy / 2; // Winner gets half of loser's energy
+			population.remove(loser); // Loser dies
+		}
 	}
 
 	/**
 	 * Helper function to determine if location is occupied by a critter
-	 * @param x x coordinate
-	 * @param y y coordinate
+	 * 
+	 * @param x
+	 *            x coordinate
+	 * @param y
+	 *            y coordinate
 	 * @return true if location is occupied; false if not
 	 */
 	private static boolean locOccupied(int x, int y, Critter me) {
 		for (Critter c : population) {
-			if(c.equals(me)) {
+			if (c.equals(me)) {
 				continue;
 			}
 			if ((c.x_coord == x) && (c.y_coord == y)) {
@@ -575,11 +577,11 @@ public abstract class Critter {
 			String row = new String(worldArray[i]);
 			System.out.println(row);
 		}
-//		String rowConcat = "";
-//		for (int i = 0; i < height; ++i) {
-//			String row = new String(worldArray[i]);
-//			rowConcat += row + '\n';
-//		}
-//		System.out.print(rowConcat);
+		// String rowConcat = "";
+		// for (int i = 0; i < height; ++i) {
+		// String row = new String(worldArray[i]);
+		// rowConcat += row + '\n';
+		// }
+		// System.out.print(rowConcat);
 	}
 }
