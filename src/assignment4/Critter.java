@@ -88,6 +88,8 @@ public abstract class Critter {
 //		if (x_coord == 0 || y_coord == 0) {
 //			System.out.println("Flag");
 //		}
+		//System.out.println("OX_coord: " + x_coord);
+		//System.out.println("OY_coord: " + y_coord);
 		switch (direction) {
 		case (0):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
@@ -118,9 +120,11 @@ public abstract class Critter {
 			y_coord = negModulo(y_coord - speed, Params.world_height);
 			break;
 		}
-		if (x_coord < 0 || y_coord < 0) {
-			System.out.println("Error");
-		}
+//		if (x_coord < 0 || y_coord < 0) {
+//			System.out.println("Error");
+//		}
+		//System.out.println("X_coord: " + x_coord);
+		//System.out.println("Y_coord: " + y_coord);
 	}
 
 	protected final void reproduce(Critter offspring, int direction) {
@@ -387,20 +391,22 @@ public abstract class Critter {
 					// First Critter
 					boolean refCFight = refC.fight(othC.toString());
 					if (refCFight == false) {
-						if (locOccupied(refC.x_coord, refC.y_coord)) {
+						if (locOccupied(refC.x_coord, refC.y_coord, refC)) {
 							// Invalid location: return position to original position, and force it to fight
 							refC.x_coord = oldX;
 							refC.y_coord = oldY;
+							System.out.println("Here");
 						}
 					}
 
 					// Second Critter
 					boolean othCFight = othC.fight(refC.toString());
 					if (othCFight == false) {
-						if (locOccupied(othC.x_coord, othC.y_coord)) {
+						if (locOccupied(othC.x_coord, othC.y_coord, othC)) {
 							// Invalid location: return position to original position, and force it to fight
 							othC.x_coord = oldX;
 							othC.y_coord = oldY;
+							System.out.println("Here");
 						}
 					}
 
@@ -512,8 +518,11 @@ public abstract class Critter {
 	 * @param y y coordinate
 	 * @return true if location is occupied; false if not
 	 */
-	private static boolean locOccupied(int x, int y) {
+	private static boolean locOccupied(int x, int y, Critter me) {
 		for (Critter c : population) {
+			if(c.equals(me)) {
+				continue;
+			}
 			if ((c.x_coord == x) && (c.y_coord == y)) {
 				return true;
 			}
@@ -566,5 +575,11 @@ public abstract class Critter {
 			String row = new String(worldArray[i]);
 			System.out.println(row);
 		}
+//		String rowConcat = "";
+//		for (int i = 0; i < height; ++i) {
+//			String row = new String(worldArray[i]);
+//			rowConcat += row + '\n';
+//		}
+//		System.out.print(rowConcat);
 	}
 }
