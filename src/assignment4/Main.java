@@ -1,6 +1,5 @@
 package assignment4;
 
-import java.util.ArrayList;
 import java.util.List;
 /* CRITTERS Main.java
  * EE422C Project 4 submission by
@@ -17,7 +16,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 /*
  * Usage: java <pkgname>.Main <input file> test
@@ -76,17 +74,6 @@ public class Main {
 
 		/* Do not alter the code above for your submission. */
 		/* Write your code below. */
-		
-		// DEBUG: Prints results to an output file
-		PrintStream outFile;
-		try {
-			kb = new Scanner(new File("AllStep6Times.txt"));
-			outFile = new PrintStream(new File("output_seed10.txt"));
-			System.setOut(outFile);
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		
 		String in;
 		do {
