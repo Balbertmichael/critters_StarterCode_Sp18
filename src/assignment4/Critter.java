@@ -359,9 +359,6 @@ public abstract class Critter {
 		// DoTimeSteps for photosynthesis
 		for (Critter c : population) {
 			c.doTimeStep();
-			// if (c.toString().equals("@")) {
-			// c.energy += Params.photosynthesis_energy_amount;
-			// }
 		}
 
 		// Encounters
