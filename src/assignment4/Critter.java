@@ -517,6 +517,51 @@ public abstract class Critter {
 		}
 		return null;
 	}
+	
+	protected String look(int direction, boolean steps) {
+		int chkX = x_coord;
+		int chkY = y_coord;
+		int speed = 1;
+		if(steps) {
+			speed = 2;
+		}
+		switch (direction) {
+		case (0):
+			chkX = negModulo(x_coord + speed, Params.world_width);
+			break;
+		case (1):
+			chkX = negModulo(x_coord + speed, Params.world_width);
+			chkY = negModulo(y_coord - speed, Params.world_height);
+			break;
+		case (2):
+			chkY = negModulo(y_coord - speed, Params.world_height);
+			break;
+		case (3):
+			chkX = negModulo(x_coord - speed, Params.world_width);
+			chkY = negModulo(y_coord - speed, Params.world_height);
+			break;
+		case (4):
+			chkX = negModulo(x_coord - speed, Params.world_width);
+			break;
+		case (5):
+			chkX = negModulo(x_coord - speed, Params.world_width);
+			chkY = negModulo(y_coord + speed, Params.world_height);
+			break;
+		case (6):
+			chkY = negModulo(y_coord + speed, Params.world_height);
+			break;
+		case (7):
+			chkX = negModulo(x_coord + speed, Params.world_width);
+			chkY = negModulo(y_coord + speed, Params.world_height);
+			break;
+		}
+		for (Critter c : population) {
+			if ((c.x_coord == chkX) && (c.y_coord == chkY)) {
+				return c.toString();
+			}
+		}
+		return null;
+	}
 
 	/**
 	 * Helper function to determine if location is occupied by a critter
