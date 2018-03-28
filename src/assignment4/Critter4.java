@@ -1,5 +1,7 @@
 package assignment4;
 
+import assignment4.Critter.CritterShape;
+
 /**
  * Critter4 Class: Mommy Critter This Critter will reproduce whenever it can if
  * it has enough energy It will fight if it has had a child in the turn (which
@@ -92,4 +94,11 @@ public class Critter4 extends Critter {
 		}
 		return child * 100 / size;
 	}
+	
+	@Override
+	public CritterShape viewShape() { return CritterShape.SQUARE; }
+
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() { return javafx.scene.paint.Color.BLUE; }
+
 }

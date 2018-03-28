@@ -1,5 +1,7 @@
 package assignment4;
 
+import assignment4.Critter.CritterShape;
+
 /**
  * Critter3 Class: Straight-laced Critter This Critter moves only completely
  * horizontally or completely vertically It never moves diagonally It can walk,
@@ -112,4 +114,11 @@ public class Critter3 extends Critter {
 		}
 		return dir * 100 / size;
 	}
+	
+	@Override
+	public CritterShape viewShape() { return CritterShape.SQUARE; }
+
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() { return javafx.scene.paint.Color.BLUE; }
+
 }

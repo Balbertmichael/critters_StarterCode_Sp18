@@ -2,6 +2,8 @@ package assignment4;
 
 import java.util.List;
 
+import assignment4.Critter.CritterShape;
+
 /**
  * Critter2 Class: Hotheaded Critter This Critter will never back away from a
  * fight. It is always energetic and running. It never walks
@@ -54,5 +56,11 @@ public class Critter2 extends Critter {
 	public static void runStats(List<Critter> critter4) {
 		System.out.println(critter4.size() + " total Critter2s who fought " + fought + " times");
 	}
+
+	@Override
+	public CritterShape viewShape() { return CritterShape.SQUARE; }
+
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() { return javafx.scene.paint.Color.BLUE; }
 
 }

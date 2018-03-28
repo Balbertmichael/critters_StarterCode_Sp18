@@ -1,5 +1,7 @@
 package assignment4;
 
+import assignment4.Critter.CritterShape;
+
 /**
  * Critter1 Class: Lazy Critter This Critter only moves if it has to, meaning it
  * will only move if it's energy is low so it can find food. Otherwise the
@@ -88,5 +90,12 @@ public class Critter1 extends Critter {
 		System.out.println("" + critter1.size() + " total Critter1s: " + lazy + "% are lazy, " + escapedFromDeath
 				+ "% had a close brush with death.");
 	}
+	
+	@Override
+	public CritterShape viewShape() { return CritterShape.SQUARE; }
+
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() { return javafx.scene.paint.Color.BLUE; }
+
 
 }
