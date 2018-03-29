@@ -2,7 +2,6 @@ package assignment4;
 
 
 import javafx.fxml.FXML;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 
@@ -11,13 +10,19 @@ public class Controller {
 	public ScrollPane viewPane;
 	@FXML
 	public AnchorPane anchorContainer;
-	public GraphicsContext gc;
+	
+	
+	private CritterWorldView world;
 	
 	public void initialize() {
 		
-		CritterWorldView world = new CritterWorldView(anchorContainer);		
+		world = new CritterWorldView(anchorContainer);		
 		viewPane.setContent(world);
 
 	}
 	
+	public void updateView() {
+		Critter.worldTimeStep();
+		Critter.displayWorld(world);
+	}
 }

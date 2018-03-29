@@ -11,7 +11,18 @@ public class Main extends Application{
 
 	@Override
 	public void start(Stage primaryStage) {
+		
 		try {
+			
+			for(int i = 0; i < 10; i++) {
+				Critter.makeCritter("Craig");
+				Critter.makeCritter("Critter1");
+				Critter.makeCritter("Critter2");
+				Critter.makeCritter("Critter3");
+				Critter.makeCritter("Critter4");
+			}
+
+			
 			Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

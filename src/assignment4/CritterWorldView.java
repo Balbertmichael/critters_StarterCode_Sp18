@@ -5,7 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-
+import assignment4.Critter.CritterShape;
 
 class CritterWorldView extends Canvas{
 	
@@ -24,20 +24,15 @@ class CritterWorldView extends Canvas{
 	private GraphicsContext gc;
 	
 	
-	/**
-	 * Constructor: initializes and displays Critter World graph
-	 * World will be redrawn and rescaled upon resizing of parent container
-	 * @param parent pane that will serve as basis for canvas size
-	 */
 	public CritterWorldView(AnchorPane parent) {
 		
 		parentContainer = parent;
-		setWorldSizeParams(20, 20);
+		setWorldSizeParams(Params.world_width, Params.world_height);
 		gc = getGraphicsContext2D();
 		
 		// Scale grid appropriately upon resize
-		parentContainer.widthProperty().addListener(e -> redraw());
-		parentContainer.heightProperty().addListener(e -> redraw());
+		parentContainer.widthProperty().addListener(e -> Critter.displayWorld(this));
+		parentContainer.heightProperty().addListener(e -> Critter.displayWorld(this));
 		
 
 	}
@@ -87,23 +82,20 @@ class CritterWorldView extends Canvas{
 		double width = parentContainer.getWidth();
 		double height = parentContainer.getHeight();
 		
+		gc.setFill(Color.GAINSBORO);
 		// Space is too small to hold entire world
 		if(width < minCanvasWidth || height < minCanvasHeight) {
-			gc.setFill(Color.RED);
 			return MIN_VOX_SIZE;
 		}
 		// Space is too big for entire world
 		else if( width > maxCanvasWidth && height > maxCanvasHeight) {
-			gc.setFill(Color.YELLOW);
 			return MAX_VOX_SIZE;
 		}
 		// Otherwise, scale world as needed
 		else if (height > width){
-			gc.setFill(Color.GREEN);
 			return width / cols;
 		}
 		else {
-			gc.setFill(Color.BLUE);
 			return height / rows;
 		}
 	}
@@ -140,7 +132,7 @@ class CritterWorldView extends Canvas{
 	 * Draws the grid
 	 */
 	private void drawGrid() {
-		gc.setStroke(Color.BLACK);
+		gc.setStroke(Color.DIMGREY);
 		gc.setLineWidth(1);
 		
 		double width = getWidth();
@@ -155,21 +147,82 @@ class CritterWorldView extends Canvas{
 			double x = i * vox_size;
 			gc.strokeLine(x, 0, x, height);	
 		}
-	
+		
 	}
 	
 //	/**
 //	 * Paints all Critters in grid
+//	 * TODO: Ask if possible to turn x_coord and y_coord protected (I'd rather not mix view code into model)
 //	 */
 //	private void paintAllCritters() {
 //		
 //	}
 //	
-//	/**
-//	 * Paints a Critter given x and y-coordinate
-//	 */
-//	private void paintCritter() {
-//		
-//	}
+	
+	/**
+	 * Paints a Critter given x and y-coordinate
+	 */
+	protected void paintCritter(Critter c, int x, int y) {
+
+		gc.setFill(c.viewFillColor());
+		gc.setStroke(c.viewOutlineColor());
+		gc.setLineWidth(2);
+		
+		// Critter will take up 75% of middle of voxel space
+		double critSize = vox_size * 0.60;
+		double startXPos = (x * vox_size) + (vox_size - critSize) / 2;
+		double startYPos = (y * vox_size) + (vox_size - critSize) / 2;
+		
+		switch(c.viewShape()) {
+			case CIRCLE:
+				gc.fillOval(startXPos, startYPos, critSize, critSize);
+				gc.strokeOval(startXPos, startYPos, critSize, critSize);
+				break;
+			case SQUARE:
+				gc.fillRect(startXPos, startYPos, critSize, critSize);
+				gc.strokeRect(startXPos, startYPos, critSize, critSize);
+				break;
+			case DIAMOND:
+				double midX = (x * vox_size) + (vox_size / 2);
+				double midY = (y * vox_size) + (vox_size / 2);
+				
+				double [] xDiaPoints = {midX, startXPos + critSize, midX, startXPos};
+				double [] yDiaPoints = {startYPos, midY, startYPos + critSize, midY};
+				
+				gc.fillPolygon(xDiaPoints, yDiaPoints, 4);
+				gc.strokePolygon(xDiaPoints, yDiaPoints, 4);
+				break; 
+				
+			// TODO: Find a way to not make star look stupid
+			case STAR:
+				double star_ax = (x * vox_size) + (vox_size / 2); 
+				double star_ay = startYPos + critSize;
+				
+				double star_bx = startXPos;
+				double star_cx = startXPos + critSize;
+				double star_bcy = startYPos;
+				
+				double [] xStarPoints = {star_ax, star_bx, star_cx};
+				double [] yStarPoints = {star_ay, star_bcy, star_bcy};
+				
+				gc.fillPolygon(xStarPoints, yStarPoints, 3);
+				
+			case TRIANGLE:
+				double ax = (x * vox_size) + (vox_size / 2); 
+				double ay = startYPos;
+				
+				double bx = startXPos;
+				double cx = startXPos + critSize;
+				double bcy = ay + critSize;
+				
+				double [] xTriPoints = {ax, bx, cx};
+				double [] yTriPoints = {ay, bcy, bcy};
+				
+				gc.fillPolygon(xTriPoints, yTriPoints, 3);
+				gc.strokePolygon(xTriPoints, yTriPoints, 3);
+				break;
+		}
+		
+	}
 
 }

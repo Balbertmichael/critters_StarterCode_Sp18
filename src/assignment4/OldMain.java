@@ -89,7 +89,7 @@ public class OldMain {
 					System.out.println("error processing: " + in);
 					break;
 				}
-				Critter.displayWorld();
+//				Critter.displayWorld();
 				break;
 
 			// advance one time step in world

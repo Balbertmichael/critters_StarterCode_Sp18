@@ -15,6 +15,8 @@ package assignment4;
 import java.util.Iterator;
 import java.util.List;
 
+import javafx.fxml.FXMLLoader;
+
 /* see the PDF for descriptions of the methods and fields in this class
  * you may add fields, methods or inner classes to Critter ONLY if you make your additions private
  * no new public, protected or default-package code or data can be added to Critter
@@ -615,49 +617,14 @@ public abstract class Critter {
 	}
 
 	/**
-	 * Prints out entire Critter world to the console
+	 * Displays Critter World
+	 * TODO: Ask if possible to pass something on to displayWorld
 	 */
-	public static void displayWorld() {
-		int height = Params.world_height + 2;
-		int width = Params.world_width + 2;
-		char[][] worldArray = new char[height][width];
-
-		String worldOut = "+";
-		for (int i = 0; i < Params.world_width; ++i) {
-			worldOut += "-";
-		}
-		worldOut += "+";
-		worldArray[0] = worldOut.toCharArray();
-
-		for (int i = 0; i < Params.world_height; ++i) {
-			worldOut = "|";
-			for (int k = 0; k < Params.world_width; ++k) {
-				worldOut += " ";
-			}
-			worldOut += "|";
-			worldArray[i + 1] = worldOut.toCharArray();
-		}
-
-		worldOut = "+";
-		for (int i = 0; i < Params.world_width; ++i) {
-			worldOut += "-";
-		}
-		worldOut += "+";
-		worldArray[height - 1] = worldOut.toCharArray();
-
-		for (Critter c : population) {
-			// Assuming to String is char and also coordinates are within world bounds
-			try {
-				worldArray[c.y_coord + 1][c.x_coord + 1] = c.toString().charAt(0);
-			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println("Y_coord: " + c.y_coord);
-				System.out.println("X_coord: " + c.x_coord);
-				throw e;
-			}
-		}
-		for (int i = 0; i < height; ++i) {
-			String row = new String(worldArray[i]);
-			System.out.println(row);
+	public static void displayWorld(CritterWorldView world) {
+		world.redraw();
+		
+		for(Critter c: population) {
+			world.paintCritter(c, c.x_coord, c.y_coord);
 		}
 	}
 }
