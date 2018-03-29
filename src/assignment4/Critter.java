@@ -622,9 +622,13 @@ public abstract class Critter {
 	 */
 	public static void displayWorld(CritterWorldView world) {
 		world.redraw();
+		double x;
+		double y;
 		
 		for(Critter c: population) {
-			world.paintCritter(c, c.x_coord, c.y_coord);
+			x = world.convertColToY(c.y_coord);
+			y = world.convertRowToX(c.x_coord);
+			world.paintCritter(c, x, y);
 		}
 	}
 }

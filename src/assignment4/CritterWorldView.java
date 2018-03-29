@@ -9,9 +9,10 @@ import assignment4.Critter.CritterShape;
 
 class CritterWorldView extends Canvas{
 	
-	private final double MIN_VOX_SIZE = 20;
+	private final double MIN_VOX_SIZE = 10;
 	private final double MAX_VOX_SIZE = 40;
 	private double vox_size;
+	private double crit_size;
 	private int rows;									// Params.world_height
 	private int cols;									// Params.world_width
 	
@@ -40,6 +41,7 @@ class CritterWorldView extends Canvas{
 	public void redraw() {
 
 		vox_size = calcVoxelSize();
+		crit_size = vox_size * 0.60;
 		setWidth(vox_size * cols);
 		setHeight(vox_size * rows);
 		
@@ -150,79 +152,119 @@ class CritterWorldView extends Canvas{
 		
 	}
 	
-//	/**
-//	 * Paints all Critters in grid
-//	 * TODO: Ask if possible to turn x_coord and y_coord protected (I'd rather not mix view code into model)
-//	 */
-//	private void paintAllCritters() {
-//		
-//	}
-//	
-	
 	/**
 	 * Paints a Critter given x and y-coordinate
+	 * Starting (x, y) indicates if Critter is wrapped in a rectangle, upper left position of rectangle
+	 * @param x starting x position on canvas 
+	 * @param y starting y position on canvas
 	 */
-	protected void paintCritter(Critter c, int x, int y) {
+	protected void paintCritter(Critter c, double x, double y) {
 
 		gc.setFill(c.viewFillColor());
 		gc.setStroke(c.viewOutlineColor());
-		gc.setLineWidth(2);
-		
-		// Critter will take up 75% of middle of voxel space
-		double critSize = vox_size * 0.60;
-		double startXPos = (x * vox_size) + (vox_size - critSize) / 2;
-		double startYPos = (y * vox_size) + (vox_size - critSize) / 2;
-		
+		gc.setLineWidth(1);
+				
 		switch(c.viewShape()) {
 			case CIRCLE:
-				gc.fillOval(startXPos, startYPos, critSize, critSize);
-				gc.strokeOval(startXPos, startYPos, critSize, critSize);
+				paintCircle(x, y);
 				break;
 			case SQUARE:
-				gc.fillRect(startXPos, startYPos, critSize, critSize);
-				gc.strokeRect(startXPos, startYPos, critSize, critSize);
+				paintSquare(x, y);
 				break;
 			case DIAMOND:
-				double midX = (x * vox_size) + (vox_size / 2);
-				double midY = (y * vox_size) + (vox_size / 2);
-				
-				double [] xDiaPoints = {midX, startXPos + critSize, midX, startXPos};
-				double [] yDiaPoints = {startYPos, midY, startYPos + critSize, midY};
-				
-				gc.fillPolygon(xDiaPoints, yDiaPoints, 4);
-				gc.strokePolygon(xDiaPoints, yDiaPoints, 4);
+				paintDiamond(x, y);
 				break; 
-				
-			// TODO: Find a way to not make star look stupid
 			case STAR:
-				double star_ax = (x * vox_size) + (vox_size / 2); 
-				double star_ay = startYPos + critSize;
-				
-				double star_bx = startXPos;
-				double star_cx = startXPos + critSize;
-				double star_bcy = startYPos;
-				
-				double [] xStarPoints = {star_ax, star_bx, star_cx};
-				double [] yStarPoints = {star_ay, star_bcy, star_bcy};
-				
-				gc.fillPolygon(xStarPoints, yStarPoints, 3);
-				
+				paintStar(x, y);
+				break;
 			case TRIANGLE:
-				double ax = (x * vox_size) + (vox_size / 2); 
-				double ay = startYPos;
-				
-				double bx = startXPos;
-				double cx = startXPos + critSize;
-				double bcy = ay + critSize;
-				
-				double [] xTriPoints = {ax, bx, cx};
-				double [] yTriPoints = {ay, bcy, bcy};
-				
-				gc.fillPolygon(xTriPoints, yTriPoints, 3);
-				gc.strokePolygon(xTriPoints, yTriPoints, 3);
+				paintTriangle(x, y);
 				break;
 		}
-		
 	}
 
+	/**
+	 * Convert given row index to canvas position values
+	 * @param x row
+	 * @return x starting position in canvas
+	 */
+	public double convertRowToX(int x) {
+		return (x * vox_size) + (vox_size - crit_size) / 2;
+	}
+	
+	/**
+	 * Convert given column index to canvas position values
+	 * @param y
+	 * @return
+	 */
+	public double convertColToY(int y) {
+		return (y * vox_size) + (vox_size - crit_size) / 2;
+	}
+	
+	/*Critter Drawing Functions*/
+	private void paintSquare(double x, double y) {
+		gc.fillRect(x, y, crit_size, crit_size);
+		gc.strokeRect(x, y, crit_size, crit_size);
+	}
+	
+	private void paintCircle(double x, double y) {
+		gc.fillOval(x, y, crit_size, crit_size);
+		gc.strokeOval(x, y, crit_size, crit_size);
+	}
+	
+	private void paintDiamond(double x, double y) {
+		double midX = x + (crit_size / 2);
+		double midY = y + (crit_size / 2);
+		
+		double [] xPoints = {midX, x + crit_size, midX, x};
+		double [] yPoints = {y, midY, y + crit_size, midY};
+		
+		gc.fillPolygon(xPoints, yPoints, 4);
+		gc.strokePolygon(xPoints, yPoints, 4);
+	}
+	
+	private void paintTriangle(double x, double y) {
+		double ax = x + (crit_size / 2); 
+		double ay = y;
+		
+		double bx = x;
+		double cx = x + crit_size;
+		double bcy = ay + crit_size;
+		
+		double [] xPoints = {ax, bx, cx};
+		double [] yPoints = {ay, bcy, bcy};
+		
+		gc.fillPolygon(xPoints, yPoints, 3);
+		gc.strokePolygon(xPoints, yPoints, 3);
+	}
+	
+	private void paintStar(double x, double y) {
+		double interval = crit_size / 3; 
+		
+		double [] xChoices = {
+				x,
+				x + 1 * interval,
+				x + 0.5 * interval,
+				x + 1.5 * interval,
+				x + 2 * interval,
+				x + 2.5 * interval,
+				x + 3 * interval
+		};
+		
+		double [] yChoices = {
+				y,
+				y + 1 * interval,
+				y + 1.75 * interval,
+				y + 2.10 * interval,
+				y + 3 * interval
+		};
+		
+		double [] xPoints = { xChoices[0], xChoices[1], xChoices[3], xChoices[4], xChoices[6], 
+							  xChoices[4], xChoices[5], xChoices[3], xChoices[2], xChoices[1]};
+		double [] yPoints = { yChoices[1], yChoices[1], yChoices[0], yChoices[1], yChoices[1],
+							  yChoices[2], yChoices[4], yChoices[3], yChoices[4], yChoices[2]};
+		gc.fillPolygon(xPoints, yPoints, 10);
+		gc.strokePolygon(xPoints, yPoints, 10);
+	}
 }
+
