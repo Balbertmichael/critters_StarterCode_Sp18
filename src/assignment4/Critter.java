@@ -621,7 +621,7 @@ public abstract class Critter {
 	 * TODO: Ask if possible to pass something on to displayWorld
 	 */
 	public static void displayWorld(CritterWorldView world) {
-		world.redraw();
+		world.redrawGrid();
 		double x;
 		double y;
 		

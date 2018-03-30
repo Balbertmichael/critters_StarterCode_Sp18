@@ -10,11 +10,12 @@ import assignment4.Critter.CritterShape;
 class CritterWorldView extends Canvas{
 	
 	private final double MIN_VOX_SIZE = 10;
-	private final double MAX_VOX_SIZE = 40;
+	private final double MAX_VOX_SIZE = 20;
 	private double vox_size;
 	private double crit_size;
 	private int rows;									// Params.world_height
 	private int cols;									// Params.world_width
+	
 	
 	private AnchorPane parentContainer;					// Canvas size basis
 	private double minCanvasWidth;
@@ -24,6 +25,18 @@ class CritterWorldView extends Canvas{
 
 	private GraphicsContext gc;
 	
+	/**
+	 * Animation Code
+	 */
+	private boolean animate = false;
+	
+	public boolean isAnimateOn() {
+		return animate;
+	}
+	
+	public void setAnimate(boolean animate) {
+		this.animate = animate;
+	}
 	
 	public CritterWorldView(AnchorPane parent) {
 		
@@ -38,7 +51,7 @@ class CritterWorldView extends Canvas{
 
 	}
 	
-	public void redraw() {
+	public void redrawGrid() {
 
 		vox_size = calcVoxelSize();
 		crit_size = vox_size * 0.60;
