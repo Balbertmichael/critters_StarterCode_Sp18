@@ -18,12 +18,12 @@ public class Controller {
 	public Slider speedSlider;
 	
 	private CritterWorldView world;
-	private WorldStepTimer worldStepTimer;
+	private WorldAnimTimer animTimer;
 	
 	public void initialize() {
 		
 		world = new CritterWorldView(anchorContainer);		
-		worldStepTimer = new WorldStepTimer(world, speedSlider);
+		animTimer = new WorldAnimTimer(world, speedSlider);
 		viewPane.setContent(world);
 
 	}
@@ -36,12 +36,13 @@ public class Controller {
 	public void toggleAnimateView() {
 		if(world.isAnimateOn()) {
 			world.setAnimate(false);
-			worldStepTimer.stop();
+			animTimer.stop();
 			togglePlayButton.setText("Play");
+			Critter.displayWorld(world);
 		}
 		else {
 			world.setAnimate(true);
-			worldStepTimer.start();
+			animTimer.start();
 			togglePlayButton.setText("Stop");
 		}
 	}

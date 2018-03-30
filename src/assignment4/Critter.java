@@ -29,6 +29,11 @@ import javafx.fxml.FXMLLoader;
  */
 public abstract class Critter {
 	
+	// Animation helper variables: keep track of previous coordinates and how each Critter moves
+	private Point prev = new Point();
+	private int moveSpeed;
+	private int moveDir;
+	
 	/* NEW FOR PROJECT 5 */
 	public enum CritterShape {
 		CIRCLE,
@@ -120,6 +125,10 @@ public abstract class Critter {
 
 	// Direction is 0-7
 	private final void move(int speed, int direction) {
+		
+		moveSpeed = speed;
+		moveDir = direction;
+		
 		switch (direction) {
 		case (0):
 			x_coord = negModulo(x_coord + speed, Params.world_width);
@@ -193,6 +202,7 @@ public abstract class Critter {
 			offspring.y_coord = negModulo(y_coord + 1, Params.world_height);
 			break;
 		}
+		offspring.prev = new Point(offspring.x_coord, offspring.y_coord);
 		babies.add(offspring);
 	}
 
@@ -236,6 +246,8 @@ public abstract class Critter {
 			// Randomly placing the critter in the world
 			c.x_coord = getRandomInt(Params.world_width);
 			c.y_coord = getRandomInt(Params.world_height);
+			
+			c.prev = new Point(c.x_coord, c.y_coord);
 			c.energy = Params.start_energy;
 
 			population.add(c);
@@ -616,6 +628,11 @@ public abstract class Critter {
 		return false;
 	}
 
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	// Technically VIEW components, but requirements state we need to call view from displayWorld
+	// So forced to place these animation elements here
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	
 	/**
 	 * Displays Critter World
 	 * TODO: Ask if possible to pass something on to displayWorld
@@ -625,10 +642,135 @@ public abstract class Critter {
 		double x;
 		double y;
 		
-		for(Critter c: population) {
-			x = world.convertColToY(c.y_coord);
-			y = world.convertRowToX(c.x_coord);
-			world.paintCritter(c, x, y);
+		if(world.isAnimateOn()) {
+			for(Critter c: population) {
+				Point curPoints = new Point(c.x_coord, c.y_coord);
+				if(c.prev.equals(curPoints)) {
+					x = world.convertToCanvCoord(c.x_coord);
+					y = world.convertToCanvCoord(c.y_coord);
+					
+					world.paintCritter(c, x, y);
+				}
+				else {
+					c.prev = new Point(c.moveFrac(c.moveSpeed, c.moveDir, c.prev, curPoints));
+					x = world.convertToCanvCoord(c.prev.getX());
+					y = world.convertToCanvCoord(c.prev.getY());
+					
+					world.paintCritter(c, x, y);
+				}
+			}
 		}
+		else {
+			for(Critter c: population) {
+				x = world.convertToCanvCoord(c.x_coord);
+				y = world.convertToCanvCoord(c.y_coord);
+				
+				c.prev.setX(c.x_coord);
+				c.prev.setY(c.y_coord);
+				
+				world.paintCritter(c, x, y);
+			}		
+		}
+	}
+	
+	// Movement for animation
+	// Moves a fraction of coordinates rather than whole steps
+	private Point moveFrac(double speed, int dir, Point prev, Point cur) {
+		
+		speed = speed * 0.25;
+		Point res = new Point();
+		
+		switch (dir) {
+		case (0):
+			res.setX(torusWrap(prev.getX() + speed, Params.world_width));
+			res.setY(prev.getY());
+			break;
+		case (1):
+			res.setX(torusWrap(prev.getX() + speed, Params.world_width));
+			res.setY(torusWrap(prev.getY() - speed, Params.world_height));
+			break;
+		case (2):
+			res.setX(prev.getX());
+			res.setY(torusWrap(prev.getY() - speed, Params.world_height));
+			break;
+		case (3):
+			res.setX(torusWrap(prev.getX()- speed, Params.world_width));
+			res.setY(torusWrap(prev.getY() - speed, Params.world_height));
+			break;
+		case (4):
+			res.setX(torusWrap(prev.getX() - speed, Params.world_width));
+			res.setY(prev.getY());
+			break;
+		case (5):
+			res.setX(torusWrap(prev.getX() - speed, Params.world_width));
+			res.setY(torusWrap(prev.getY() + speed, Params.world_height));
+			break;
+		case (6):
+			res.setX(torusWrap(prev.getX() + speed, Params.world_height));
+			res.setY(prev.getY());
+			break;
+		case (7):
+			res.setX(torusWrap(prev.getX() + speed, Params.world_width));
+			res.setY(torusWrap(prev.getY() + speed, Params.world_height));
+			break;
+		}
+		return res;
+	}
+	
+	// Similar to NegModulo but account for doubles as input
+	private double torusWrap(double div, int mod) {
+		if (div < 0) {
+			div += mod;
+		}
+		else if (div > mod) {
+			return div -= mod;
+		}
+		return div;
+	}
+}
+
+//Private helper class for use in animation
+class Point{
+	private double x;
+	private double y;
+	
+	public Point() {
+		
+	}
+	
+	public Point(Point oth) {
+		this.x = oth.x;
+		this.y = oth.y;
+	}
+	
+	public Point(double x, double y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
+	}
+	
+	public void setX(double x) {
+		this.x = x;
+	}
+	
+	public void setY(double y) {
+		this.y = y;
+	}
+	
+	public boolean equals(Point other) {
+		double xDiff = Math.abs(x - other.x);
+		double yDiff = Math.abs(y - other.y);
+		
+		if(xDiff < 0.01 && yDiff < 0.01) {
+			return true;
+		}
+		return false;
 	}
 }

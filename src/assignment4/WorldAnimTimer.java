@@ -3,14 +3,15 @@ package assignment4;
 import javafx.animation.AnimationTimer;
 import javafx.scene.control.Slider;
 
-public class WorldStepTimer extends AnimationTimer{
+public class WorldAnimTimer extends AnimationTimer{
 
 	CritterWorldView world;
 	Slider speedSlider;
 	long prevTime = 0;
 	double refreshRate = 1.0e9;
+	int numFramesPerWorldStep = 0;
 	
-	public WorldStepTimer(CritterWorldView world, Slider speed) {
+	public WorldAnimTimer(CritterWorldView world, Slider speed) {
 		this.world = world;
 		this.speedSlider = speed;
 	}
@@ -26,9 +27,17 @@ public class WorldStepTimer extends AnimationTimer{
 		
 		if(timeInterval > refreshRate) {
 			refreshRate = 1.0e9 / speedSlider.getValue();
-			Critter.worldTimeStep();
 			Critter.displayWorld(world);
 			prevTime = 0;
+			
+			if(numFramesPerWorldStep == 4) {
+				Critter.worldTimeStep();
+				Critter.displayWorld(world);
+				numFramesPerWorldStep = 0;
+			}
+			else {
+				numFramesPerWorldStep++;
+			}
 		}
 	}
 

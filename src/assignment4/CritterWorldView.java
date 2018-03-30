@@ -41,7 +41,7 @@ class CritterWorldView extends Canvas{
 	public CritterWorldView(AnchorPane parent) {
 		
 		parentContainer = parent;
-		setWorldSizeParams(Params.world_width, Params.world_height);
+		setWorldSizeParams(Params.world_height, Params.world_width);
 		gc = getGraphicsContext2D();
 		
 		// Scale grid appropriately upon resize
@@ -173,6 +173,11 @@ class CritterWorldView extends Canvas{
 	 */
 	protected void paintCritter(Critter c, double x, double y) {
 
+		double temp;
+		// Made mistake when implementing code; switched x and y in paintFunctions
+		// swapped them here to avoid mess in refactoring
+
+		
 		gc.setFill(c.viewFillColor());
 		gc.setStroke(c.viewOutlineColor());
 		gc.setLineWidth(1);
@@ -198,20 +203,11 @@ class CritterWorldView extends Canvas{
 
 	/**
 	 * Convert given row index to canvas position values
-	 * @param x row
-	 * @return x starting position in canvas
+	 * @param grid_pos row
+	 * @return starting position in canvas
 	 */
-	public double convertRowToX(int x) {
-		return (x * vox_size) + (vox_size - crit_size) / 2;
-	}
-	
-	/**
-	 * Convert given column index to canvas position values
-	 * @param y
-	 * @return
-	 */
-	public double convertColToY(int y) {
-		return (y * vox_size) + (vox_size - crit_size) / 2;
+	public double convertToCanvCoord(double grid_pos) {
+		return (grid_pos * vox_size) + (vox_size - crit_size) / 2;
 	}
 	
 	/*Critter Drawing Functions*/
