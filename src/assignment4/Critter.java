@@ -33,6 +33,7 @@ public abstract class Critter {
 	private Point prev = new Point();
 	private int moveSpeed;
 	private int moveDir;
+	private static boolean isAnimateOn;
 	
 	/* NEW FOR PROJECT 5 */
 	public enum CritterShape {
@@ -400,11 +401,15 @@ public abstract class Critter {
 	 */
 	public static void worldTimeStep() {
 
+
 		// DoTimeSteps for photosynthesis
-		for (Critter c : population) {
-			c.doTimeStep();
+		if(!isAnimateOn) {
+			for (Critter c : population) {
+				c.doTimeStep();
+			}			
 		}
 
+		
 		// Encounters
 		// Checks each member of population against every other member of population not
 		// yet checked
@@ -460,6 +465,13 @@ public abstract class Critter {
 			Critter c = babyIter.next();
 			population.add(c);
 			babyIter.remove();
+		}
+		
+		// Do Time Step at end if animation is on so that there are no gaps in animation
+		if(isAnimateOn) {
+			for (Critter c : population) {
+				c.doTimeStep();
+			}			
 		}
 	}
 
@@ -638,6 +650,8 @@ public abstract class Critter {
 	 * TODO: Ask if possible to pass something on to displayWorld
 	 */
 	public static void displayWorld(CritterWorldView world) {
+		isAnimateOn = world.isAnimateOn();
+		
 		world.redrawGrid();
 		double x;
 		double y;

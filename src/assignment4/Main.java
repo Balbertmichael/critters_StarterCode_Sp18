@@ -14,13 +14,13 @@ public class Main extends Application{
 		
 		try {
 			
-			for(int i = 0; i < 10; i++) {
-				
+			for(int i = 0; i < 1; i++) {
+				Critter.setSeed(5);
 				Critter.makeCritter("Craig");
-				Critter.makeCritter("Critter1");
-				Critter.makeCritter("Critter2");
-				Critter.makeCritter("Critter3");
-				Critter.makeCritter("Critter4");
+//				Critter.makeCritter("Critter1");
+//				Critter.makeCritter("Critter2");
+//				Critter.makeCritter("Critter3");
+//				Critter.makeCritter("Critter4");
 			}
 
 			

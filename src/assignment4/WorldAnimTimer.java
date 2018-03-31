@@ -30,7 +30,7 @@ public class WorldAnimTimer extends AnimationTimer{
 			Critter.displayWorld(world);
 			prevTime = 0;
 			
-			if(numFramesPerWorldStep == 4) {
+			if(numFramesPerWorldStep == 3) {
 				Critter.worldTimeStep();
 				Critter.displayWorld(world);
 				numFramesPerWorldStep = 0;
