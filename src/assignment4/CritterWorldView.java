@@ -41,7 +41,7 @@ class CritterWorldView extends Canvas{
 	public CritterWorldView(AnchorPane parent) {
 		
 		parentContainer = parent;
-		setWorldSizeParams(Params.world_width, Params.world_height);
+		setWorldSizeParams(Params.world_height, Params.world_width);
 		gc = getGraphicsContext2D();
 		
 		// Scale grid appropriately upon resize

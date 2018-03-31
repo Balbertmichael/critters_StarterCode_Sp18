@@ -626,8 +626,8 @@ public abstract class Critter {
 		double y;
 		
 		for(Critter c: population) {
-			x = world.convertColToY(c.y_coord);
-			y = world.convertRowToX(c.x_coord);
+			x = world.convertColToY(c.x_coord);
+			y = world.convertRowToX(c.y_coord);
 			world.paintCritter(c, x, y);
 		}
 	}
