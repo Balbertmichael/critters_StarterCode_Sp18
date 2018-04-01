@@ -6,7 +6,7 @@ import assignment4.Critter.CritterShape;
 
 /**
  * Critter2 Class: Hotheaded Critter This Critter will never back away from a
- * fight. It is always energetic and running. It never walks
+ * fight. It is always will go towards a fight.
  */
 public class Critter2 extends Critter {
 
@@ -19,12 +19,25 @@ public class Critter2 extends Critter {
 	}
 
 	/**
-	 * doTimeStep: Critter2 will always run randomly in whichever direction it wants
+	 * doTimeStep: Critter2 will always move to fight
 	 */
 	@Override
 	public void doTimeStep() {
 		fought = 0;
-		run(getRandomInt(8));
+		boolean moved = false;
+		for(int i = 0; i < 8; ++i) {
+			if(look(i, false) != null) {
+				walk(i);
+				moved = true;
+			}
+			else if(look(i, true) != null) {
+				run(i);
+				moved = true;
+			}
+		}
+		if(!moved) {
+			run(getRandomInt(8));
+		}
 		if (getEnergy() >= Params.start_energy * 3) {
 			Critter2 child = new Critter2();
 			reproduce(child, getRandomInt(8));

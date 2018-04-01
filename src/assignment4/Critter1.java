@@ -30,9 +30,25 @@ public class Critter1 extends Critter {
 		moved = false;
 		if (getEnergy() < Params.start_energy / 2) {
 			// Only walks if it knows it's about to die
-			walk(Critter.getRandomInt(8));
-			moved = true;
+			for (int i = 0; i < 8; ++i) {
+				String lookVal = look(i, false);
+				if (lookVal.equals("2") || lookVal.equals("C")) {
+					walk((i + 4) % 8);
+					moved = true;
+				}
+			}
+			if (!moved) {
+				walk(getRandomInt(8));
+				moved = true;
+			}
 		} else {
+			for (int i = 0; i < 8; ++i) {
+				String lookVal = look(i, false);
+				if (lookVal.equals("2") || lookVal.equals("C")) {
+					walk((i + 4) % 8);
+					moved = true;
+				}
+			}
 			if (getEnergy() >= 2 * Params.start_energy) {
 				Critter1 child = new Critter1();
 				reproduce(child, getRandomInt(8));
@@ -92,15 +108,20 @@ public class Critter1 extends Critter {
 				+ "% had a close brush with death.");
 		return ret;
 	}
-	
-	@Override
-	public CritterShape viewShape() { return CritterShape.CIRCLE; }
 
 	@Override
-	public javafx.scene.paint.Color viewOutlineColor() { return javafx.scene.paint.Color.DARKMAGENTA; }
-	
-	@Override
-	public javafx.scene.paint.Color viewFillColor() { return javafx.scene.paint.Color.DARKMAGENTA; }
+	public CritterShape viewShape() {
+		return CritterShape.CIRCLE;
+	}
 
+	@Override
+	public javafx.scene.paint.Color viewOutlineColor() {
+		return javafx.scene.paint.Color.DARKMAGENTA;
+	}
+
+	@Override
+	public javafx.scene.paint.Color viewFillColor() {
+		return javafx.scene.paint.Color.DARKMAGENTA;
+	}
 
 }
