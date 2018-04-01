@@ -32,7 +32,7 @@ public class Critter1 extends Critter {
 			// Only walks if it knows it's about to die
 			for (int i = 0; i < 8; ++i) {
 				String lookVal = look(i, false);
-				if (lookVal.equals("2") || lookVal.equals("C")) {
+				if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
 					walk((i + 4) % 8);
 					moved = true;
 				}
@@ -44,7 +44,7 @@ public class Critter1 extends Critter {
 		} else {
 			for (int i = 0; i < 8; ++i) {
 				String lookVal = look(i, false);
-				if (lookVal.equals("2") || lookVal.equals("C")) {
+				if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
 					walk((i + 4) % 8);
 					moved = true;
 				}
