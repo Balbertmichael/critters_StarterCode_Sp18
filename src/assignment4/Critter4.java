@@ -65,7 +65,8 @@ public class Critter4 extends Critter {
 	 * 
 	 * @param critter4
 	 */
-	public static void runStats(java.util.List<Critter> critter4) {
+	public static String runStats(java.util.List<Critter> critter4) {
+		String ret = "";
 		int hadChild = 0;
 		for (Object obj : critter4) {
 			Critter4 c = (Critter4) obj;
@@ -75,7 +76,8 @@ public class Critter4 extends Critter {
 		}
 		hadChild = percentChild(critter4.size(), hadChild);
 
-		System.out.println("" + critter4.size() + " total Critter3s: " + hadChild + "% had babies");
+		ret += ("" + critter4.size() + " total Critter3s: " + hadChild + "% had babies") + '\n';
+		return ret;
 	}
 
 	/**

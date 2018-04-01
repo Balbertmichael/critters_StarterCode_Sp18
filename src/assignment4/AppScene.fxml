@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1000.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment4.Controller">
    <children>
-      <SplitPane dividerPositions="0.6212424849699398" layoutX="301.0" layoutY="66.0" prefHeight="611.0" prefWidth="1000.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.6232464929859719" layoutX="301.0" layoutY="66.0" prefHeight="611.0" prefWidth="1000.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane fx:id="anchorContainer" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -19,7 +19,7 @@
             </AnchorPane>
             <ScrollPane prefViewportHeight="798.0" prefViewportWidth="373.0">
                <content>
-                <AnchorPane prefWidth="400.0">
+                <AnchorPane prefHeight="712.0" prefWidth="366.0">
                      <children>
                         <VBox layoutX="10.0" layoutY="7.0" prefHeight="776.0" prefWidth="351.0">
                            <children>
@@ -77,8 +77,8 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <TextField prefHeight="52.0" prefWidth="89.0" />
-                                    <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" text="&gt;&gt;">
+                                    <TextField fx:id="stepsNumber" prefHeight="52.0" prefWidth="89.0" />
+                                    <Button fx:id="stepsForward" mnemonicParsing="false" onMouseClicked="#stepForward" prefHeight="51.0" prefWidth="60.0" text="&gt;&gt;">
                                        <font>
                                           <Font name="Copperplate Gothic Bold" size="18.0" />
                                        </font>
@@ -95,8 +95,8 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <TextField prefHeight="52.0" prefWidth="85.0" />
-                                    <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="64.0" text="Set">
+                                    <TextField fx:id="seedNumber" prefHeight="52.0" prefWidth="85.0" />
+                                    <Button fx:id="setSeedNumber" mnemonicParsing="false" onMouseClicked="#setSeed" prefHeight="51.0" prefWidth="64.0" text="Set">
                                        <font>
                                           <Font name="Copperplate Gothic Bold" size="12.0" />
                                        </font>
@@ -110,18 +110,18 @@
                                  <children>
                                     <HBox prefHeight="47.0" prefWidth="351.0">
                                        <children>
-                                          <ChoiceBox prefHeight="51.0" prefWidth="211.0" />
-                                          <Button alignment="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="110.0" text="Run Stats">
+                                          <ChoiceBox fx:id="runStatsChoiceBox" prefHeight="51.0" prefWidth="211.0" />
+                                          <Button fx:id="changeRunStats" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#setRunStats" prefHeight="64.0" prefWidth="110.0" text="Run Stats">
                                              <font>
                                                 <Font name="Copperplate Gothic Bold" size="14.0" />
                                              </font>
                                           </Button>
                                        </children>
                                     </HBox>
-                                    <ScrollPane prefHeight="172.0" prefWidth="311.0">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="288.0" prefWidth="347.0" />
-                                      </content>
+                                    <ScrollPane hbarPolicy="NEVER" prefHeight="172.0" prefWidth="311.0" vbarPolicy="ALWAYS">
+                                       <content>
+                                          <TextFlow fx:id="runStatsText" prefHeight="171.0" prefWidth="298.0" />
+                                       </content>
                                     </ScrollPane>
                                  </children>
                               </VBox>

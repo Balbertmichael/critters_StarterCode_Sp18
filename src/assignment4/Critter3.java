@@ -72,7 +72,8 @@ public class Critter3 extends Critter {
 	 * 
 	 * @param critter3
 	 */
-	public static void runStats(java.util.List<Critter> critter3) {
+	public static String runStats(java.util.List<Critter> critter3) {
+		String ret = "";
 		int up = 0;
 		int down = 0;
 		int left = 0;
@@ -94,8 +95,9 @@ public class Critter3 extends Critter {
 		down = PercentDir(size, down);
 		right = PercentDir(size, right);
 		left = PercentDir(size, left);
-		System.out.println("" + critter3.size() + " total Critter3s: " + up + "% Up, " + down + "% Down, " + left
-				+ "% Left, " + right + "% right");
+		ret += ("" + critter3.size() + " total Critter3s: " + up + "% Up, " + down + "% Down, " + left
+				+ "% Left, " + right + "% right") + '\n';
+		return ret;
 	}
 
 	/**

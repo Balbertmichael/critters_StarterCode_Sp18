@@ -70,7 +70,8 @@ public class Critter1 extends Critter {
 	 * 
 	 * @param critter1
 	 */
-	public static void runStats(java.util.List<Critter> critter1) {
+	public static String runStats(java.util.List<Critter> critter1) {
+		String ret = "";
 		int lazy = 0;
 		int escapedFromDeath = 0;
 		for (Object obj : critter1) {
@@ -87,8 +88,9 @@ public class Critter1 extends Critter {
 		if (escapedFromDeath != 0) {
 			escapedFromDeath = ((escapedFromDeath * 100) / critter1.size());
 		}
-		System.out.println("" + critter1.size() + " total Critter1s: " + lazy + "% are lazy, " + escapedFromDeath
+		ret += ("" + critter1.size() + " total Critter1s: " + lazy + "% are lazy, " + escapedFromDeath
 				+ "% had a close brush with death.");
+		return ret;
 	}
 	
 	@Override

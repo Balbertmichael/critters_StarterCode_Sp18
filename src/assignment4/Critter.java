@@ -12,9 +12,15 @@ package assignment4;
  * Spring 2018
  */
 
+import java.io.File;
+import java.lang.reflect.Modifier;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 
 /* see the PDF for descriptions of the methods and fields in this class
@@ -28,44 +34,50 @@ import javafx.fxml.FXMLLoader;
  * population
  */
 public abstract class Critter {
-	
+
 	/* NEW FOR PROJECT 5 */
 	public enum CritterShape {
-		CIRCLE,
-		SQUARE,
-		TRIANGLE,
-		DIAMOND,
-		STAR
+		CIRCLE, SQUARE, TRIANGLE, DIAMOND, STAR
 	}
-	
-	/* the default color is white, which I hope makes critters invisible by default
-	 * If you change the background color of your View component, then update the default
-	 * color to be the same as you background 
+
+	/*
+	 * the default color is white, which I hope makes critters invisible by default
+	 * If you change the background color of your View component, then update the
+	 * default color to be the same as you background
 	 * 
-	 * critters must override at least one of the following three methods, it is not 
+	 * critters must override at least one of the following three methods, it is not
 	 * proper for critters to remain invisible in the view
 	 * 
-	 * If a critter only overrides the outline color, then it will look like a non-filled 
-	 * shape, at least, that's the intent. You can edit these default methods however you 
-	 * need to, but please preserve that intent as you implement them. 
+	 * If a critter only overrides the outline color, then it will look like a
+	 * non-filled shape, at least, that's the intent. You can edit these default
+	 * methods however you need to, but please preserve that intent as you implement
+	 * them.
 	 */
-	public javafx.scene.paint.Color viewColor() { 
-		return javafx.scene.paint.Color.WHITE; 
+	public javafx.scene.paint.Color viewColor() {
+		return javafx.scene.paint.Color.WHITE;
 	}
-	
-	public javafx.scene.paint.Color viewOutlineColor() { return viewColor(); }
-	public javafx.scene.paint.Color viewFillColor() { return viewColor(); }
-	
-	public abstract CritterShape viewShape(); 
-	
+
+	public javafx.scene.paint.Color viewOutlineColor() {
+		return viewColor();
+	}
+
+	public javafx.scene.paint.Color viewFillColor() {
+		return viewColor();
+	}
+
+	public abstract CritterShape viewShape();
+
 	private static String myPackage;
+	private static String pkgLoc;
+
 	private static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
 
-	// Gets the package name. This assumes that Critter and its subclasses are all
-	// in the same package.
+	// Gets the package name. The usage assumes that Critter and its subclasses are
+	// all in the same package.
 	static {
 		myPackage = Critter.class.getPackage().toString().split(" ")[1];
+		pkgLoc = Paths.get("").toAbsolutePath().toString().replace("\\", "\\\\") + "\\\\" + "bin\\\\" + myPackage;
 	}
 
 	private static java.util.Random rand = new java.util.Random();
@@ -275,8 +287,9 @@ public abstract class Critter {
 	 * @param critters
 	 *            List of Critters.
 	 */
-	public static void runStats(List<Critter> critters) {
-		System.out.print("" + critters.size() + " critters as follows -- ");
+	public static String runStats(List<Critter> critters) {
+		String ret = "";
+		ret += "" + critters.size() + " critters as follows -- ";
 		java.util.Map<String, Integer> critter_count = new java.util.HashMap<String, Integer>();
 		for (Critter crit : critters) {
 			String crit_string = crit.toString();
@@ -289,10 +302,12 @@ public abstract class Critter {
 		}
 		String prefix = "";
 		for (String s : critter_count.keySet()) {
-			System.out.print(prefix + s + ":" + critter_count.get(s));
+			ret += (prefix + s + ":" + critter_count.get(s));
 			prefix = ", ";
 		}
-		System.out.println();
+		ret += '\n';
+		System.out.print(ret);
+		return ret;
 	}
 
 	/*
@@ -549,12 +564,12 @@ public abstract class Critter {
 		}
 		return null;
 	}
-	
+
 	protected final String look(int direction, boolean steps) {
 		int chkX = x_coord;
 		int chkY = y_coord;
 		int speed = 1;
-		if(steps) {
+		if (steps) {
 			speed = 2;
 		}
 		switch (direction) {
@@ -617,18 +632,49 @@ public abstract class Critter {
 	}
 
 	/**
-	 * Displays Critter World
-	 * TODO: Ask if possible to pass something on to displayWorld
+	 * Displays Critter World TODO: Ask if possible to pass something on to
+	 * displayWorld
 	 */
 	public static void displayWorld(CritterWorldView world) {
 		world.redrawGrid();
 		double x;
 		double y;
-		
-		for(Critter c: population) {
+
+		for (Critter c : population) {
 			x = world.convertColToY(c.x_coord);
 			y = world.convertRowToX(c.y_coord);
 			world.paintCritter(c, x, y);
 		}
+	}
+
+	public static ObservableList<String> makeCritterList() {
+		File f = new File(pkgLoc);
+		String[] subFiles = f.list();
+		List<String> findClasses = new ArrayList<String>();
+		List<String> findCritters = new ArrayList<String>();
+		for (String s : subFiles) {
+			if (s.endsWith(".class")) {
+				findClasses.add(s);
+			}
+		}
+		for (String s : findClasses) {
+			String critName = s.substring(0, s.indexOf(".class"));
+			try {
+				Class<?> check_class = Class.forName(myPackage + '.' + critName);
+				int mod = check_class.getModifiers();
+				if (Modifier.isAbstract(mod) || Modifier.isPrivate(mod)) {
+					continue;
+				}
+				Class<?> critter_class = Critter.class;
+				if (critter_class.isAssignableFrom(check_class)) {
+					findCritters.add(critName);
+					// System.out.println(critName);
+				}
+			} catch (ClassNotFoundException e) {
+				// Shouldn't happen
+				continue;
+			}
+		}
+		return FXCollections.observableArrayList(findCritters);
 	}
 }

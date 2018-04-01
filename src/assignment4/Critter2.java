@@ -53,8 +53,10 @@ public class Critter2 extends Critter {
 	 * 
 	 * @param critter4
 	 */
-	public static void runStats(List<Critter> critter4) {
-		System.out.println(critter4.size() + " total Critter2s who fought " + fought + " times");
+	public static String runStats(List<Critter> critter4) {
+		String ret = "";
+		ret += (critter4.size() + " total Critter2s who fought " + fought + " times") + '\n';
+		return ret;
 	}
 
 	@Override
