@@ -31,10 +31,12 @@ public class Critter1 extends Critter {
 		if (getEnergy() < Params.start_energy / 2) {
 			// Only walks if it knows it's about to die
 			for (int i = 0; i < 8; ++i) {
-				String lookVal = look(i, false);
-				if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
-					walk((i + 4) % 8);
-					moved = true;
+				if (getEnergy() < .5 * Params.start_energy) {
+					String lookVal = look(i, false);
+					if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
+						walk((i + 4) % 8);
+						moved = true;
+					}
 				}
 			}
 			if (!moved) {
@@ -43,10 +45,12 @@ public class Critter1 extends Critter {
 			}
 		} else {
 			for (int i = 0; i < 8; ++i) {
-				String lookVal = look(i, false);
-				if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
-					walk((i + 4) % 8);
-					moved = true;
+				if (getEnergy() < .5 * Params.start_energy) {
+					String lookVal = look(i, false);
+					if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
+						walk((i + 4) % 8);
+						moved = true;
+					}
 				}
 			}
 			if (getEnergy() >= 2 * Params.start_energy) {

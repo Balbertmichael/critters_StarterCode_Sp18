@@ -26,11 +26,7 @@ public class Critter2 extends Critter {
 		fought = 0;
 		boolean moved = false;
 		for(int i = 0; i < 8; ++i) {
-			if(look(i, false) != null) {
-				walk(i);
-				moved = true;
-			}
-			else if(look(i, true) != null) {
+			if(look(i, true) != null) {
 				run(i);
 				moved = true;
 			}

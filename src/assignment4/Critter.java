@@ -566,6 +566,7 @@ public abstract class Critter {
 	}
 
 	protected final String look(int direction, boolean steps) {
+		energy -= Params.look_energy_cost;
 		int chkX = x_coord;
 		int chkY = y_coord;
 		int speed = 1;
