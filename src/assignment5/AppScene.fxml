@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+   <children>
+      <SplitPane dividerPositions="0.6232464929859719" layoutX="301.0" layoutY="66.0" prefHeight="611.0" prefWidth="1000.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="anchorContainer" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane fx:id="viewPane" layoutX="121.0" layoutY="91.0" minHeight="200.0" minWidth="200.0" onMouseClicked="#resetWorld" pannable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <ScrollPane prefViewportHeight="798.0" prefViewportWidth="373.0">
+               <content>
+                <AnchorPane prefHeight="712.0" prefWidth="366.0">
+                     <children>
+                        <VBox layoutX="10.0" layoutY="7.0" prefHeight="776.0" prefWidth="351.0">
+                           <children>
+                              <HBox prefHeight="49.0" prefWidth="351.0">
+                                 <children>
+                                    <Label prefHeight="57.0" prefWidth="374.0" style="-fx-font-size: 35;" text="CONTROLLER" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Copperplate Gothic Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="146.0" prefWidth="351.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label alignment="BOTTOM_LEFT" prefHeight="39.0" prefWidth="161.0" text="Critter Type:" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="BOTTOM_LEFT" prefHeight="39.0" prefWidth="124.0" text="Number:">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="8.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="351.0" spacing="30.0">
+                                       <children>
+                                          <ChoiceBox fx:id="critterChoiceBox" prefHeight="53.0" prefWidth="153.0" />
+                                          <TextField fx:id="critterNumber" prefHeight="51.0" prefWidth="58.0" text="1" />
+                                          <Button fx:id="addCritter" mnemonicParsing="false" onMouseClicked="#controllerMakeCritter" prefHeight="51.0" prefWidth="79.0" text="ADD">
+                                             <font>
+                                                <Font name="Copperplate Gothic Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="20.0" top="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox prefHeight="124.0" prefWidth="351.0">
+                                 <children>
+                                    <Label prefHeight="51.0" prefWidth="208.0" text="Set Seed: " textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="seedNumber" prefHeight="52.0" prefWidth="85.0" />
+                                    <Button fx:id="setSeedNumber" mnemonicParsing="false" onMouseClicked="#setSeed" prefHeight="51.0" prefWidth="64.0" text="Set">
+                                       <font>
+                                          <Font name="Copperplate Gothic Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <VBox prefHeight="256.0" prefWidth="351.0">
+                                 <children>
+                                    <HBox prefHeight="47.0" prefWidth="351.0">
+                                       <children>
+                                          <ChoiceBox fx:id="runStatsChoiceBox" prefHeight="51.0" prefWidth="211.0" />
+                                          <Button fx:id="changeRunStats" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#setRunStats" prefHeight="64.0" prefWidth="110.0" text="Run Stats">
+                                             <font>
+                                                <Font name="Copperplate Gothic Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ScrollPane hbarPolicy="NEVER" prefHeight="172.0" prefWidth="311.0" vbarPolicy="ALWAYS">
+                                       <content>
+                                          <TextFlow fx:id="runStatsText" prefHeight="171.0" prefWidth="298.0" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <HBox prefHeight="122.0" prefWidth="311.0">
+                                       <children>
+                                          <Label prefHeight="55.0" prefWidth="209.0" text="Number Steps Forward:" wrapText="true">
+                                             <padding>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="stepsNumber" prefHeight="52.0" prefWidth="89.0" text="1" />
+                                          <Button fx:id="stepsForward" mnemonicParsing="false" onMouseClicked="#stepForward" prefHeight="51.0" prefWidth="60.0" text="&gt;&gt;">
+                                             <font>
+                                                <Font name="Copperplate Gothic Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <Label prefHeight="31.0" prefWidth="306.0" text="Speed (Number steps forward per second)" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="128.0" prefWidth="311.0" spacing="20.0">
+                                       <children>
+                                          <Slider fx:id="speedSlider" blockIncrement="5.0" majorTickUnit="7.0" max="31.0" min="1.0" prefHeight="91.0" prefWidth="224.0" showTickLabels="true" showTickMarks="true" value="8.0">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Button fx:id="togglePlayButton" mnemonicParsing="false" onMouseClicked="#toggleAnimateView" prefHeight="78.0" prefWidth="106.0" text="Play">
+                                             <font>
+                                                <Font name="Copperplate Gothic Bold" size="20.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox prefHeight="17.0" prefWidth="311.0">
+                                 <children>
+                                    <Button fx:id="resetButton" mnemonicParsing="false" onMouseClicked="#resetWorld" prefHeight="23.0" prefWidth="309.0" text="Reset World" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
