@@ -14,6 +14,8 @@ package assignment4;
 
 import java.io.File;
 import java.lang.reflect.Modifier;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -73,11 +75,15 @@ public abstract class Critter {
 	private static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
 
-	// Gets the package name. The usage assumes that Critter and its subclasses are
+	// Gets the package name and finds the location of the package. The usage
+	// assumes that Critter and its subclasses are
 	// all in the same package.
 	static {
 		myPackage = Critter.class.getPackage().toString().split(" ")[1];
 		pkgLoc = Paths.get("").toAbsolutePath().toString().replace("\\", "\\\\") + "\\\\" + "bin\\\\" + myPackage;
+		if (!Files.exists(Paths.get(pkgLoc))) {
+			pkgLoc = Paths.get("").toAbsolutePath().toString().replace("\\", "\\\\") + "\\\\" + myPackage;
+		}
 	}
 
 	private static java.util.Random rand = new java.util.Random();
@@ -306,7 +312,7 @@ public abstract class Critter {
 			prefix = ", ";
 		}
 		ret += '\n';
-		System.out.print(ret);
+		//System.out.print(ret);
 		return ret;
 	}
 
@@ -565,12 +571,20 @@ public abstract class Critter {
 		return null;
 	}
 
-	protected final String look(int direction, boolean steps) {
+	/**
+	 * Method to allow Critters to see other Critters in the world and make choices
+	 * based on sight
+	 * 
+	 * @param direction The direction to look at relative to the current x and y position
+	 * @param willRun Basically determines how far to look: 1 or 2 spaces around
+	 * @return Returns the first critter that is in the spot that is being looked at
+	 */
+	protected final String look(int direction, boolean willRun) {
 		energy -= Params.look_energy_cost;
 		int chkX = x_coord;
 		int chkY = y_coord;
 		int speed = 1;
-		if (steps) {
+		if (willRun) {
 			speed = 2;
 		}
 		switch (direction) {
@@ -633,8 +647,10 @@ public abstract class Critter {
 	}
 
 	/**
-	 * Displays Critter World TODO: Ask if possible to pass something on to
-	 * displayWorld
+	 * Basically a way for the model to push it's values onto the CritterWorldView
+	 * 
+	 * @param world
+	 *            The view to utilize to display the critters in the population
 	 */
 	public static void displayWorld(CritterWorldView world) {
 		world.redrawGrid();
@@ -648,6 +664,11 @@ public abstract class Critter {
 		}
 	}
 
+	/**
+	 * Makes an observable list of critters in the package for the drop down menu
+	 * 
+	 * @return A List of Strings to be used in the ChoiceBox
+	 */
 	public static ObservableList<String> makeCritterList() {
 		File f = new File(pkgLoc);
 		String[] subFiles = f.list();

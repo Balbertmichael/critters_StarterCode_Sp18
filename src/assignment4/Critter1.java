@@ -22,7 +22,7 @@ public class Critter1 extends Critter {
 	}
 
 	/**
-	 * doTimeStep: Critter1 only rests during a time step It will only reproduce
+	 * doTimeStep: Critter1 only rests during a time step. It will only reproduce
 	 * once it has energy twice as much as the starting energy
 	 */
 	@Override
@@ -30,29 +30,9 @@ public class Critter1 extends Critter {
 		moved = false;
 		if (getEnergy() < Params.start_energy / 2) {
 			// Only walks if it knows it's about to die
-			for (int i = 0; i < 8; ++i) {
-				if (getEnergy() < .5 * Params.start_energy) {
-					String lookVal = look(i, false);
-					if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
-						walk((i + 4) % 8);
-						moved = true;
-					}
-				}
-			}
-			if (!moved) {
-				walk(getRandomInt(8));
-				moved = true;
-			}
+			walk(Critter.getRandomInt(8));
+			moved = true;
 		} else {
-			for (int i = 0; i < 8; ++i) {
-				if (getEnergy() < .5 * Params.start_energy) {
-					String lookVal = look(i, false);
-					if ((lookVal != null) && (lookVal.equals("2") || lookVal.equals("C"))) {
-						walk((i + 4) % 8);
-						moved = true;
-					}
-				}
-			}
 			if (getEnergy() >= 2 * Params.start_energy) {
 				Critter1 child = new Critter1();
 				reproduce(child, getRandomInt(8));
@@ -72,9 +52,14 @@ public class Critter1 extends Critter {
 		if (moved == true) {
 			return true;
 		}
-		walk(getRandomInt(8));
-		moved = true;
-		return false;
+		for (int i = 0; i < 8; ++i) {
+			if (look(i, false) == null) {
+				walk(i); //Basically checks to see if it can run away in which it will if it can
+				moved = true;
+				return false;
+			}
+		}
+		return true; //If can't run away then fights
 	}
 
 	/**

@@ -53,19 +53,25 @@ public class Controller {
 	
 	private CritterWorldView world;
 	private WorldStepTimer worldStepTimer;
-
+	/**
+	 * Initializes the graphics context and also start some the needed choices for the choice box
+	 */
 	public void initialize() {
 		world = new CritterWorldView(anchorContainer);
 		populateChoiceBox();
 		worldStepTimer = new WorldStepTimer(world, speedSlider);
 		viewPane.setContent(world);
 	}
-
+	/**
+	 * Basically updates the View to allow for the world to advance a world time step
+	 */
 	public void updateView() {
 		Critter.worldTimeStep();
 		Critter.displayWorld(world);
 	}
-
+	/**
+	 * Switches the animation on or off to allow for animation. Also closes the rest of the controller
+	 */
 	public void toggleAnimateView() {
 		if (world.isAnimateOn()) {
 			world.setAnimate(false);
@@ -85,7 +91,9 @@ public class Controller {
 			togglePlayButton.setText("Stop");
 		}
 	}
-
+	/**
+	 * Private method that sets the ChoiceBox accordingly to the critters that are a subclass of Critter
+	 */
 	private void populateChoiceBox() {
 		ObservableList<String> s = Critter.makeCritterList();
 		critterChoiceBox.getItems().addAll(s);
@@ -95,7 +103,9 @@ public class Controller {
 			runStatsChoiceBox.setValue(s.get(0));
 		}
 	}
-
+	/**
+	 * Handles adding a critter from taking the input number and also displays the new critter accordingly
+	 */
 	public void controllerMakeCritter() {
 		String inputNum = critterNumber.getText();
 		String inputCritter = critterChoiceBox.getValue();
@@ -112,7 +122,9 @@ public class Controller {
 			Critter.displayWorld(world);
 		}
 	}
-
+	/**
+	 * Handles moving forward the specified amount of steps by the user
+	 */
 	public void stepForward() {
 		int stepCount = 0;
 		if (!world.isAnimateOn()) {
@@ -127,7 +139,9 @@ public class Controller {
 			}
 		}
 	}
-
+	/**
+	 * Sets the seed of the random number generator of the model to allow for testing
+	 */
 	public void setSeed() {
 		Long seed;
 		if (!world.isAnimateOn()) {
@@ -139,7 +153,9 @@ public class Controller {
 			}
 		}
 	}
-
+	/**
+	 * A setter to output the runStats of the current critter in the ChoiceBox
+	 */
 	public void setRunStats() {
 		String inputCritter = runStatsChoiceBox.getValue();
 		String critterRunStats;
@@ -159,12 +175,16 @@ public class Controller {
 			}
 		}
 	}
-	
+	/**
+	 * Resets the world to allow for testing in one session
+	 */
 	public void resetWorld() {
 		Critter.clearWorld();
 		Critter.displayWorld(world);
 	}
-	
+	/**
+	 * Disables the buttons that call stuff on the controller during animation
+	 */
 	private void disableButtons() {
 		addCritter.setDisable(true);
 		stepsForward.setDisable(true);
@@ -174,7 +194,9 @@ public class Controller {
 		runStatsChoiceBox.setDisable(true);
 		resetButton.setDisable(true);
 	}
-	
+	/**
+	 * Enables the buttons back when the animation is stopped
+	 */
 	private void enableButtons() {
 		addCritter.setDisable(false);
 		stepsForward.setDisable(false);
