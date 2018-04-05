@@ -48,6 +48,9 @@ public class Controller {
 	@FXML
 	public TextFlow runStatsText;
 
+	@FXML
+	public Button resetButton;
+	
 	private CritterWorldView world;
 	private WorldStepTimer worldStepTimer;
 
@@ -66,10 +69,18 @@ public class Controller {
 	public void toggleAnimateView() {
 		if (world.isAnimateOn()) {
 			world.setAnimate(false);
+			enableButtons();			
 			worldStepTimer.stop();
 			togglePlayButton.setText("Play");
 		} else {
 			world.setAnimate(true);
+			try{
+				int numSteps = Integer.parseInt(stepsNumber.getText());
+				worldStepTimer.setNumSteps(numSteps);
+			} finally {
+				// Do nothing
+			}
+			disableButtons();
 			worldStepTimer.start();
 			togglePlayButton.setText("Stop");
 		}
@@ -98,6 +109,7 @@ public class Controller {
 			} catch (NumberFormatException | InvalidCritterException e) {
 				// For now leave as empty to ignore any strange changes
 			}
+			Critter.displayWorld(world);
 		}
 	}
 
@@ -147,4 +159,30 @@ public class Controller {
 			}
 		}
 	}
+	
+	public void resetWorld() {
+		Critter.clearWorld();
+		Critter.displayWorld(world);
+	}
+	
+	private void disableButtons() {
+		addCritter.setDisable(true);
+		stepsForward.setDisable(true);
+		setSeedNumber.setDisable(true);
+		changeRunStats.setDisable(true);
+		stepsNumber.setDisable(true);
+		runStatsChoiceBox.setDisable(true);
+		resetButton.setDisable(true);
+	}
+	
+	private void enableButtons() {
+		addCritter.setDisable(false);
+		stepsForward.setDisable(false);
+		setSeedNumber.setDisable(false);
+		changeRunStats.setDisable(false);		
+		stepsNumber.setDisable(false);
+		runStatsChoiceBox.setDisable(false);
+		resetButton.setDisable(false);
+	}
+	
 }

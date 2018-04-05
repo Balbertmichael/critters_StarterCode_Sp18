@@ -669,10 +669,8 @@ public abstract class Critter {
 				Class<?> critter_class = Critter.class;
 				if (critter_class.isAssignableFrom(check_class)) {
 					findCritters.add(critName);
-					// System.out.println(critName);
 				}
 			} catch (ClassNotFoundException e) {
-				// Shouldn't happen
 				continue;
 			}
 		}

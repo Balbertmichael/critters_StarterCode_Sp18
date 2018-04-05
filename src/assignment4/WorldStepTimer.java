@@ -9,10 +9,15 @@ public class WorldStepTimer extends AnimationTimer{
 	Slider speedSlider;
 	long prevTime = 0;
 	double refreshRate = 1.0e9;
+	int numSteps = 1;
 	
 	public WorldStepTimer(CritterWorldView world, Slider speed) {
 		this.world = world;
 		this.speedSlider = speed;
+	}
+	
+	public void setNumSteps(int numSteps) {
+		this.numSteps = numSteps;
 	}
 	
 	@Override
@@ -26,7 +31,11 @@ public class WorldStepTimer extends AnimationTimer{
 		
 		if(timeInterval > refreshRate) {
 			refreshRate = 1.0e9 / speedSlider.getValue();
-			Critter.worldTimeStep();
+			
+			for(int i = 0; i < numSteps; ++i) {
+				Critter.worldTimeStep();	
+			}
+
 			Critter.displayWorld(world);
 			prevTime = 0;
 		}
